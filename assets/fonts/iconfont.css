@@ -1,0 +1,3882 @@
+@font-face {
+  font-family: 'senses-icons'; /* Project id 2669995 */
+  src: url('iconfont.woff2?t=1640254892504') format('woff2'),
+    url('iconfont.woff?t=1640254892504') format('woff'),
+    url('iconfont.ttf?t=1640254892504') format('truetype');
+}
+
+.senses-icons {
+  font-family: 'senses-icons' !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.senses-icons-shanchuwenjian:before {
+  content: '\e605';
+}
+
+.senses-icons-zidianguanli:before {
+  content: '\e6e7';
+}
+
+.senses-icons-xiangxia2:before {
+  content: '\ea08';
+}
+
+.senses-icons-tiaojian:before {
+  content: '\ea09';
+}
+
+.senses-icons-sucai:before {
+  content: '\e619';
+}
+
+.senses-icons-wenjianjia:before {
+  content: '\e61e';
+}
+
+.senses-icons-wj-zl:before {
+  content: '\ea0a';
+}
+
+.senses-icons-xinjian1:before {
+  content: '\e622';
+}
+
+.senses-icons-move-up:before {
+  content: '\e623';
+}
+
+.senses-icons-move-down:before {
+  content: '\e625';
+}
+
+.senses-icons-RSS:before {
+  content: '\e604';
+}
+
+.senses-icons-shuaxin1:before {
+  content: '\e9f8';
+}
+
+.senses-icons-xiangxia:before {
+  content: '\e600';
+}
+
+.senses-icons-dingzi:before {
+  content: '\e601';
+}
+
+.senses-icons-shoucangxuanzhong:before {
+  content: '\e602';
+}
+
+.senses-icons-shouquanguanli:before {
+  content: '\e60b';
+}
+
+.senses-icons-xiangzuo:before {
+  content: '\e626';
+}
+
+.senses-icons-24gl-tags3:before {
+  content: '\e9f9';
+}
+
+.senses-icons-zhankai:before {
+  content: '\e627';
+}
+
+.senses-icons-jurassic_admin:before {
+  content: '\e9fa';
+}
+
+.senses-icons-jichupeizhi:before {
+  content: '\e62d';
+}
+
+.senses-icons-moxingku:before {
+  content: '\e628';
+}
+
+.senses-icons-shuxing:before {
+  content: '\e9fb';
+}
+
+.senses-icons-shuxing1:before {
+  content: '\e9fc';
+}
+
+.senses-icons-logo-slack:before {
+  content: '\e9fd';
+}
+
+.senses-icons-shuaxin:before {
+  content: '\e9fe';
+}
+
+.senses-icons-biaoqian:before {
+  content: '\e9ff';
+}
+
+.senses-icons-24gf-tags3:before {
+  content: '\ea00';
+}
+
+.senses-icons-guanbi:before {
+  content: '\e60e';
+}
+
+.senses-icons-qiapian:before {
+  content: '\ea01';
+}
+
+.senses-icons-liebiao:before {
+  content: '\ea02';
+}
+
+.senses-icons-wodechanpin:before {
+  content: '\ea03';
+}
+
+.senses-icons-yonghu:before {
+  content: '\ea04';
+}
+
+.senses-icons-jigouxinxi:before {
+  content: '\e603';
+}
+
+.senses-icons-yunhangshipeizhi:before {
+  content: '\ea05';
+}
+
+.senses-icons-wulumuqishigongandashujuguanlipingtai-ico-:before {
+  content: '\ea06';
+}
+
+.senses-icons-yingyong:before {
+  content: '\e629';
+}
+
+.senses-icons-peizhishujuyuan:before {
+  content: '\ea07';
+}
+
+.senses-icons-fenxi:before {
+  content: '\e618';
+}
+
+.senses-icons-DT_NUMBER:before {
+  content: '\e9f2';
+}
+
+.senses-icons-get-num-more:before {
+  content: '\e9f1';
+}
+
+.senses-icons-get-num-subs:before {
+  content: '\e9f6';
+}
+
+.senses-icons-get-num-edit:before {
+  content: '\e9f7';
+}
+
+.senses-icons-DT_STRING:before {
+  content: '\e9f3';
+}
+
+.senses-icons-DT_DATE:before {
+  content: '\e9f4';
+}
+
+.senses-icons-DT_TIME:before {
+  content: '\e9f5';
+}
+
+.senses-icons-get-num-an:before {
+  content: '\e9ec';
+}
+
+.senses-icons-get-num-subscribe:before {
+  content: '\e9ed';
+}
+
+.senses-icons-get-num-download:before {
+  content: '\e9ee';
+}
+
+.senses-icons-get-num-save:before {
+  content: '\e9ef';
+}
+
+.senses-icons-get-num-filter:before {
+  content: '\e9f0';
+}
+
+.senses-icons-organization-chart--treemap:before {
+  content: '\e6ed';
+}
+
+.senses-icons-actions-flash--off:before {
+  content: '\e7ed';
+}
+
+.senses-icons-organization-graphical-data-flow:before {
+  content: '\e8ed';
+}
+
+.senses-icons-planning-airport-location:before {
+  content: '\e6ee';
+}
+
+.senses-icons-organization-chart--candlestick:before {
+  content: '\e7ee';
+}
+
+.senses-icons-planning-monument:before {
+  content: '\e8ee';
+}
+
+.senses-icons-actions-align-box--bottom-left:before {
+  content: '\e6ef';
+}
+
+.senses-icons-actions-tag--edit:before {
+  content: '\e7ef';
+}
+
+.senses-icons-planning-direction--curve--filled:before {
+  content: '\e8ef';
+}
+
+.senses-icons-person-user--favorite--alt--filled:before {
+  content: '\e6f0';
+}
+
+.senses-icons-actions-page--first:before {
+  content: '\e7f0';
+}
+
+.senses-icons-organization-heat-map--02:before {
+  content: '\e8f0';
+}
+
+.senses-icons-organization-model-builder--reference:before {
+  content: '\e6f1';
+}
+
+.senses-icons-actions-list--boxes:before {
+  content: '\e7f1';
+}
+
+.senses-icons-planning-pedestrian--family:before {
+  content: '\e8f1';
+}
+
+.senses-icons-organization-data--base--alt:before {
+  content: '\e6f2';
+}
+
+.senses-icons-organization-linux:before {
+  content: '\e7f2';
+}
+
+.senses-icons-actions-flash:before {
+  content: '\e8f2';
+}
+
+.senses-icons-planning-navaid--vordme:before {
+  content: '\e6f3';
+}
+
+.senses-icons-actions-branch:before {
+  content: '\e7f3';
+}
+
+.senses-icons-actions-insert-syntax:before {
+  content: '\e8f3';
+}
+
+.senses-icons-organization-flow--modeler:before {
+  content: '\e6f4';
+}
+
+.senses-icons-organization-network--3--reference:before {
+  content: '\e7f4';
+}
+
+.senses-icons-actions-document--horizontal:before {
+  content: '\e8f4';
+}
+
+.senses-icons-actions-checkbox--checked--filled:before {
+  content: '\e6f5';
+}
+
+.senses-icons-actions-cut:before {
+  content: '\e7f5';
+}
+
+.senses-icons-actions-restart:before {
+  content: '\e8f5';
+}
+
+.senses-icons-organization-cloud--data-ops:before {
+  content: '\e6f6';
+}
+
+.senses-icons-actions-translate:before {
+  content: '\e7f6';
+}
+
+.senses-icons-actions-caret--right:before {
+  content: '\e8f6';
+}
+
+.senses-icons-organization-scatter-matrix:before {
+  content: '\e6f7';
+}
+
+.senses-icons-actions-shrink-screen:before {
+  content: '\e7f7';
+}
+
+.senses-icons-actions-shape--except:before {
+  content: '\e8f7';
+}
+
+.senses-icons-planning-location--company:before {
+  content: '\e6f8';
+}
+
+.senses-icons-planning-direction--bear-right--01:before {
+  content: '\e7f8';
+}
+
+.senses-icons-actions-volume--up--filled:before {
+  content: '\e8f8';
+}
+
+.senses-icons-actions-open-panel--right:before {
+  content: '\e6f9';
+}
+
+.senses-icons-planning-service-desk:before {
+  content: '\e7f9';
+}
+
+.senses-icons-actions-caret--sort:before {
+  content: '\e8f9';
+}
+
+.senses-icons-planning-airline--digital-gate:before {
+  content: '\e6fa';
+}
+
+.senses-icons-planning-direction--sharp-turn:before {
+  content: '\e7fa';
+}
+
+.senses-icons-organization-data--error:before {
+  content: '\e8fa';
+}
+
+.senses-icons-actions-unlocked:before {
+  content: '\e6fb';
+}
+
+.senses-icons-organization-choropleth-map:before {
+  content: '\e7fb';
+}
+
+.senses-icons-person-taste:before {
+  content: '\e8fb';
+}
+
+.senses-icons-organization-table--built:before {
+  content: '\e6fc';
+}
+
+.senses-icons-organization-chart--bar-floating:before {
+  content: '\e7fc';
+}
+
+.senses-icons-actions-align-box--middle-right:before {
+  content: '\e8fc';
+}
+
+.senses-icons-organization-data--check:before {
+  content: '\e6fd';
+}
+
+.senses-icons-actions-home:before {
+  content: '\e7fd';
+}
+
+.senses-icons-planning-car--front:before {
+  content: '\e8fd';
+}
+
+.senses-icons-actions-phone--off:before {
+  content: '\e6fe';
+}
+
+.senses-icons-person-face--satisfied--filled:before {
+  content: '\e7fe';
+}
+
+.senses-icons-actions-view:before {
+  content: '\e8fe';
+}
+
+.senses-icons-organization-data--structured:before {
+  content: '\e6ff';
+}
+
+.senses-icons-actions-text--align--right:before {
+  content: '\e7ff';
+}
+
+.senses-icons-actions-filter--reset:before {
+  content: '\e8ff';
+}
+
+.senses-icons-planning-pest:before {
+  content: '\e700';
+}
+
+.senses-icons-actions-rewind--5:before {
+  content: '\e800';
+}
+
+.senses-icons-organization-storage-pool:before {
+  content: '\e900';
+}
+
+.senses-icons-actions-align--vertical-top:before {
+  content: '\e701';
+}
+
+.senses-icons-organization-chart--venn-diagram:before {
+  content: '\e801';
+}
+
+.senses-icons-planning-dew-point--filled:before {
+  content: '\e901';
+}
+
+.senses-icons-actions-text--scale:before {
+  content: '\e702';
+}
+
+.senses-icons-actions-screen:before {
+  content: '\e802';
+}
+
+.senses-icons-planning-traffic--flow-incident:before {
+  content: '\e902';
+}
+
+.senses-icons-actions-subtract:before {
+  content: '\e703';
+}
+
+.senses-icons-actions-recording--filled--alt:before {
+  content: '\e803';
+}
+
+.senses-icons-actions-skip--back--solid--filled:before {
+  content: '\e903';
+}
+
+.senses-icons-actions-distribute--vertical-center:before {
+  content: '\e704';
+}
+
+.senses-icons-actions-migrate--alt:before {
+  content: '\e804';
+}
+
+.senses-icons-organization-join--left:before {
+  content: '\e904';
+}
+
+.senses-icons-actions-play--outline--filled:before {
+  content: '\e705';
+}
+
+.senses-icons-actions-text--highlight:before {
+  content: '\e805';
+}
+
+.senses-icons-person-touch--2:before {
+  content: '\e905';
+}
+
+.senses-icons-organization-report--data:before {
+  content: '\e706';
+}
+
+.senses-icons-actions-view--filled:before {
+  content: '\e806';
+}
+
+.senses-icons-planning-buoy:before {
+  content: '\e906';
+}
+
+.senses-icons-actions-rewind--10:before {
+  content: '\e707';
+}
+
+.senses-icons-actions-draw:before {
+  content: '\e807';
+}
+
+.senses-icons-person-user--avatar--filled--alt:before {
+  content: '\e907';
+}
+
+.senses-icons-organization-container-software:before {
+  content: '\e708';
+}
+
+.senses-icons-actions-quotes:before {
+  content: '\e808';
+}
+
+.senses-icons-actions-intersect:before {
+  content: '\e908';
+}
+
+.senses-icons-actions-unlink:before {
+  content: '\e709';
+}
+
+.senses-icons-planning-radar--enhanced:before {
+  content: '\e809';
+}
+
+.senses-icons-person-accessibility:before {
+  content: '\e909';
+}
+
+.senses-icons-planning-earth--southeast-asia:before {
+  content: '\e70a';
+}
+
+.senses-icons-planning-haze:before {
+  content: '\e80a';
+}
+
+.senses-icons-actions-login:before {
+  content: '\e90a';
+}
+
+.senses-icons-planning-direction--straight--right:before {
+  content: '\e70b';
+}
+
+.senses-icons-actions-language:before {
+  content: '\e80b';
+}
+
+.senses-icons-actions-video--chat:before {
+  content: '\e90b';
+}
+
+.senses-icons-actions-pause-past:before {
+  content: '\e70c';
+}
+
+.senses-icons-actions-align-box--top-left:before {
+  content: '\e80c';
+}
+
+.senses-icons-actions-select--02:before {
+  content: '\e90c';
+}
+
+.senses-icons-actions-thumbnail--1:before {
+  content: '\e70d';
+}
+
+.senses-icons-planning-direction--rotary--first-right:before {
+  content: '\e80d';
+}
+
+.senses-icons-actions-send--filled:before {
+  content: '\e90d';
+}
+
+.senses-icons-planning-rain:before {
+  content: '\e70e';
+}
+
+.senses-icons-actions-run:before {
+  content: '\e80e';
+}
+
+.senses-icons-organization-chart--river:before {
+  content: '\e90e';
+}
+
+.senses-icons-organization-calculation--alt:before {
+  content: '\e70f';
+}
+
+.senses-icons-actions-pause--outline--filled:before {
+  content: '\e80f';
+}
+
+.senses-icons-organization-chart--area:before {
+  content: '\e90f';
+}
+
+.senses-icons-organization-tree-view--alt:before {
+  content: '\e710';
+}
+
+.senses-icons-organization-virtual-machine:before {
+  content: '\e810';
+}
+
+.senses-icons-actions-chevron--mini:before {
+  content: '\e910';
+}
+
+.senses-icons-planning-earth--europe-africa:before {
+  content: '\e711';
+}
+
+.senses-icons-planning-mostly-cloudy:before {
+  content: '\e811';
+}
+
+.senses-icons-planning-earth--americas:before {
+  content: '\e911';
+}
+
+.senses-icons-actions-column:before {
+  content: '\e712';
+}
+
+.senses-icons-actions-row:before {
+  content: '\e812';
+}
+
+.senses-icons-planning-hospital-bed:before {
+  content: '\e912';
+}
+
+.senses-icons-person-face--neutral--filled:before {
+  content: '\e713';
+}
+
+.senses-icons-actions-arrow--down-right:before {
+  content: '\e813';
+}
+
+.senses-icons-actions-skip--back--outline--solid:before {
+  content: '\e913';
+}
+
+.senses-icons-planning-help-desk:before {
+  content: '\e714';
+}
+
+.senses-icons-actions-arrow--down:before {
+  content: '\e814';
+}
+
+.senses-icons-actions-text--vertical-alignment:before {
+  content: '\e914';
+}
+
+.senses-icons-actions-x-axis:before {
+  content: '\e715';
+}
+
+.senses-icons-actions-deploy-rules:before {
+  content: '\e815';
+}
+
+.senses-icons-planning-pedestrian-child:before {
+  content: '\e915';
+}
+
+.senses-icons-organization-data-vis--4:before {
+  content: '\e716';
+}
+
+.senses-icons-actions-overlay:before {
+  content: '\e816';
+}
+
+.senses-icons-actions-gradient:before {
+  content: '\e916';
+}
+
+.senses-icons-planning-forecast--hail:before {
+  content: '\e717';
+}
+
+.senses-icons-actions-spray-paint:before {
+  content: '\e817';
+}
+
+.senses-icons-actions-package:before {
+  content: '\e917';
+}
+
+.senses-icons-planning-accumulation--snow:before {
+  content: '\e718';
+}
+
+.senses-icons-planning-stop-sign:before {
+  content: '\e818';
+}
+
+.senses-icons-organization-model-builder:before {
+  content: '\e918';
+}
+
+.senses-icons-actions-apps:before {
+  content: '\e719';
+}
+
+.senses-icons-actions-view--mode-1:before {
+  content: '\e819';
+}
+
+.senses-icons-actions-rotate--counterclockwise--filled:before {
+  content: '\e919';
+}
+
+.senses-icons-organization-network--3:before {
+  content: '\e71a';
+}
+
+.senses-icons-actions-arrows--vertical:before {
+  content: '\e81a';
+}
+
+.senses-icons-actions-rotate:before {
+  content: '\e91a';
+}
+
+.senses-icons-organization-app-connectivity:before {
+  content: '\e71b';
+}
+
+.senses-icons-organization-chart--column-floating:before {
+  content: '\e81b';
+}
+
+.senses-icons-planning-sailboat--offshore:before {
+  content: '\e91b';
+}
+
+.senses-icons-actions-y-axis:before {
+  content: '\e71c';
+}
+
+.senses-icons-actions-area--custom:before {
+  content: '\e81c';
+}
+
+.senses-icons-planning-cloudy:before {
+  content: '\e91c';
+}
+
+.senses-icons-actions-corner:before {
+  content: '\e71d';
+}
+
+.senses-icons-planning-van:before {
+  content: '\e81d';
+}
+
+.senses-icons-actions-notification:before {
+  content: '\e91d';
+}
+
+.senses-icons-actions-overflow-menu--horizontal:before {
+  content: '\e71e';
+}
+
+.senses-icons-actions-image--reference:before {
+  content: '\e81e';
+}
+
+.senses-icons-person-face--pending--filled:before {
+  content: '\e91e';
+}
+
+.senses-icons-organization-quadrant-plot:before {
+  content: '\e71f';
+}
+
+.senses-icons-planning-location--person:before {
+  content: '\e81f';
+}
+
+.senses-icons-actions-view--off--filled:before {
+  content: '\e91f';
+}
+
+.senses-icons-planning-cabin-care--alert:before {
+  content: '\e720';
+}
+
+.senses-icons-planning-charging-station:before {
+  content: '\e820';
+}
+
+.senses-icons-planning-navaid--seaplane:before {
+  content: '\e920';
+}
+
+.senses-icons-actions-add--alt:before {
+  content: '\e721';
+}
+
+.senses-icons-actions-rotate--clockwise--filled:before {
+  content: '\e821';
+}
+
+.senses-icons-actions-circle-dash:before {
+  content: '\e921';
+}
+
+.senses-icons-actions-pin--filled:before {
+  content: '\e722';
+}
+
+.senses-icons-planning-earth--europe-africa--filled:before {
+  content: '\e822';
+}
+
+.senses-icons-actions-connect:before {
+  content: '\e922';
+}
+
+.senses-icons-actions-mac--option:before {
+  content: '\e723';
+}
+
+.senses-icons-organization-schematics:before {
+  content: '\e823';
+}
+
+.senses-icons-planning-radar--weather:before {
+  content: '\e923';
+}
+
+.senses-icons-person-user--identification:before {
+  content: '\e724';
+}
+
+.senses-icons-actions-text--all-caps:before {
+  content: '\e824';
+}
+
+.senses-icons-actions-chevron--up:before {
+  content: '\e924';
+}
+
+.senses-icons-organization-network--2:before {
+  content: '\e725';
+}
+
+.senses-icons-planning-navaid--private:before {
+  content: '\e825';
+}
+
+.senses-icons-actions-star:before {
+  content: '\e925';
+}
+
+.senses-icons-planning-bicycle:before {
+  content: '\e726';
+}
+
+.senses-icons-organization-type-pattern:before {
+  content: '\e826';
+}
+
+.senses-icons-actions-distribute--vertical-bottom:before {
+  content: '\e926';
+}
+
+.senses-icons-organization-term:before {
+  content: '\e727';
+}
+
+.senses-icons-actions-text--clear-format:before {
+  content: '\e827';
+}
+
+.senses-icons-actions-shape--exclude:before {
+  content: '\e927';
+}
+
+.senses-icons-planning-direction--right--01:before {
+  content: '\e728';
+}
+
+.senses-icons-actions-distribute--horizontal-left:before {
+  content: '\e828';
+}
+
+.senses-icons-actions-loop:before {
+  content: '\e928';
+}
+
+.senses-icons-actions-favorite:before {
+  content: '\e729';
+}
+
+.senses-icons-organization-chart--histogram:before {
+  content: '\e829';
+}
+
+.senses-icons-person-collaborate:before {
+  content: '\e929';
+}
+
+.senses-icons-planning-navaid--ndb-dme:before {
+  content: '\e72a';
+}
+
+.senses-icons-organization-chart--bullet:before {
+  content: '\e82a';
+}
+
+.senses-icons-person-accessibility--color:before {
+  content: '\e92a';
+}
+
+.senses-icons-organization-share-knowledge:before {
+  content: '\e72b';
+}
+
+.senses-icons-actions-commit:before {
+  content: '\e82b';
+}
+
+.senses-icons-planning-reminder--medical:before {
+  content: '\e92b';
+}
+
+.senses-icons-actions-video--off--filled:before {
+  content: '\e72c';
+}
+
+.senses-icons-actions-arrow--right:before {
+  content: '\e82c';
+}
+
+.senses-icons-actions-microphone--off:before {
+  content: '\e92c';
+}
+
+.senses-icons-actions-clean:before {
+  content: '\e72d';
+}
+
+.senses-icons-planning-restaurant--fine:before {
+  content: '\e82d';
+}
+
+.senses-icons-actions-reset:before {
+  content: '\e92d';
+}
+
+.senses-icons-planning-navaid--military-civil:before {
+  content: '\e72e';
+}
+
+.senses-icons-organization-vmdk-disk:before {
+  content: '\e82e';
+}
+
+.senses-icons-actions-zoom--out-area:before {
+  content: '\e92e';
+}
+
+.senses-icons-actions-text--selection:before {
+  content: '\e72f';
+}
+
+.senses-icons-actions-zoom--reset:before {
+  content: '\e82f';
+}
+
+.senses-icons-planning-location--star--filled:before {
+  content: '\e92f';
+}
+
+.senses-icons-organization-flow--data:before {
+  content: '\e730';
+}
+
+.senses-icons-planning-earth--americas--filled:before {
+  content: '\e830';
+}
+
+.senses-icons-organization-types:before {
+  content: '\e930';
+}
+
+.senses-icons-actions-upgrade:before {
+  content: '\e731';
+}
+
+.senses-icons-planning-passenger--drinks:before {
+  content: '\e831';
+}
+
+.senses-icons-actions-border--bottom:before {
+  content: '\e931';
+}
+
+.senses-icons-actions-thumbs-down:before {
+  content: '\e732';
+}
+
+.senses-icons-organization-row--expand:before {
+  content: '\e832';
+}
+
+.senses-icons-planning-cabin-care:before {
+  content: '\e932';
+}
+
+.senses-icons-organization-chart--column-target:before {
+  content: '\e733';
+}
+
+.senses-icons-planning-direction--curve:before {
+  content: '\e833';
+}
+
+.senses-icons-actions-logout:before {
+  content: '\e933';
+}
+
+.senses-icons-actions-open-panel--filled--bottom:before {
+  content: '\e734';
+}
+
+.senses-icons-actions-spell-check:before {
+  content: '\e834';
+}
+
+.senses-icons-planning-direction--merge--filled:before {
+  content: '\e934';
+}
+
+.senses-icons-organization-diagram--reference:before {
+  content: '\e735';
+}
+
+.senses-icons-person-touch--interaction:before {
+  content: '\e835';
+}
+
+.senses-icons-organization-chart--radial:before {
+  content: '\e935';
+}
+
+.senses-icons-organization-virtual-private-cloud:before {
+  content: '\e736';
+}
+
+.senses-icons-actions-insert--page:before {
+  content: '\e836';
+}
+
+.senses-icons-organization-chart--multitype:before {
+  content: '\e936';
+}
+
+.senses-icons-actions-notification--off--filled:before {
+  content: '\e737';
+}
+
+.senses-icons-organization-data--set:before {
+  content: '\e837';
+}
+
+.senses-icons-actions-pause--outline:before {
+  content: '\e937';
+}
+
+.senses-icons-actions-change-catalog:before {
+  content: '\e738';
+}
+
+.senses-icons-planning-gas-station--filled:before {
+  content: '\e838';
+}
+
+.senses-icons-actions-open-panel--filled--right:before {
+  content: '\e938';
+}
+
+.senses-icons-actions-dot-mark:before {
+  content: '\e739';
+}
+
+.senses-icons-organization-join--right:before {
+  content: '\e839';
+}
+
+.senses-icons-actions-arrow--up-left:before {
+  content: '\e939';
+}
+
+.senses-icons-actions-zoom--in-area:before {
+  content: '\e73a';
+}
+
+.senses-icons-actions-menu:before {
+  content: '\e83a';
+}
+
+.senses-icons-actions-send--alt--filled:before {
+  content: '\e93a';
+}
+
+.senses-icons-person-user--admin:before {
+  content: '\e73b';
+}
+
+.senses-icons-actions-screen--off:before {
+  content: '\e83b';
+}
+
+.senses-icons-actions-view-next:before {
+  content: '\e93b';
+}
+
+.senses-icons-planning-compass:before {
+  content: '\e73c';
+}
+
+.senses-icons-actions-open-panel--left:before {
+  content: '\e83c';
+}
+
+.senses-icons-planning-crowd-report--filled:before {
+  content: '\e93c';
+}
+
+.senses-icons-actions-stop--filled--alt:before {
+  content: '\e73d';
+}
+
+.senses-icons-actions-previous--filled:before {
+  content: '\e83d';
+}
+
+.senses-icons-planning-picnic-area:before {
+  content: '\e93d';
+}
+
+.senses-icons-actions-pause:before {
+  content: '\e73e';
+}
+
+.senses-icons-actions-z-axis:before {
+  content: '\e83e';
+}
+
+.senses-icons-planning-dew-point:before {
+  content: '\e93e';
+}
+
+.senses-icons-organization-concept:before {
+  content: '\e73f';
+}
+
+.senses-icons-organization-chart--line-smooth:before {
+  content: '\e83f';
+}
+
+.senses-icons-organization-increase-level:before {
+  content: '\e93f';
+}
+
+.senses-icons-organization-chart--bubble:before {
+  content: '\e740';
+}
+
+.senses-icons-planning-direction--loop-right:before {
+  content: '\e840';
+}
+
+.senses-icons-organization-join--full:before {
+  content: '\e940';
+}
+
+.senses-icons-actions-microphone--off--filled:before {
+  content: '\e741';
+}
+
+.senses-icons-planning-rain--scattered--night:before {
+  content: '\e841';
+}
+
+.senses-icons-actions-arrow--up:before {
+  content: '\e941';
+}
+
+.senses-icons-organization-skill-level--advanced:before {
+  content: '\e742';
+}
+
+.senses-icons-actions-skip--back--filled:before {
+  content: '\e842';
+}
+
+.senses-icons-actions-pan--vertical:before {
+  content: '\e942';
+}
+
+.senses-icons-actions-add--filled:before {
+  content: '\e743';
+}
+
+.senses-icons-planning-direction--rotary--straight:before {
+  content: '\e843';
+}
+
+.senses-icons-organization-progress-bar:before {
+  content: '\e943';
+}
+
+.senses-icons-organization-chart--cluster-bar:before {
+  content: '\e744';
+}
+
+.senses-icons-actions-align-box--top-center:before {
+  content: '\e844';
+}
+
+.senses-icons-actions-volume--up:before {
+  content: '\e944';
+}
+
+.senses-icons-planning-calendar--settings:before {
+  content: '\e745';
+}
+
+.senses-icons-organization-data--1:before {
+  content: '\e845';
+}
+
+.senses-icons-person-face--neutral:before {
+  content: '\e945';
+}
+
+.senses-icons-planning-car:before {
+  content: '\e746';
+}
+
+.senses-icons-actions-text--footnote:before {
+  content: '\e846';
+}
+
+.senses-icons-actions-text--indent:before {
+  content: '\e946';
+}
+
+.senses-icons-actions-zoom--in:before {
+  content: '\e747';
+}
+
+.senses-icons-actions-skip--forward--outline:before {
+  content: '\e847';
+}
+
+.senses-icons-planning-cabin-care--alt:before {
+  content: '\e947';
+}
+
+.senses-icons-actions-skip--forward--solid--filled:before {
+  content: '\e748';
+}
+
+.senses-icons-person-group:before {
+  content: '\e848';
+}
+
+.senses-icons-planning-direction--u-turn:before {
+  content: '\e948';
+}
+
+.senses-icons-planning-airport--01:before {
+  content: '\e749';
+}
+
+.senses-icons-planning-direction--straight--filled:before {
+  content: '\e849';
+}
+
+.senses-icons-person-credentials:before {
+  content: '\e949';
+}
+
+.senses-icons-actions-radio-button:before {
+  content: '\e74a';
+}
+
+.senses-icons-actions-rotate--counterclockwise:before {
+  content: '\e84a';
+}
+
+.senses-icons-organization-document-sentiment:before {
+  content: '\e94a';
+}
+
+.senses-icons-organization-box-plot:before {
+  content: '\e74b';
+}
+
+.senses-icons-actions-notification--off:before {
+  content: '\e84b';
+}
+
+.senses-icons-organization-flow--stream:before {
+  content: '\e94b';
+}
+
+.senses-icons-actions-text--creation:before {
+  content: '\e74c';
+}
+
+.senses-icons-actions-microphone:before {
+  content: '\e84c';
+}
+
+.senses-icons-actions-next--outline:before {
+  content: '\e94c';
+}
+
+.senses-icons-planning-event:before {
+  content: '\e74d';
+}
+
+.senses-icons-actions-text--align--left:before {
+  content: '\e84d';
+}
+
+.senses-icons-actions-send--alt:before {
+  content: '\e94d';
+}
+
+.senses-icons-organization-chart--multi-line:before {
+  content: '\e74e';
+}
+
+.senses-icons-actions-repeat:before {
+  content: '\e84e';
+}
+
+.senses-icons-person-movement:before {
+  content: '\e94e';
+}
+
+.senses-icons-actions-draggable:before {
+  content: '\e74f';
+}
+
+.senses-icons-actions-arrow--down-left:before {
+  content: '\e84f';
+}
+
+.senses-icons-organization-data-bin:before {
+  content: '\e94f';
+}
+
+.senses-icons-actions-reset--alt:before {
+  content: '\e750';
+}
+
+.senses-icons-actions-manage-protection:before {
+  content: '\e850';
+}
+
+.senses-icons-person-user--online:before {
+  content: '\e950';
+}
+
+.senses-icons-actions-drill-down:before {
+  content: '\e751';
+}
+
+.senses-icons-actions-volume--mute:before {
+  content: '\e851';
+}
+
+.senses-icons-organization-qq-plot:before {
+  content: '\e951';
+}
+
+.senses-icons-organization-analytics--reference:before {
+  content: '\e652';
+}
+
+.senses-icons-person-identification:before {
+  content: '\e752';
+}
+
+.senses-icons-planning-direction--bear-right--02--filled:before {
+  content: '\e852';
+}
+
+.senses-icons-actions-color-switch:before {
+  content: '\e952';
+}
+
+.senses-icons-actions-dashboard:before {
+  content: '\e653';
+}
+
+.senses-icons-actions-caret--down:before {
+  content: '\e753';
+}
+
+.senses-icons-actions-maximize:before {
+  content: '\e853';
+}
+
+.senses-icons-actions-text--wrap:before {
+  content: '\e953';
+}
+
+.senses-icons-organization-ordinal:before {
+  content: '\e654';
+}
+
+.senses-icons-actions-star--half:before {
+  content: '\e754';
+}
+
+.senses-icons-planning-not-available:before {
+  content: '\e854';
+}
+
+.senses-icons-planning-navaid--dme:before {
+  content: '\e954';
+}
+
+.senses-icons-actions-flag:before {
+  content: '\e655';
+}
+
+.senses-icons-actions-erase:before {
+  content: '\e755';
+}
+
+.senses-icons-actions-jump-link:before {
+  content: '\e855';
+}
+
+.senses-icons-actions-phone--incoming:before {
+  content: '\e955';
+}
+
+.senses-icons-actions-fit-to-screen:before {
+  content: '\e656';
+}
+
+.senses-icons-organization-chart--sunburst:before {
+  content: '\e756';
+}
+
+.senses-icons-planning-direction--straight:before {
+  content: '\e856';
+}
+
+.senses-icons-planning-navaid--civil:before {
+  content: '\e956';
+}
+
+.senses-icons-planning-humidity--alt:before {
+  content: '\e657';
+}
+
+.senses-icons-planning-train:before {
+  content: '\e757';
+}
+
+.senses-icons-planning-alarm--subtract:before {
+  content: '\e857';
+}
+
+.senses-icons-organization-chart--evaluation:before {
+  content: '\e957';
+}
+
+.senses-icons-planning-earth--filled:before {
+  content: '\e658';
+}
+
+.senses-icons-actions-collapse-categories:before {
+  content: '\e758';
+}
+
+.senses-icons-planning-snooze:before {
+  content: '\e858';
+}
+
+.senses-icons-actions-new-tab:before {
+  content: '\e958';
+}
+
+.senses-icons-organization-chart--error-bar:before {
+  content: '\e659';
+}
+
+.senses-icons-planning-crowd-report:before {
+  content: '\e759';
+}
+
+.senses-icons-actions-text--line-spacing:before {
+  content: '\e859';
+}
+
+.senses-icons-actions-video--filled:before {
+  content: '\e959';
+}
+
+.senses-icons-actions-previous--outline:before {
+  content: '\e65a';
+}
+
+.senses-icons-planning-location--hazard:before {
+  content: '\e75a';
+}
+
+.senses-icons-person-events--alt:before {
+  content: '\e85a';
+}
+
+.senses-icons-organization-skill-level--basic:before {
+  content: '\e95a';
+}
+
+.senses-icons-actions-volume--down:before {
+  content: '\e65b';
+}
+
+.senses-icons-actions-forward--30:before {
+  content: '\e75b';
+}
+
+.senses-icons-planning-calendar--tools:before {
+  content: '\e85b';
+}
+
+.senses-icons-organization-linux--alt:before {
+  content: '\e95b';
+}
+
+.senses-icons-planning-gas-station:before {
+  content: '\e65c';
+}
+
+.senses-icons-actions-split:before {
+  content: '\e75c';
+}
+
+.senses-icons-planning-charging-station--filled:before {
+  content: '\e85c';
+}
+
+.senses-icons-organization-chart--combo-stacked:before {
+  content: '\e95c';
+}
+
+.senses-icons-organization-data--reference:before {
+  content: '\e65d';
+}
+
+.senses-icons-actions-crop:before {
+  content: '\e75d';
+}
+
+.senses-icons-actions-play--filled:before {
+  content: '\e85d';
+}
+
+.senses-icons-actions-drag--vertical:before {
+  content: '\e95d';
+}
+
+.senses-icons-actions-pan--horizontal:before {
+  content: '\e65e';
+}
+
+.senses-icons-planning-mostly-cloudy--night:before {
+  content: '\e75e';
+}
+
+.senses-icons-planning-observed--hail:before {
+  content: '\e85e';
+}
+
+.senses-icons-actions-pen:before {
+  content: '\e95e';
+}
+
+.senses-icons-planning-direction--fork:before {
+  content: '\e65f';
+}
+
+.senses-icons-planning-mixed-rain-hail:before {
+  content: '\e75f';
+}
+
+.senses-icons-actions-image--search:before {
+  content: '\e85f';
+}
+
+.senses-icons-planning-delivery-truck:before {
+  content: '\e95f';
+}
+
+.senses-icons-actions-overflow-menu--vertical:before {
+  content: '\e660';
+}
+
+.senses-icons-actions-skip--forward--filled:before {
+  content: '\e760';
+}
+
+.senses-icons-actions-skip--forward--outline--filled:before {
+  content: '\e860';
+}
+
+.senses-icons-actions-center--square:before {
+  content: '\e960';
+}
+
+.senses-icons-organization-data-vis--1:before {
+  content: '\e661';
+}
+
+.senses-icons-actions-not-sent:before {
+  content: '\e761';
+}
+
+.senses-icons-person-face--wink:before {
+  content: '\e861';
+}
+
+.senses-icons-planning-taxi:before {
+  content: '\e961';
+}
+
+.senses-icons-planning-agriculture-analytics:before {
+  content: '\e662';
+}
+
+.senses-icons-actions-filter:before {
+  content: '\e762';
+}
+
+.senses-icons-actions-lasso--polygon:before {
+  content: '\e862';
+}
+
+.senses-icons-actions-automatic:before {
+  content: '\e962';
+}
+
+.senses-icons-planning-direction--rotary--straight--filled:before {
+  content: '\e663';
+}
+
+.senses-icons-organization-datastore:before {
+  content: '\e763';
+}
+
+.senses-icons-planning-navaid--vortac:before {
+  content: '\e863';
+}
+
+.senses-icons-planning-milestone:before {
+  content: '\e963';
+}
+
+.senses-icons-actions-skip--back--outline:before {
+  content: '\e664';
+}
+
+.senses-icons-actions-caret--sort--down:before {
+  content: '\e764';
+}
+
+.senses-icons-person-user--avatar:before {
+  content: '\e864';
+}
+
+.senses-icons-person-user--favorite--alt:before {
+  content: '\e964';
+}
+
+.senses-icons-actions-paragraph:before {
+  content: '\e665';
+}
+
+.senses-icons-organization-virtual-column--key:before {
+  content: '\e765';
+}
+
+.senses-icons-organization-data-refinery--reference:before {
+  content: '\e865';
+}
+
+.senses-icons-organization-classifier--language:before {
+  content: '\e965';
+}
+
+.senses-icons-actions-volume--down--filled:before {
+  content: '\e666';
+}
+
+.senses-icons-actions-operations--record:before {
+  content: '\e766';
+}
+
+.senses-icons-planning-direction--loop-left--filled:before {
+  content: '\e866';
+}
+
+.senses-icons-actions-reply:before {
+  content: '\e966';
+}
+
+.senses-icons-actions-checkbox:before {
+  content: '\e667';
+}
+
+.senses-icons-planning-event--schedule:before {
+  content: '\e767';
+}
+
+.senses-icons-person-partnership:before {
+  content: '\e867';
+}
+
+.senses-icons-planning-timer:before {
+  content: '\e967';
+}
+
+.senses-icons-planning-location--hazard--filled:before {
+  content: '\e668';
+}
+
+.senses-icons-actions-center-to-fit:before {
+  content: '\e768';
+}
+
+.senses-icons-organization-cross-tab:before {
+  content: '\e868';
+}
+
+.senses-icons-actions-migrate:before {
+  content: '\e968';
+}
+
+.senses-icons-organization-data-table:before {
+  content: '\e669';
+}
+
+.senses-icons-planning-hotel:before {
+  content: '\e769';
+}
+
+.senses-icons-actions-settings--check:before {
+  content: '\e869';
+}
+
+.senses-icons-planning-departure:before {
+  content: '\e969';
+}
+
+.senses-icons-actions-list--checked:before {
+  content: '\e66a';
+}
+
+.senses-icons-planning-location--company--filled:before {
+  content: '\e76a';
+}
+
+.senses-icons-planning-map-boundary:before {
+  content: '\e86a';
+}
+
+.senses-icons-organization-nominal:before {
+  content: '\e96a';
+}
+
+.senses-icons-organization-data-player:before {
+  content: '\e66b';
+}
+
+.senses-icons-actions-align--horizontal-left:before {
+  content: '\e76b';
+}
+
+.senses-icons-actions-recording--filled:before {
+  content: '\e86b';
+}
+
+.senses-icons-actions-text--align--justify:before {
+  content: '\e96b';
+}
+
+.senses-icons-actions-stop:before {
+  content: '\e66c';
+}
+
+.senses-icons-actions-asleep:before {
+  content: '\e76c';
+}
+
+.senses-icons-actions-caret--left:before {
+  content: '\e86c';
+}
+
+.senses-icons-organization-table--split:before {
+  content: '\e96c';
+}
+
+.senses-icons-person-events:before {
+  content: '\e66d';
+}
+
+.senses-icons-actions-compare:before {
+  content: '\e76d';
+}
+
+.senses-icons-planning-navaid--ndb:before {
+  content: '\e86d';
+}
+
+.senses-icons-organization-summary--KPI:before {
+  content: '\e96d';
+}
+
+.senses-icons-organization-query-queue:before {
+  content: '\e66e';
+}
+
+.senses-icons-planning-earthquake:before {
+  content: '\e76e';
+}
+
+.senses-icons-planning-plane--sea:before {
+  content: '\e86e';
+}
+
+.senses-icons-actions-play--filled--alt:before {
+  content: '\e96e';
+}
+
+.senses-icons-planning-marine-warning:before {
+  content: '\e66f';
+}
+
+.senses-icons-organization-driver-analysis:before {
+  content: '\e76f';
+}
+
+.senses-icons-person-cognitive:before {
+  content: '\e86f';
+}
+
+.senses-icons-person-user--x-ray:before {
+  content: '\e96f';
+}
+
+.senses-icons-planning-rain--scattered:before {
+  content: '\e670';
+}
+
+.senses-icons-planning-hospital:before {
+  content: '\e770';
+}
+
+.senses-icons-organization-data--2:before {
+  content: '\e870';
+}
+
+.senses-icons-actions-edit:before {
+  content: '\e970';
+}
+
+.senses-icons-actions-favorite--filled:before {
+  content: '\e671';
+}
+
+.senses-icons-actions-phone--voice:before {
+  content: '\e771';
+}
+
+.senses-icons-planning-moonset:before {
+  content: '\e871';
+}
+
+.senses-icons-actions-lasso:before {
+  content: '\e971';
+}
+
+.senses-icons-organization-math-curve:before {
+  content: '\e672';
+}
+
+.senses-icons-actions-text--tracking:before {
+  content: '\e772';
+}
+
+.senses-icons-actions-checkbox--indeterminate--filled:before {
+  content: '\e872';
+}
+
+.senses-icons-person-idea:before {
+  content: '\e972';
+}
+
+.senses-icons-actions-volume--down--alt:before {
+  content: '\e673';
+}
+
+.senses-icons-actions-asleep--filled:before {
+  content: '\e773';
+}
+
+.senses-icons-organization-chart--point:before {
+  content: '\e873';
+}
+
+.senses-icons-actions-workspace--import:before {
+  content: '\e973';
+}
+
+.senses-icons-actions-not-sent--filled:before {
+  content: '\e674';
+}
+
+.senses-icons-person-face--dissatisfied:before {
+  content: '\e774';
+}
+
+.senses-icons-organization-chart--waterfall:before {
+  content: '\e874';
+}
+
+.senses-icons-organization-chart--violin-plot:before {
+  content: '\e974';
+}
+
+.senses-icons-actions-expand-categories:before {
+  content: '\e675';
+}
+
+.senses-icons-actions-tag--group:before {
+  content: '\e775';
+}
+
+.senses-icons-planning-location--heart:before {
+  content: '\e875';
+}
+
+.senses-icons-actions-pin:before {
+  content: '\e975';
+}
+
+.senses-icons-actions-shape--unite:before {
+  content: '\e676';
+}
+
+.senses-icons-actions-rotate--clockwise--alt--filled:before {
+  content: '\e776';
+}
+
+.senses-icons-planning-drought:before {
+  content: '\e876';
+}
+
+.senses-icons-planning-alarm:before {
+  content: '\e976';
+}
+
+.senses-icons-organization-chart--minimum:before {
+  content: '\e677';
+}
+
+.senses-icons-actions-move:before {
+  content: '\e777';
+}
+
+.senses-icons-planning-location--heart--filled:before {
+  content: '\e877';
+}
+
+.senses-icons-person-face--dizzy--filled:before {
+  content: '\e977';
+}
+
+.senses-icons-actions-text--align--mixed:before {
+  content: '\e678';
+}
+
+.senses-icons-person-transgender:before {
+  content: '\e778';
+}
+
+.senses-icons-organization-chart--bar-target:before {
+  content: '\e878';
+}
+
+.senses-icons-actions-eyedropper:before {
+  content: '\e978';
+}
+
+.senses-icons-actions-shape--join:before {
+  content: '\e679';
+}
+
+.senses-icons-actions-opacity:before {
+  content: '\e779';
+}
+
+.senses-icons-person-face--dizzy:before {
+  content: '\e879';
+}
+
+.senses-icons-organization-chart--parallel:before {
+  content: '\e979';
+}
+
+.senses-icons-organization-join--outer:before {
+  content: '\e67a';
+}
+
+.senses-icons-organization-join--inner:before {
+  content: '\e77a';
+}
+
+.senses-icons-actions-send-to-back:before {
+  content: '\e87a';
+}
+
+.senses-icons-planning-direction--loop-left:before {
+  content: '\e97a';
+}
+
+.senses-icons-planning-rain--heavy:before {
+  content: '\e67b';
+}
+
+.senses-icons-actions-align--horizontal-center:before {
+  content: '\e77b';
+}
+
+.senses-icons-planning-rain--drizzle:before {
+  content: '\e87b';
+}
+
+.senses-icons-actions-chevron--sort:before {
+  content: '\e97b';
+}
+
+.senses-icons-actions-choices:before {
+  content: '\e67c';
+}
+
+.senses-icons-person-voice-activate:before {
+  content: '\e77c';
+}
+
+.senses-icons-actions-text--leading:before {
+  content: '\e87c';
+}
+
+.senses-icons-person-user--multiple:before {
+  content: '\e97c';
+}
+
+.senses-icons-person-person:before {
+  content: '\e67d';
+}
+
+.senses-icons-actions-cut-out:before {
+  content: '\e77d';
+}
+
+.senses-icons-organization-flow:before {
+  content: '\e87d';
+}
+
+.senses-icons-planning-forecast--lightning:before {
+  content: '\e97d';
+}
+
+.senses-icons-organization-chart--network:before {
+  content: '\e67e';
+}
+
+.senses-icons-actions-bring-to-front:before {
+  content: '\e77e';
+}
+
+.senses-icons-organization-chart--spiral:before {
+  content: '\e87e';
+}
+
+.senses-icons-actions-caret--sort--up:before {
+  content: '\e97e';
+}
+
+.senses-icons-actions-video:before {
+  content: '\e67f';
+}
+
+.senses-icons-actions-reflect--horizontal:before {
+  content: '\e77f';
+}
+
+.senses-icons-planning-partly-cloudy:before {
+  content: '\e87f';
+}
+
+.senses-icons-organization-word-cloud:before {
+  content: '\e97f';
+}
+
+.senses-icons-actions-recommend:before {
+  content: '\e680';
+}
+
+.senses-icons-planning-airport--02:before {
+  content: '\e780';
+}
+
+.senses-icons-actions-skip--back--outline--filled:before {
+  content: '\e880';
+}
+
+.senses-icons-actions-text--fill:before {
+  content: '\e980';
+}
+
+.senses-icons-organization-text-link:before {
+  content: '\e681';
+}
+
+.senses-icons-organization-data-share:before {
+  content: '\e781';
+}
+
+.senses-icons-actions-search:before {
+  content: '\e881';
+}
+
+.senses-icons-actions-select--01:before {
+  content: '\e981';
+}
+
+.senses-icons-actions-light--filled:before {
+  content: '\e682';
+}
+
+.senses-icons-actions-align-box--middle-left:before {
+  content: '\e782';
+}
+
+.senses-icons-actions-dashboard--reference:before {
+  content: '\e882';
+}
+
+.senses-icons-planning-direction--bear-right--01--filled:before {
+  content: '\e982';
+}
+
+.senses-icons-planning-direction--u-turn--filled:before {
+  content: '\e683';
+}
+
+.senses-icons-organization-progress-bar--round:before {
+  content: '\e783';
+}
+
+.senses-icons-actions-transpose:before {
+  content: '\e883';
+}
+
+.senses-icons-person-face--activated--add:before {
+  content: '\e983';
+}
+
+.senses-icons-planning-swim:before {
+  content: '\e684';
+}
+
+.senses-icons-actions-phone--outgoing:before {
+  content: '\e784';
+}
+
+.senses-icons-actions-open-panel--top:before {
+  content: '\e884';
+}
+
+.senses-icons-organization-heat-map--stocks:before {
+  content: '\e984';
+}
+
+.senses-icons-actions-image--copy:before {
+  content: '\e685';
+}
+
+.senses-icons-actions-repeat--one:before {
+  content: '\e785';
+}
+
+.senses-icons-actions-phone--voice--filled:before {
+  content: '\e885';
+}
+
+.senses-icons-actions-row--delete:before {
+  content: '\e985';
+}
+
+.senses-icons-planning-direction--rotary--first-right--filled:before {
+  content: '\e686';
+}
+
+.senses-icons-planning-passenger--plus:before {
+  content: '\e786';
+}
+
+.senses-icons-planning-traffic-cone:before {
+  content: '\e886';
+}
+
+.senses-icons-planning-location--person--filled:before {
+  content: '\e986';
+}
+
+.senses-icons-actions-rotate--clockwise:before {
+  content: '\e687';
+}
+
+.senses-icons-actions-percentage--filled:before {
+  content: '\e787';
+}
+
+.senses-icons-actions-border--right:before {
+  content: '\e887';
+}
+
+.senses-icons-person-user--simulation:before {
+  content: '\e987';
+}
+
+.senses-icons-actions-area:before {
+  content: '\e688';
+}
+
+.senses-icons-actions-text--small-caps:before {
+  content: '\e788';
+}
+
+.senses-icons-organization-string-text:before {
+  content: '\e888';
+}
+
+.senses-icons-planning-mountain:before {
+  content: '\e988';
+}
+
+.senses-icons-planning-location--star:before {
+  content: '\e689';
+}
+
+.senses-icons-actions-text--indent--less:before {
+  content: '\e789';
+}
+
+.senses-icons-person-face--wink--filled:before {
+  content: '\e889';
+}
+
+.senses-icons-person-user--speaker:before {
+  content: '\e989';
+}
+
+.senses-icons-organization-heat-map:before {
+  content: '\e68a';
+}
+
+.senses-icons-organization-hashtag:before {
+  content: '\e78a';
+}
+
+.senses-icons-actions-recently-viewed:before {
+  content: '\e88a';
+}
+
+.senses-icons-actions-magic-wand:before {
+  content: '\e98a';
+}
+
+.senses-icons-planning-satellite--weather:before {
+  content: '\e68b';
+}
+
+.senses-icons-organization-data--connected:before {
+  content: '\e78b';
+}
+
+.senses-icons-actions-settings--adjust:before {
+  content: '\e88b';
+}
+
+.senses-icons-actions-rewind--30:before {
+  content: '\e98b';
+}
+
+.senses-icons-organization-chart--stepper:before {
+  content: '\e68c';
+}
+
+.senses-icons-actions-caret--up:before {
+  content: '\e78c';
+}
+
+.senses-icons-planning-humidity:before {
+  content: '\e88c';
+}
+
+.senses-icons-planning-helicopter:before {
+  content: '\e98c';
+}
+
+.senses-icons-organization-chart--scatter:before {
+  content: '\e68d';
+}
+
+.senses-icons-planning-accumulation--precipitation:before {
+  content: '\e78d';
+}
+
+.senses-icons-planning-direction--sharp-turn--filled:before {
+  content: '\e88d';
+}
+
+.senses-icons-organization-growth:before {
+  content: '\e98d';
+}
+
+.senses-icons-actions-shape--intersect:before {
+  content: '\e68e';
+}
+
+.senses-icons-planning-airline--rapid-board:before {
+  content: '\e78e';
+}
+
+.senses-icons-person-user--favorite:before {
+  content: '\e88e';
+}
+
+.senses-icons-person-user--certification:before {
+  content: '\e98e';
+}
+
+.senses-icons-actions-flash--off--filled:before {
+  content: '\e68f';
+}
+
+.senses-icons-organization-chart--custom:before {
+  content: '\e78f';
+}
+
+.senses-icons-organization-chart--line--data:before {
+  content: '\e88f';
+}
+
+.senses-icons-planning-flood:before {
+  content: '\e98f';
+}
+
+.senses-icons-planning-airline--passenger-care:before {
+  content: '\e690';
+}
+
+.senses-icons-actions-bookmark:before {
+  content: '\e790';
+}
+
+.senses-icons-planning-pedestrian:before {
+  content: '\e890';
+}
+
+.senses-icons-actions-fork:before {
+  content: '\e990';
+}
+
+.senses-icons-organization-cloud-satellite:before {
+  content: '\e691';
+}
+
+.senses-icons-planning-satellite--radar:before {
+  content: '\e791';
+}
+
+.senses-icons-actions-expand-all:before {
+  content: '\e891';
+}
+
+.senses-icons-person-group--presentation:before {
+  content: '\e991';
+}
+
+.senses-icons-actions-distribute--horizontal-center:before {
+  content: '\e692';
+}
+
+.senses-icons-actions-shrink-screen--filled:before {
+  content: '\e792';
+}
+
+.senses-icons-organization-boolean:before {
+  content: '\e892';
+}
+
+.senses-icons-actions-settings:before {
+  content: '\e992';
+}
+
+.senses-icons-planning-earth--southeast-asia--filled:before {
+  content: '\e693';
+}
+
+.senses-icons-actions-image:before {
+  content: '\e793';
+}
+
+.senses-icons-actions-magic-wand--filled:before {
+  content: '\e893';
+}
+
+.senses-icons-organization-blockchain:before {
+  content: '\e993';
+}
+
+.senses-icons-planning-navaid--helipad:before {
+  content: '\e694';
+}
+
+.senses-icons-actions-border--top:before {
+  content: '\e794';
+}
+
+.senses-icons-actions-split-screen:before {
+  content: '\e894';
+}
+
+.senses-icons-planning-calendar:before {
+  content: '\e994';
+}
+
+.senses-icons-actions-fade:before {
+  content: '\e695';
+}
+
+.senses-icons-organization-skill-level--intermediate:before {
+  content: '\e795';
+}
+
+.senses-icons-planning-lightning:before {
+  content: '\e895';
+}
+
+.senses-icons-actions-save:before {
+  content: '\e995';
+}
+
+.senses-icons-organization-data-vis--2:before {
+  content: '\e696';
+}
+
+.senses-icons-organization-text-link--analysis:before {
+  content: '\e796';
+}
+
+.senses-icons-actions-forward--5:before {
+  content: '\e896';
+}
+
+.senses-icons-actions-scan:before {
+  content: '\e996';
+}
+
+.senses-icons-actions-color-palette:before {
+  content: '\e697';
+}
+
+.senses-icons-planning-moon:before {
+  content: '\e797';
+}
+
+.senses-icons-actions-forward--10:before {
+  content: '\e897';
+}
+
+.senses-icons-actions-insert:before {
+  content: '\e997';
+}
+
+.senses-icons-person-user--access:before {
+  content: '\e698';
+}
+
+.senses-icons-organization-chart--ring:before {
+  content: '\e798';
+}
+
+.senses-icons-actions-contrast:before {
+  content: '\e898';
+}
+
+.senses-icons-organization-chart--average:before {
+  content: '\e998';
+}
+
+.senses-icons-planning-flagging-taxi:before {
+  content: '\e699';
+}
+
+.senses-icons-planning-pressure:before {
+  content: '\e799';
+}
+
+.senses-icons-actions-phone--block--filled:before {
+  content: '\e899';
+}
+
+.senses-icons-actions-close--filled:before {
+  content: '\e999';
+}
+
+.senses-icons-actions-text--superscript:before {
+  content: '\e69a';
+}
+
+.senses-icons-planning-navaid--vhfor:before {
+  content: '\e79a';
+}
+
+.senses-icons-planning-crop-growth:before {
+  content: '\e89a';
+}
+
+.senses-icons-organization-chart--combo:before {
+  content: '\e99a';
+}
+
+.senses-icons-planning-bar:before {
+  content: '\e69b';
+}
+
+.senses-icons-planning-accumulation--ice:before {
+  content: '\e79b';
+}
+
+.senses-icons-organization-hybrid-networking:before {
+  content: '\e89b';
+}
+
+.senses-icons-actions-volume--up--filled--alt:before {
+  content: '\e99b';
+}
+
+.senses-icons-actions-stop--outline--filled:before {
+  content: '\e69c';
+}
+
+.senses-icons-planning-cloud-ceiling:before {
+  content: '\e79c';
+}
+
+.senses-icons-planning-construction:before {
+  content: '\e89c';
+}
+
+.senses-icons-planning-direction--straight--right--filled:before {
+  content: '\e99c';
+}
+
+.senses-icons-actions-border--none:before {
+  content: '\e69d';
+}
+
+.senses-icons-actions-phone--outgoing--filled:before {
+  content: '\e79d';
+}
+
+.senses-icons-actions-reply--all:before {
+  content: '\e89d';
+}
+
+.senses-icons-planning-scooter--front:before {
+  content: '\e99d';
+}
+
+.senses-icons-planning-flight--international:before {
+  content: '\e69e';
+}
+
+.senses-icons-actions-recording:before {
+  content: '\e79e';
+}
+
+.senses-icons-actions-mac--command:before {
+  content: '\e89e';
+}
+
+.senses-icons-organization-chart--rose:before {
+  content: '\e99e';
+}
+
+.senses-icons-planning-hail:before {
+  content: '\e69f';
+}
+
+.senses-icons-actions-text--bold:before {
+  content: '\e79f';
+}
+
+.senses-icons-actions-deploy:before {
+  content: '\e89f';
+}
+
+.senses-icons-planning-fog:before {
+  content: '\e99f';
+}
+
+.senses-icons-planning-scooter:before {
+  content: '\e6a0';
+}
+
+.senses-icons-actions-text--strikethrough:before {
+  content: '\e7a0';
+}
+
+.senses-icons-organization-report:before {
+  content: '\e8a0';
+}
+
+.senses-icons-actions-notification--filled:before {
+  content: '\e9a0';
+}
+
+.senses-icons-planning-crop-health:before {
+  content: '\e6a1';
+}
+
+.senses-icons-actions-arrow--up-right:before {
+  content: '\e7a1';
+}
+
+.senses-icons-planning-direction--rotary--right:before {
+  content: '\e8a1';
+}
+
+.senses-icons-actions-distribute--horizontal-right:before {
+  content: '\e9a1';
+}
+
+.senses-icons-actions-phone:before {
+  content: '\e6a2';
+}
+
+.senses-icons-planning-baggage-claim:before {
+  content: '\e7a2';
+}
+
+.senses-icons-organization-analytics:before {
+  content: '\e8a2';
+}
+
+.senses-icons-person-education:before {
+  content: '\e9a2';
+}
+
+.senses-icons-actions-align--vertical-center:before {
+  content: '\e6a3';
+}
+
+.senses-icons-actions-border--left:before {
+  content: '\e7a3';
+}
+
+.senses-icons-planning-navaid--vor:before {
+  content: '\e8a3';
+}
+
+.senses-icons-organization-text-mining:before {
+  content: '\e9a3';
+}
+
+.senses-icons-actions-launch:before {
+  content: '\e6a4';
+}
+
+.senses-icons-organization-circle-packing:before {
+  content: '\e7a4';
+}
+
+.senses-icons-actions-column--insert:before {
+  content: '\e8a4';
+}
+
+.senses-icons-organization-improve-relevance:before {
+  content: '\e9a4';
+}
+
+.senses-icons-actions-save--model:before {
+  content: '\e6a5';
+}
+
+.senses-icons-organization-cloud-registry:before {
+  content: '\e7a5';
+}
+
+.senses-icons-organization-chart--high-low:before {
+  content: '\e8a5';
+}
+
+.senses-icons-organization-chart--pie:before {
+  content: '\e9a5';
+}
+
+.senses-icons-actions-scan--disabled:before {
+  content: '\e6a6';
+}
+
+.senses-icons-organization-chart--t-sne:before {
+  content: '\e7a6';
+}
+
+.senses-icons-planning-accumulation--rain:before {
+  content: '\e8a6';
+}
+
+.senses-icons-planning-stop-sign--filled:before {
+  content: '\e9a6';
+}
+
+.senses-icons-organization-data-table--reference:before {
+  content: '\e6a7';
+}
+
+.senses-icons-organization-phrase-sentiment:before {
+  content: '\e7a7';
+}
+
+.senses-icons-actions-text--color:before {
+  content: '\e8a7';
+}
+
+.senses-icons-person-face--activated--filled:before {
+  content: '\e9a7';
+}
+
+.senses-icons-planning-plane--private:before {
+  content: '\e6a8';
+}
+
+.senses-icons-planning-flight--schedule:before {
+  content: '\e7a8';
+}
+
+.senses-icons-actions-page--last:before {
+  content: '\e8a8';
+}
+
+.senses-icons-organization-table:before {
+  content: '\e9a8';
+}
+
+.senses-icons-organization-data-vis--3:before {
+  content: '\e6a9';
+}
+
+.senses-icons-organization-chart--area-smooth:before {
+  content: '\e7a9';
+}
+
+.senses-icons-actions-document--vertical:before {
+  content: '\e8a9';
+}
+
+.senses-icons-actions-align-box--bottom-center:before {
+  content: '\e9a9';
+}
+
+.senses-icons-person-accessibility--alt:before {
+  content: '\e6aa';
+}
+
+.senses-icons-organization-string-integer:before {
+  content: '\e7aa';
+}
+
+.senses-icons-actions-favorite--half:before {
+  content: '\e8aa';
+}
+
+.senses-icons-planning-hurricane:before {
+  content: '\e9aa';
+}
+
+.senses-icons-actions-down-to-bottom:before {
+  content: '\e6ab';
+}
+
+.senses-icons-actions-page-number:before {
+  content: '\e7ab';
+}
+
+.senses-icons-planning-wind-stream:before {
+  content: '\e8ab';
+}
+
+.senses-icons-planning-observed--lightning:before {
+  content: '\e9ab';
+}
+
+.senses-icons-organization-network--4:before {
+  content: '\e6ac';
+}
+
+.senses-icons-actions-awake:before {
+  content: '\e7ac';
+}
+
+.senses-icons-person-face--activated:before {
+  content: '\e8ac';
+}
+
+.senses-icons-person-gender--female:before {
+  content: '\e9ac';
+}
+
+.senses-icons-actions-phone--block:before {
+  content: '\e6ad';
+}
+
+.senses-icons-actions-explore:before {
+  content: '\e7ad';
+}
+
+.senses-icons-actions-mac--shift:before {
+  content: '\e8ad';
+}
+
+.senses-icons-person-user--role:before {
+  content: '\e9ad';
+}
+
+.senses-icons-actions-pause-future:before {
+  content: '\e6ae';
+}
+
+.senses-icons-organization-double-integer:before {
+  content: '\e7ae';
+}
+
+.senses-icons-actions-exit:before {
+  content: '\e8ae';
+}
+
+.senses-icons-actions-power:before {
+  content: '\e9ae';
+}
+
+.senses-icons-actions-drag--horizontal:before {
+  content: '\e6af';
+}
+
+.senses-icons-actions-close:before {
+  content: '\e7af';
+}
+
+.senses-icons-actions-skip--back:before {
+  content: '\e8af';
+}
+
+.senses-icons-actions-trophy:before {
+  content: '\e9af';
+}
+
+.senses-icons-person-hearing:before {
+  content: '\e6b0';
+}
+
+.senses-icons-organization-virtual-column:before {
+  content: '\e7b0';
+}
+
+.senses-icons-organization-archive:before {
+  content: '\e8b0';
+}
+
+.senses-icons-actions-send:before {
+  content: '\e9b0';
+}
+
+.senses-icons-organization-stem-leaf-plot:before {
+  content: '\e6b1';
+}
+
+.senses-icons-actions-volume--down--filled--alt:before {
+  content: '\e7b1';
+}
+
+.senses-icons-planning-crossroads:before {
+  content: '\e8b1';
+}
+
+.senses-icons-organization-chart--bar:before {
+  content: '\e9b1';
+}
+
+.senses-icons-person-accessibility--color--filled:before {
+  content: '\e6b2';
+}
+
+.senses-icons-actions-center--circle:before {
+  content: '\e7b2';
+}
+
+.senses-icons-planning-airline--manage-gates:before {
+  content: '\e8b2';
+}
+
+.senses-icons-organization-column-dependency:before {
+  content: '\e9b2';
+}
+
+.senses-icons-planning-pressure--filled:before {
+  content: '\e6b3';
+}
+
+.senses-icons-actions-phone--off--filled:before {
+  content: '\e7b3';
+}
+
+.senses-icons-organization-interactions:before {
+  content: '\e8b3';
+}
+
+.senses-icons-planning-cloud:before {
+  content: '\e9b3';
+}
+
+.senses-icons-planning-theater:before {
+  content: '\e6b4';
+}
+
+.senses-icons-organization-row--collapse:before {
+  content: '\e7b4';
+}
+
+.senses-icons-organization-chart--population:before {
+  content: '\e8b4';
+}
+
+.senses-icons-actions-bookmark--filled:before {
+  content: '\e9b4';
+}
+
+.senses-icons-organization-tree-view:before {
+  content: '\e6b5';
+}
+
+.senses-icons-actions-zoom--area:before {
+  content: '\e7b5';
+}
+
+.senses-icons-planning-forecast--lightning-30:before {
+  content: '\e8b5';
+}
+
+.senses-icons-planning-time:before {
+  content: '\e9b5';
+}
+
+.senses-icons-actions-text--kerning:before {
+  content: '\e6b6';
+}
+
+.senses-icons-actions-pause--filled:before {
+  content: '\e7b6';
+}
+
+.senses-icons-planning-navaid--tacan:before {
+  content: '\e8b6';
+}
+
+.senses-icons-organization-circle--filled:before {
+  content: '\e9b6';
+}
+
+.senses-icons-organization-chart--line:before {
+  content: '\e6b7';
+}
+
+.senses-icons-actions-star--filled:before {
+  content: '\e7b7';
+}
+
+.senses-icons-actions-tag:before {
+  content: '\e8b7';
+}
+
+.senses-icons-actions-no-image:before {
+  content: '\e9b7';
+}
+
+.senses-icons-organization-text-mining--applier:before {
+  content: '\e6b8';
+}
+
+.senses-icons-organization-chart--bar-stacked:before {
+  content: '\e7b8';
+}
+
+.senses-icons-actions-drill-through:before {
+  content: '\e8b8';
+}
+
+.senses-icons-organization-sys-provision:before {
+  content: '\e9b8';
+}
+
+.senses-icons-actions-attachment:before {
+  content: '\e6b9';
+}
+
+.senses-icons-planning-weather-station:before {
+  content: '\e7b9';
+}
+
+.senses-icons-organization-data--format:before {
+  content: '\e8b9';
+}
+
+.senses-icons-actions-thumbs-up:before {
+  content: '\e9b9';
+}
+
+.senses-icons-planning-direction--right--02--filled:before {
+  content: '\e6ba';
+}
+
+.senses-icons-actions-operations--field:before {
+  content: '\e7ba';
+}
+
+.senses-icons-planning-map:before {
+  content: '\e8ba';
+}
+
+.senses-icons-actions-chat:before {
+  content: '\e9ba';
+}
+
+.senses-icons-organization-chart--stacked:before {
+  content: '\e6bb';
+}
+
+.senses-icons-planning-palm-tree:before {
+  content: '\e7bb';
+}
+
+.senses-icons-organization-activity:before {
+  content: '\e8bb';
+}
+
+.senses-icons-organization-data-class:before {
+  content: '\e9bb';
+}
+
+.senses-icons-actions-arrows--horizontal:before {
+  content: '\e6bc';
+}
+
+.senses-icons-planning-ice--vision:before {
+  content: '\e7bc';
+}
+
+.senses-icons-person-face--cool:before {
+  content: '\e8bc';
+}
+
+.senses-icons-actions-minimize:before {
+  content: '\e9bc';
+}
+
+.senses-icons-actions-link:before {
+  content: '\e6bd';
+}
+
+.senses-icons-actions-chevron--sort--down:before {
+  content: '\e7bd';
+}
+
+.senses-icons-person-touch--1:before {
+  content: '\e8bd';
+}
+
+.senses-icons-planning-fire:before {
+  content: '\e9bd';
+}
+
+.senses-icons-organization-flow--stream--reference:before {
+  content: '\e6be';
+}
+
+.senses-icons-actions-trophy--filled:before {
+  content: '\e7be';
+}
+
+.senses-icons-planning-harbor:before {
+  content: '\e8be';
+}
+
+.senses-icons-actions-next--filled:before {
+  content: '\e9be';
+}
+
+.senses-icons-actions-phone--filled:before {
+  content: '\e6bf';
+}
+
+.senses-icons-organization-chart--bar-overlay:before {
+  content: '\e7bf';
+}
+
+.senses-icons-person-face--add:before {
+  content: '\e8bf';
+}
+
+.senses-icons-person-face--mask:before {
+  content: '\e9bf';
+}
+
+.senses-icons-actions-open-panel--bottom:before {
+  content: '\e6c0';
+}
+
+.senses-icons-actions-paint-brush:before {
+  content: '\e7c0';
+}
+
+.senses-icons-organization-chart--error-bar--alt:before {
+  content: '\e8c0';
+}
+
+.senses-icons-actions-align-box--middle-center:before {
+  content: '\e9c0';
+}
+
+.senses-icons-planning-ref-evapotranspiration:before {
+  content: '\e6c1';
+}
+
+.senses-icons-actions-up-to-top:before {
+  content: '\e7c1';
+}
+
+.senses-icons-actions-rotate--counterclockwise--alt--filled:before {
+  content: '\e8c1';
+}
+
+.senses-icons-organization-calculation:before {
+  content: '\e9c1';
+}
+
+.senses-icons-actions-column--delete:before {
+  content: '\e6c2';
+}
+
+.senses-icons-actions-sort--descending:before {
+  content: '\e7c2';
+}
+
+.senses-icons-organization-chart--column:before {
+  content: '\e8c2';
+}
+
+.senses-icons-person-user--filled:before {
+  content: '\e9c2';
+}
+
+.senses-icons-person-gender--male:before {
+  content: '\e6c3';
+}
+
+.senses-icons-actions-add-comment:before {
+  content: '\e7c3';
+}
+
+.senses-icons-planning-shuttle:before {
+  content: '\e8c3';
+}
+
+.senses-icons-actions-checkbox--checked:before {
+  content: '\e9c3';
+}
+
+.senses-icons-organization-sankey-diagram--alt:before {
+  content: '\e6c4';
+}
+
+.senses-icons-planning-direction--right--01--filled:before {
+  content: '\e7c4';
+}
+
+.senses-icons-actions-volume--mute--filled:before {
+  content: '\e8c4';
+}
+
+.senses-icons-planning-partly-cloudy--night:before {
+  content: '\e9c4';
+}
+
+.senses-icons-actions-rotate--clockwise--alt:before {
+  content: '\e6c5';
+}
+
+.senses-icons-actions-stop--outline:before {
+  content: '\e7c5';
+}
+
+.senses-icons-actions-request-quote:before {
+  content: '\e8c5';
+}
+
+.senses-icons-actions-percentage:before {
+  content: '\e9c5';
+}
+
+.senses-icons-actions-thumbnail--2:before {
+  content: '\e6c6';
+}
+
+.senses-icons-organization-sankey-diagram:before {
+  content: '\e7c6';
+}
+
+.senses-icons-actions-play--outline:before {
+  content: '\e8c6';
+}
+
+.senses-icons-person-person--favorite:before {
+  content: '\e9c6';
+}
+
+.senses-icons-person-user-profile--alt:before {
+  content: '\e6c7';
+}
+
+.senses-icons-actions-row--insert:before {
+  content: '\e7c7';
+}
+
+.senses-icons-planning-campsite:before {
+  content: '\e8c7';
+}
+
+.senses-icons-actions-radio-button--checked:before {
+  content: '\e9c7';
+}
+
+.senses-icons-actions-page-break:before {
+  content: '\e6c8';
+}
+
+.senses-icons-planning-direction--bear-right--02:before {
+  content: '\e7c8';
+}
+
+.senses-icons-actions-align-box--bottom-right:before {
+  content: '\e8c8';
+}
+
+.senses-icons-actions-open-panel--filled--top:before {
+  content: '\e9c8';
+}
+
+.senses-icons-organization-calendar--heat-map:before {
+  content: '\e6c9';
+}
+
+.senses-icons-actions-text--subscript:before {
+  content: '\e7c9';
+}
+
+.senses-icons-actions-flag--filled:before {
+  content: '\e8c9';
+}
+
+.senses-icons-actions-open-panel--filled--left:before {
+  content: '\e9c9';
+}
+
+.senses-icons-organization-chart--relationship:before {
+  content: '\e6ca';
+}
+
+.senses-icons-organization-diagram:before {
+  content: '\e7ca';
+}
+
+.senses-icons-planning-hourglass:before {
+  content: '\e8ca';
+}
+
+.senses-icons-planning-globe:before {
+  content: '\e9ca';
+}
+
+.senses-icons-actions-text--indent--more:before {
+  content: '\e6cb';
+}
+
+.senses-icons-actions-text--italic:before {
+  content: '\e7cb';
+}
+
+.senses-icons-actions-switcher:before {
+  content: '\e8cb';
+}
+
+.senses-icons-person-user--activity:before {
+  content: '\e9cb';
+}
+
+.senses-icons-organization-chart--median:before {
+  content: '\e6cc';
+}
+
+.senses-icons-actions-video--off:before {
+  content: '\e7cc';
+}
+
+.senses-icons-actions-paint-brush--alt:before {
+  content: '\e8cc';
+}
+
+.senses-icons-actions-chat--launch:before {
+  content: '\e9cc';
+}
+
+.senses-icons-actions-stop--filled:before {
+  content: '\e6cd';
+}
+
+.senses-icons-actions-drop-photo--filled:before {
+  content: '\e7cd';
+}
+
+.senses-icons-person-user--profile:before {
+  content: '\e8cd';
+}
+
+.senses-icons-planning-rain-drop:before {
+  content: '\e9cd';
+}
+
+.senses-icons-actions-skip--forward:before {
+  content: '\e6ce';
+}
+
+.senses-icons-organization-decision-tree:before {
+  content: '\e7ce';
+}
+
+.senses-icons-actions-checkbox--indeterminate:before {
+  content: '\e8ce';
+}
+
+.senses-icons-planning-outlook-severe:before {
+  content: '\e9ce';
+}
+
+.senses-icons-planning-sun:before {
+  content: '\e6cf';
+}
+
+.senses-icons-planning-plane:before {
+  content: '\e7cf';
+}
+
+.senses-icons-actions-view--off:before {
+  content: '\e8cf';
+}
+
+.senses-icons-actions-chevron--left:before {
+  content: '\e9cf';
+}
+
+.senses-icons-organization-flow--connection:before {
+  content: '\e6d0';
+}
+
+.senses-icons-actions-align-box--top-right:before {
+  content: '\e7d0';
+}
+
+.senses-icons-actions-pen--fountain:before {
+  content: '\e8d0';
+}
+
+.senses-icons-actions-chevron--right:before {
+  content: '\e9d0';
+}
+
+.senses-icons-actions-chevron--down:before {
+  content: '\e6d1';
+}
+
+.senses-icons-actions-distribute--vertical-top:before {
+  content: '\e7d1';
+}
+
+.senses-icons-organization-covariate:before {
+  content: '\e8d1';
+}
+
+.senses-icons-organization-virtual-private-cloud--alt:before {
+  content: '\e9d1';
+}
+
+.senses-icons-actions-light:before {
+  content: '\e6d2';
+}
+
+.senses-icons-organization-name-space:before {
+  content: '\e7d2';
+}
+
+.senses-icons-organization-time-plot:before {
+  content: '\e8d2';
+}
+
+.senses-icons-actions-filter--edit:before {
+  content: '\e9d2';
+}
+
+.senses-icons-actions-subtract--alt:before {
+  content: '\e6d3';
+}
+
+.senses-icons-actions-grid:before {
+  content: '\e7d3';
+}
+
+.senses-icons-planning-forecast--hail-30:before {
+  content: '\e8d3';
+}
+
+.senses-icons-actions-renew:before {
+  content: '\e9d3';
+}
+
+.senses-icons-actions-notification--new:before {
+  content: '\e6d4';
+}
+
+.senses-icons-actions-text--new-line:before {
+  content: '\e7d4';
+}
+
+.senses-icons-actions-list--bulleted:before {
+  content: '\e8d4';
+}
+
+.senses-icons-actions-play:before {
+  content: '\e9d4';
+}
+
+.senses-icons-actions-close--outline:before {
+  content: '\e6d5';
+}
+
+.senses-icons-person-face--satisfied:before {
+  content: '\e7d5';
+}
+
+.senses-icons-organization-data--unstructured:before {
+  content: '\e8d5';
+}
+
+.senses-icons-actions-microphone--filled:before {
+  content: '\e9d5';
+}
+
+.senses-icons-actions-filter--remove:before {
+  content: '\e6d6';
+}
+
+.senses-icons-actions-text--align--center:before {
+  content: '\e7d6';
+}
+
+.senses-icons-organization-character-patterns:before {
+  content: '\e8d6';
+}
+
+.senses-icons-organization-chart--3D:before {
+  content: '\e9d6';
+}
+
+.senses-icons-organization-data-refinery:before {
+  content: '\e6d7';
+}
+
+.senses-icons-planning-direction--loop-right--filled:before {
+  content: '\e7d7';
+}
+
+.senses-icons-organization-storage-request:before {
+  content: '\e8d7';
+}
+
+.senses-icons-organization-chart--bubble-packed:before {
+  content: '\e9d7';
+}
+
+.senses-icons-organization-skill-level:before {
+  content: '\e6d8';
+}
+
+.senses-icons-person-sight:before {
+  content: '\e7d8';
+}
+
+.senses-icons-planning-arrival:before {
+  content: '\e8d8';
+}
+
+.senses-icons-planning-ice--accretion:before {
+  content: '\e9d8';
+}
+
+.senses-icons-person-user--follow:before {
+  content: '\e6d9';
+}
+
+.senses-icons-person-smell:before {
+  content: '\e7d9';
+}
+
+.senses-icons-actions-chevron--sort--up:before {
+  content: '\e8d9';
+}
+
+.senses-icons-organization-object-storage:before {
+  content: '\e9d9';
+}
+
+.senses-icons-actions-arrow-shift-down:before {
+  content: '\e6da';
+}
+
+.senses-icons-actions-trash-can:before {
+  content: '\e7da';
+}
+
+.senses-icons-actions-zoom--out:before {
+  content: '\e8da';
+}
+
+.senses-icons-planning-flood--warning:before {
+  content: '\e9da';
+}
+
+.senses-icons-actions-shuffle:before {
+  content: '\e6db';
+}
+
+.senses-icons-actions-query:before {
+  content: '\e7db';
+}
+
+.senses-icons-organization-chart--marimekko:before {
+  content: '\e8db';
+}
+
+.senses-icons-actions-reflect--vertical:before {
+  content: '\e9db';
+}
+
+.senses-icons-organization-visual-recognition:before {
+  content: '\e6dc';
+}
+
+.senses-icons-actions-text--underline:before {
+  content: '\e7dc';
+}
+
+.senses-icons-organization-data--view:before {
+  content: '\e8dc';
+}
+
+.senses-icons-actions-brightness-contrast:before {
+  content: '\e9dc';
+}
+
+.senses-icons-organization-chart--area-stepper:before {
+  content: '\e6dd';
+}
+
+.senses-icons-actions-carousel--vertical:before {
+  content: '\e7dd';
+}
+
+.senses-icons-organization-data--base:before {
+  content: '\e8dd';
+}
+
+.senses-icons-planning-cafe:before {
+  content: '\e9dd';
+}
+
+.senses-icons-actions-skip--forward--outline--solid:before {
+  content: '\e6de';
+}
+
+.senses-icons-planning-reminder:before {
+  content: '\e7de';
+}
+
+.senses-icons-organization-managed-solutions:before {
+  content: '\e8de';
+}
+
+.senses-icons-planning-storm-tracker:before {
+  content: '\e9de';
+}
+
+.senses-icons-actions-rotate--counterclockwise--alt:before {
+  content: '\e6df';
+}
+
+.senses-icons-actions-view--mode-2:before {
+  content: '\e7df';
+}
+
+.senses-icons-actions-phone--incoming--filled:before {
+  content: '\e8df';
+}
+
+.senses-icons-organization-data-collection:before {
+  content: '\e9df';
+}
+
+.senses-icons-actions-drop-photo:before {
+  content: '\e6e0';
+}
+
+.senses-icons-actions-collapse-all:before {
+  content: '\e7e0';
+}
+
+.senses-icons-actions-list--numbered:before {
+  content: '\e8e0';
+}
+
+.senses-icons-actions-redo:before {
+  content: '\e9e0';
+}
+
+.senses-icons-organization-parent-child:before {
+  content: '\e6e1';
+}
+
+.senses-icons-actions-carousel--horizontal:before {
+  content: '\e7e1';
+}
+
+.senses-icons-planning-stay-inside:before {
+  content: '\e8e1';
+}
+
+.senses-icons-actions-drill-back:before {
+  content: '\e9e1';
+}
+
+.senses-icons-person-user--avatar--filled:before {
+  content: '\e6e2';
+}
+
+.senses-icons-actions-locked:before {
+  content: '\e7e2';
+}
+
+.senses-icons-actions-arrow--left:before {
+  content: '\e8e2';
+}
+
+.senses-icons-actions-align--vertical-bottom:before {
+  content: '\e9e2';
+}
+
+.senses-icons-actions-border--full:before {
+  content: '\e6e3';
+}
+
+.senses-icons-planning-haze--night:before {
+  content: '\e7e3';
+}
+
+.senses-icons-actions-align--horizontal-right:before {
+  content: '\e8e3';
+}
+
+.senses-icons-planning-direction--fork--filled:before {
+  content: '\e9e3';
+}
+
+.senses-icons-actions-volume--up--alt:before {
+  content: '\e6e4';
+}
+
+.senses-icons-planning-direction--rotary--right--filled:before {
+  content: '\e7e4';
+}
+
+.senses-icons-planning-cyclist:before {
+  content: '\e8e4';
+}
+
+.senses-icons-planning-worship:before {
+  content: '\e9e4';
+}
+
+.senses-icons-planning-direction--right--02:before {
+  content: '\e6e5';
+}
+
+.senses-icons-person-cough:before {
+  content: '\e7e5';
+}
+
+.senses-icons-planning-police:before {
+  content: '\e8e5';
+}
+
+.senses-icons-actions-add:before {
+  content: '\e9e5';
+}
+
+.senses-icons-organization-network--1:before {
+  content: '\e6e6';
+}
+
+.senses-icons-actions-edit--off:before {
+  content: '\e7e6';
+}
+
+.senses-icons-planning-moonrise:before {
+  content: '\e8e6';
+}
+
+.senses-icons-planning-location:before {
+  content: '\e9e6';
+}
+
+.senses-icons-planning-navaid--military:before {
+  content: '\e7e7';
+}
+
+.senses-icons-organization-heat-map--03:before {
+  content: '\e8e7';
+}
+
+.senses-icons-planning-direction--merge:before {
+  content: '\e9e7';
+}
+
+.senses-icons-organization-factor:before {
+  content: '\e6e8';
+}
+
+.senses-icons-actions-list:before {
+  content: '\e7e8';
+}
+
+.senses-icons-planning-alarm--add:before {
+  content: '\e8e8';
+}
+
+.senses-icons-actions-flash--filled:before {
+  content: '\e9e8';
+}
+
+.senses-icons-person-user--data:before {
+  content: '\e6e9';
+}
+
+.senses-icons-planning-flight--roster:before {
+  content: '\e7e9';
+}
+
+.senses-icons-actions-undo:before {
+  content: '\e8e9';
+}
+
+.senses-icons-organization-presentation-file:before {
+  content: '\e9e9';
+}
+
+.senses-icons-planning-earth:before {
+  content: '\e6ea';
+}
+
+.senses-icons-actions-video--add:before {
+  content: '\e7ea';
+}
+
+.senses-icons-actions-sort--ascending:before {
+  content: '\e8ea';
+}
+
+.senses-icons-actions-layers:before {
+  content: '\e9ea';
+}
+
+.senses-icons-person-face--dissatisfied--filled:before {
+  content: '\e6eb';
+}
+
+.senses-icons-actions-function-math:before {
+  content: '\e7eb';
+}

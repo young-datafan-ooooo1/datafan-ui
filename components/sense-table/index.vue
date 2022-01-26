@@ -7,7 +7,7 @@
  * 4. 少于最小页面展示条数时，自动隐藏分页器  -  autoHidePager
  * 5. 空数据模版配置  - emptyConfig
  * @Date: 2021-11-28 13:50:03
- * @LastEditTime: 2021-12-01 10:37:14
+ * @LastEditTime: 2022-01-21 18:46:11
 -->
 
 <template>
@@ -51,6 +51,7 @@ const PAGERCONFIG = {
   currentPage: 1, // 当前页
   pageSize: 10, // 当前页码
   pageSizes: [10, 20, 50, 100], // 页面展示条数选择范围
+  pagerCount: 5,
   layouts: ['Total', 'PrevPage', 'JumpNumber', 'NextPage', 'Sizes', 'FullJump'] // 分页器配置
 }
 // 空状态默认配置

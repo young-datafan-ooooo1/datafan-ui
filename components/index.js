@@ -1,18 +1,19 @@
 import SenseTable from './sense-table/index.vue'
 import Empty from './empty/index.vue'
 import { PageTitle, PageHandle, PageHandleItem } from './page-table'
+import { Navigation } from './navigation-slider'
 import { matchPermission } from '../utils/match-permission'
 
 function install(Vue) {
   if (install.installed) return
   install.installed = true
 
-  Vue.component('STable', STable)
   Vue.component('SenseTable', SenseTable)
   Vue.component('Empty', Empty)
   Vue.component('SPageTitle', PageTitle)
   Vue.component('SPageHandle', PageHandle)
   Vue.component('SPageHandleItem', PageHandleItem)
+  Vue.component('SNavigation', Navigation)
 
   Vue.directive('permission', (el, binding, vnode) => {
     if (binding.value && !matchPermission(binding.value)) {
