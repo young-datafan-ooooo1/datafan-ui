@@ -5,7 +5,7 @@
 -->
 <template>
   <div class="empty" :style="`color: ${color}`">
-    <img class="empty__img" :src="emptyImg" :alt="text" draggable="false" />
+    <img class="empty__img" :src="emptyImg" :alt="text" draggable="false">
     <p v-if="text" class="empty__text">{{ text }}</p>
     <p v-if="description" class="empty__description">{{ description }}</p>
   </div>
@@ -46,7 +46,7 @@ export default {
 .empty {
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #aaaaaa;
+  color: #AAAAAA;
   .empty__img {
     min-width: 90px;
     width: 25%;
@@ -57,8 +57,7 @@ export default {
   &__description {
     margin: 5px 0 0 0;
   }
-  &__text,
-  &__description {
+  &__text, &__description {
     font-weight: 400;
     line-height: 1;
   }

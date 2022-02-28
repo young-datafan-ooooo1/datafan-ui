@@ -29,11 +29,10 @@ export default {
     line-height: 38px;
   }
   /* 下拉框样式 */
-  & > .ant-select {
+  & > .ant-select{
     width: 180px;
     border-radius: 6px;
-    /deep/ .ant-select-selection,
-    /deep/ .ant-select-selection__rendered {
+    /deep/ .ant-select-selection, /deep/ .ant-select-selection__rendered {
       height: 40px;
       border-radius: 6px;
       line-height: 38px;
@@ -49,7 +48,7 @@ export default {
     }
   }
   /* 按钮样式 */
-  & > button {
+   & > button {
     padding-right: 10px;
     padding-left: 10px;
     min-width: 70px;

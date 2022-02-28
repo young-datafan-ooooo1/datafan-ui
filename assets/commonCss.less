@@ -1,0 +1,74 @@
+@import url('./scrollbar.less');
+@import url('./sense-tree.less');
+@import url('./sense-title.less');
+@import url('./sense-tabs.less');
+// 更多按钮弹出框样式
+.more-popover.ant-popover {
+  &.ant-popover-placement-top {
+    .ant-popover-content {
+      .ant-popover-arrow {
+        bottom: 16px;
+        background: #fff;
+        box-shadow: -1px -1px 1px #f9b6a1;
+        transform: rotate(225deg);
+        transform-origin: bottom;
+      }
+    }
+  }
+  &.ant-popover-placement-bottom {
+    .ant-popover-content {
+      .ant-popover-arrow {
+        top: 8px;
+        background: #fff;
+        box-shadow: -1px -1px 1px #f9b6a1;
+      }
+    }
+  }
+  .ant-popover-inner {
+    border: 1px solid #f9b6a1;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px 0px rgb(28 41 90 / 4%);
+  }
+  .ant-popover-inner-content {
+    padding: 5px;
+  }
+}
+/* 更多操作按钮弹出层-列表样式 */
+.more-content {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    height: 28px;
+    color: #f36f4e;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    &:hover {
+      background-color: #fffbf7;
+    }
+    & + li {
+      margin-top: 5px;
+    }
+  }
+}
+
+
+@light-yellow: #fff6ec;
+
+// 低版本浏览器样式兼容
+a[type=button], span[type=button] {
+  appearance: none;
+}
+
+// 下拉框在loading时屏蔽value显示值
+.ant-select.ant-select-loading {
+  .ant-select-selection-selected-value {
+    opacity: 0 !important;
+    transition: all .3s;
+  }
+}

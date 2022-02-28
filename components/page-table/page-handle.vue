@@ -39,8 +39,8 @@ export default {
 
 <style scoped lang="less">
 .page-handle {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top:10px;
+  margin-bottom:10px;
   display: flex;
   align-items: center;
   &__gap {

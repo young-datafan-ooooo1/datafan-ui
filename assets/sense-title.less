@@ -1,0 +1,64 @@
+/**
+ * @description: 标题样式
+ */
+ .sense-title{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  height: 36px;
+  font-weight: 500;
+  line-height: 36px;
+
+  &::before{
+    margin-right: 10px;
+    width: 3px;
+    height: 16px;
+    border-radius: 1px;
+    background: #F36F4E;
+    content: '';
+  }
+
+  &::after{
+    color: #5A6373;
+    content:attr(title);
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  &[size=small]::before{
+    margin-right: 10px;
+    width: 2px;
+    height: 14px;
+    border-radius: 1px;
+    background: #F36F4E;
+    content: '';
+  }
+
+  &[size=small]::after{
+    color: #5A6373;
+    content:attr(title);
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  &[size=max]::before{
+    margin-right: 10px;
+    width: 4px;
+    height: 18px;
+    border-radius: 1px;
+    background: #F36F4E;
+    content: '';
+  }
+  &[size=max]::after{
+    color: #5A6373;
+    content:attr(title);
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+}
