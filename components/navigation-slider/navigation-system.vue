@@ -3,7 +3,8 @@
     <s-page-title :title="menuData[0]" class="mx-6 mt-2"> </s-page-title>
     <div class="flex flex-wrap content-menu">
       <div
-        class="block-menu w-56 h-10 rounded px-4 py-2 mx-6 my-1 items-center cursor-pointer flex justify-between"
+        class="block-menu w-56 h-10 rounded px-4 py-2 mx-6 my-1 
+        items-center cursor-pointer flex justify-between"
         v-for="(menu, index) in menuData.slice(1, menuData.length)"
         :key="index"
         @click="open_url(menu)"
@@ -16,7 +17,7 @@
                 menu.icon ? menu.icon : 'actions-shape--except'
               } `,
               'text-gray-400',
-              'mr-5'
+              'mr-5',
             ]"
           />
           <span class="font-menu">{{ menu.nodeName }}</span>
@@ -29,7 +30,7 @@
               favorite.map((i) => i.nodeEnName).includes(menu.nodeEnName)
                 ? 'text-yellow-400 opacity-100'
                 : 'text-gray-400 opacity-0',
-              'star'
+              'star',
             ]"
         /></span>
       </div>
@@ -42,11 +43,11 @@ export default {
   name: 'NavigationSystem',
   props: {
     menuData: {
-      type: Array
+      type: Array,
     },
     favorite: {
-      type: Array
-    }
+      type: Array,
+    },
   },
   // created() {
   //   this.favorite = JSON.parse(localStorage.getItem('components.favorite') ?? '[]')
@@ -57,8 +58,8 @@ export default {
     },
     dispatch_favorite(menu) {
       this.$emit('dispatch_favorite', menu)
-    }
-  }
+    },
+  },
 }
 </script>
 

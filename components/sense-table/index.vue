@@ -7,7 +7,7 @@
  * 4. 少于最小页面展示条数时，自动隐藏分页器  -  autoHidePager
  * 5. 空数据模版配置  - emptyConfig
  * @Date: 2021-11-28 13:50:03
- * @LastEditTime: 2022-01-21 18:46:11
+ * @LastEditTime: 2022-02-17 18:24:01
 -->
 
 <template>
@@ -37,7 +37,7 @@
         @page-change="handlePageChange"
       />
     </template>
-    <!-- 空数据 -->
+     <!-- 空数据 -->
     <template #empty>
       <Empty v-bind="emptyConfig" />
     </template>
@@ -45,41 +45,48 @@
 </template>
 
 <script>
+
 // 分页默认配置
-const PAGERCONFIG = {
-  total: 0, // 总条数
-  currentPage: 1, // 当前页
-  pageSize: 10, // 当前页码
-  pageSizes: [10, 20, 50, 100], // 页面展示条数选择范围
-  pagerCount: 5,
-  layouts: ['Total', 'PrevPage', 'JumpNumber', 'NextPage', 'Sizes', 'FullJump'] // 分页器配置
+const GET_PAGERCONFIG = function() {
+  return {
+    total: 0, // 总条数
+    currentPage: 1, // 当前页
+    pageSize: 10, // 当前页码
+    pageSizes: [10, 20, 50, 100], // 页面展示条数选择范围
+    pagerCount: 5,
+    layouts: ['Total', 'PrevPage', 'JumpNumber', 'NextPage', 'Sizes', 'FullJump']// 分页器配置
+  }
 }
 // 空状态默认配置
-const EMPTYCONFIG = {
-  text: '暂无数据', // 提示标题
-  description: '', // 补充提示
-  color: '' // 提示字体颜色
+const GET_EMPTYCONFIG = function () {
+  return {
+    text: '暂无数据', // 提示标题
+    description: '', // 补充提示
+    color: '' // 提示字体颜色
+  }
 }
 
 // 表格默认配置
-const GRIDOPTIONS = {
-  data: undefined, // 表格数据
-  loading: false, // 加载状态
-  resizable: true, // 可拖动调整列
-  autoResize: true, // 自动响应大小
-  stripe: true, // 斑马纹
-  showHeaderOverflow: true, // 表格列头内容超出隐藏
-  showOverflow: true, // 表格内容超出隐藏
-  class: 'sense-table', // 表格类名
-  headerCellClassName: 'sense-table-header-cell', // 表格表头单元格类名
-  headerRowClassName: 'sense-table-header-row', // 表格表头行类名
-  cellClassName: 'sense-table-cell', // 表格单元格类名
-  rowClassName: 'sense-table-row', // 表格行类名
-  border: 'none', // 边框线 true | none
-  // 排序配置
-  sortConfig: {
-    trigger: 'cell', // 点击区域
-    remote: true // 是否远程
+const GET_GRIDOPTIONS = function() {
+ return {
+    data: undefined, // 表格数据
+    loading: false, // 加载状态
+    resizable: true, // 可拖动调整列
+    autoResize: true, // 自动响应大小
+    stripe: true, // 斑马纹
+    showHeaderOverflow: true, // 表格列头内容超出隐藏
+    showOverflow: true, // 表格内容超出隐藏
+    class: 'sense-table', // 表格类名
+    headerCellClassName: 'sense-table-header-cell', // 表格表头单元格类名
+    headerRowClassName: 'sense-table-header-row', // 表格表头行类名
+    cellClassName: 'sense-table-cell', // 表格单元格类名
+    rowClassName: 'sense-table-row', // 表格行类名
+    border: 'none', // 边框线 true | none
+    // 排序配置
+    sortConfig: {
+      trigger: 'cell', // 点击区域
+      remote: true // 是否远程
+    }
   }
 }
 
@@ -114,29 +121,29 @@ export default {
     // 分页器配置
     pagerConfig: {
       type: Object,
-      default: () => {}
+      default: ()=> {}
     },
     // 空数据配置
     emptyConfig: {
       type: Object,
-      default: () => {
-        return EMPTYCONFIG
+      default: ()=> {
+        return GET_EMPTYCONFIG()
       }
     }
   },
   data() {
     return {
       // 表格默认配置项
-      gridOptions: GRIDOPTIONS,
+      gridOptions: GET_GRIDOPTIONS(),
       // 生效的分页配置
-      effectPager: null
+      effectPager: null,
     }
   },
-  watch: {
+  watch:{
     // 监听pagerConfig，更新effectPager配置
     pagerConfig: {
       handler(val) {
-        this.effectPager = { ...PAGERCONFIG, ...val }
+        this.effectPager = { ...GET_PAGERCONFIG(), ...val }
       },
       deep: true,
       immediate: true
@@ -145,11 +152,7 @@ export default {
   computed: {
     // 是否展示分页
     showPager() {
-      return this.hidePager
-        ? false
-        : this.autoHidePager
-        ? this.effectPager.total > this.effectPager.pageSizes[0]
-        : true
+      return this.hidePager ? false : (this.autoHidePager ? this.effectPager.total > this.effectPager.pageSizes[0] : true)
     },
     // 是否api模式
     hasAPI() {
@@ -157,9 +160,7 @@ export default {
     },
     // 是否加载中
     isLoading() {
-      return _.isNil(this.$attrs.loading)
-        ? this.gridOptions.loading
-        : this.$attrs.loading
+      return _.isNil(this.$attrs.loading) ? this.gridOptions.loading : this.$attrs.loading
     }
   },
   created() {
@@ -187,14 +188,12 @@ export default {
       const { currentPage, pageSize } = this.effectPager
       params.page = currentPage
       params.pageSize = pageSize
-      this.api(params)
-        .then((res) => {
-          this.gridOptions.data = res.data?.content?.list
-          this.effectPager.total = res.data?.content?.total
-        })
-        .finally(() => {
-          this.gridOptions.loading = false
-        })
+      this.api(params).then(res => {
+        this.gridOptions.data = res.data?.content?.list
+        this.effectPager.total = res.data?.content?.total
+      }).finally(() => {
+        this.gridOptions.loading = false
+      })
     },
     /**
      * @description: 分页改变事件

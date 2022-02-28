@@ -8,6 +8,7 @@ $vxe-table-font-color: $vxe-font-color;
 $vxe-table-border-color: #e8eaec;
 $vxe-table-border-radius: 4px;
 
+
 @import 'vxe-table/styles/table.scss';
 @import 'vxe-table/styles/tooltip.scss';
 @import 'vxe-table/styles/column.scss';
@@ -34,7 +35,7 @@ $vxe-table-border-radius: 4px;
     flex: 1;
     padding: 0 15px;
     height: 0;
-    border: 1px solid #e9e9e9;
+    border: 1px solid #E9E9E9;
     border-radius: 6px;
     background: #ffffff;
     box-shadow: 0px 23px 44px 0px rgba(176, 183, 195, 0.14);
@@ -45,10 +46,10 @@ $vxe-table-border-radius: 4px;
 .sense-table {
   .vxe-table--render-default {
     .vxe-table--fixed-wrapper {
-      .vxe-table--fixed-left-wrapper {
+     .vxe-table--fixed-left-wrapper {
         box-shadow: 7px 0px 10px 0px rgb(195 183 176 / 24%);
       }
-      .vxe-table--fixed-right-wrapper {
+     .vxe-table--fixed-right-wrapper {
         box-shadow: -7px 0px 10px 0px rgb(195 183 176 / 24%);
       }
     }
@@ -100,15 +101,14 @@ $vxe-table-border-radius: 4px;
 }
 
 /* loading相关 */
-.vxe-grid .vxe-table--loading,
-.vxe-pager.is--loading:after {
-  background-color: rgba(255, 255, 255, 0.6);
+.vxe-grid .vxe-table--loading, .vxe-pager.is--loading:after {
+  background-color: rgba(255,255,255,0.6);
 }
 
 /* 分页相关 */
 .table-container {
   .vxe-pager {
-    border-top: 1px solid #eaeff0;
+    border-top: 1px solid #EAEFF0;
   }
 }
 .vxe-pager {
@@ -123,10 +123,6 @@ $vxe-table-border-radius: 4px;
     &.is--disabled {
       color: #dfe1e5;
     }
-  }
-  .vxe-pager--jump-prev,
-  .vxe-pager--jump-next {
-    appearance: none;
   }
 }
 

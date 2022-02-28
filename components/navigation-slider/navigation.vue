@@ -24,13 +24,13 @@
       :wrap-style="{
         position: 'fixed',
         top: '60px',
-        height: 'calc(100vh - 60px)'
+        height: 'calc(100vh - 60px)',
       }"
       :body-style="{
         padding: 0,
         display: 'flex',
         height: '100%',
-        overflow: 'hidden'
+        overflow: 'hidden',
       }"
       @close="headerBtnMenu = true"
       ><div class="flex">
@@ -56,7 +56,8 @@
               @click="open_url(menu)"
               v-for="(menu, index) in favorite"
               :key="index"
-              class="favorite_nav_button cursor-pointer select-none flex items-center justify-between my-2"
+              class="favorite_nav_button cursor-pointer select-none 
+              flex items-center justify-between my-2"
             >
               <div class="my-2 ml-6 inline-flex flex-shrink-1 overflow-hidden">
                 <i
@@ -64,7 +65,7 @@
                     'senses-icons favorite_font  mr-5',
                     `senses-icons-${
                       menu.icon ? menu.icon : 'actions-shape--except'
-                    } `
+                    } `,
                   ]"
                 />
                 <span class="favorite_font truncate">{{ menu.nodeName }}</span>
@@ -108,7 +109,7 @@ export default {
       headerBtnMenu: true, // 控制展开页的展开
       visibleRightPanel: true, // 展开页全部展开
       menuCategory: [],
-      favorite: [] // 收藏的栏目
+      favorite: [], // 收藏的栏目
     }
   },
   methods: {
@@ -160,7 +161,7 @@ export default {
     // 返回唯一id
     id_str(i) {
       return `{system:"${i.system}",nodeEnName:"${i.nodeEnName}"}`
-    }
+    },
   },
   created() {
     // 初始化提取localStorage的值
@@ -173,7 +174,7 @@ export default {
         : true
   },
   computed: {
-    ...mapState('components', ['menuNavigator'])
+    ...mapState('components', ['menuNavigator']),
   },
   mounted() {
     // 生成哈希表方便操作
@@ -205,28 +206,28 @@ export default {
     )
     const ceres_demand = _.compact([
       '需求平台',
-      hashMenu['{system:"ceres-demand",nodeEnName:"ceres-demand"}']
+      hashMenu['{system:"ceres-demand",nodeEnName:"ceres-demand"}'],
     ])
     const ceres_assets = _.compact([
       '资产平台',
-      hashMenu['{system:"ceres-assets",nodeEnName:"ceres-assets"}']
+      hashMenu['{system:"ceres-assets",nodeEnName:"ceres-assets"}'],
     ])
     const ceres_appliance = _.compact([
       '资产应用',
       hashMenu['{system:"ceres-data",nodeEnName:"ceres-data"}'],
       hashMenu['{system:"dataExplore",nodeEnName:"dataExplore"}'],
       hashMenu['{system:"dashboard",nodeEnName:"dashboard"}'],
-      hashMenu['{system:"massrelay-api",nodeEnName:"massrelay-api"}']
+      hashMenu['{system:"massrelay-api",nodeEnName:"massrelay-api"}'],
     ])
     const ai_platform = _.compact([
       'AI中台',
-      hashMenu['{system:"stella",nodeEnName:"aiPlatform"}']
+      hashMenu['{system:"stella",nodeEnName:"aiPlatform"}'],
     ])
     const assets_develop = _.compact([
       '资产开发',
       hashMenu['{system:"vulcan-assets-dev",nodeEnName:"vulcan-assets-dev"}'],
       hashMenu['{system:"Stella-Sailfish",nodeEnName:"Stella-Sailfish"}'],
-      hashMenu['{system:"stella",nodeEnName:"vqI"}']
+      hashMenu['{system:"stella",nodeEnName:"vqI"}'],
     ])
     const data_integration = _.compact([
       '数据集成',
@@ -234,13 +235,13 @@ export default {
       hashMenu['{system:"stella",nodeEnName:"dataExchange"}'],
       hashMenu['{system:"stella",nodeEnName:"bumbleBee"}'],
       hashMenu['{system:"stella",nodeEnName:"commander"}'],
-      hashMenu['{system:"stella",nodeEnName:"externalReport"}']
+      hashMenu['{system:"stella",nodeEnName:"externalReport"}'],
     ])
     const portal = _.compact([
       '门户管理',
       hashMenu['{system:"stella",nodeEnName:"model"}'],
       hashMenu['{system:"stella",nodeEnName:"online"}'],
-      hashMenu['{system:"stella",nodeEnName:"system"}']
+      hashMenu['{system:"stella",nodeEnName:"system"}'],
     ])
     const _menuCategory = [
       ceres_demand,
@@ -249,7 +250,7 @@ export default {
       ai_platform,
       assets_develop,
       data_integration,
-      portal
+      portal,
     ].filter((i) => i.length > 1)
     this.menuCategory = _menuCategory
 
@@ -265,7 +266,7 @@ export default {
     this.favorite = prefixFavorite
     localStorage.setItem('components.favorite', JSON.stringify(prefixFavorite))
     this.$forceUpdate()
-  }
+  },
 }
 </script>
 

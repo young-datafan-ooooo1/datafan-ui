@@ -1,7 +1,9 @@
 import SenseTable from './sense-table/index.vue'
 import Empty from './empty/index.vue'
+import SenseDictSelect from './sense-dict-select/index.vue'
+import Resizable from './resizable'
 import { PageTitle, PageHandle, PageHandleItem } from './page-table'
-import { Navigation } from './navigation-slider'
+import Navigation from './navigation-slider'
 import { matchPermission } from '../utils/match-permission'
 
 function install(Vue) {
@@ -10,10 +12,12 @@ function install(Vue) {
 
   Vue.component('SenseTable', SenseTable)
   Vue.component('Empty', Empty)
+  Vue.component('SenseDictSelect', SenseDictSelect)
   Vue.component('SPageTitle', PageTitle)
   Vue.component('SPageHandle', PageHandle)
   Vue.component('SPageHandleItem', PageHandleItem)
   Vue.component('SNavigation', Navigation)
+  Vue.component('SResizable', Resizable)
 
   Vue.directive('permission', (el, binding, vnode) => {
     if (binding.value && !matchPermission(binding.value)) {
@@ -42,8 +46,6 @@ function install(Vue) {
   })
 }
 
-const Plugins = {
-  install: install
-}
+const Plugins = { install }
 
 export default Plugins

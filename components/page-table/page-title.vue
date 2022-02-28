@@ -32,35 +32,35 @@ export default {
   align-items: center;
   justify-content: space-between;
   height: 36px;
-  &__label {
-    display: flex;
-    align-items: center;
-    color: #44454d;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
-    &::before {
-      margin-right: 15px;
-      width: 4px;
-      height: 16px;
-      border-radius: 2px;
-      background: #f36f4e;
-      content: '';
-    }
-  }
-  &__action {
-    .ant-btn {
-      padding-right: 15px;
-      padding-left: 15px;
-      height: 36px;
-      border-radius: 6px;
+    &__label {
+      display: flex;
+      align-items: center;
+      color: #44454D;
       font-weight: 500;
-      font-size: 14px;
-      line-height: 1.25;
-      & + .ant-btn {
-        margin-left: 10px;
+      font-size: 16px;
+      line-height: 22px;
+      &::before {
+        margin-right: 15px;
+        width: 4px;
+        height: 16px;
+        border-radius: 2px;
+        background: #F36F4E;
+        content: '';
+      }
+    }
+    &__action {
+      .ant-btn {
+        padding-right: 15px;
+        padding-left: 15px;
+        height: 36px;
+        border-radius: 6px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.25;
+        & + .ant-btn {
+          margin-left: 10px;
+        }
       }
     }
   }
-}
 </style>
