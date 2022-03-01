@@ -1,9 +1,16 @@
+/*
+ * @Description: 组件/指令安装注册
+ * @Date: 2022-03-01 15:14:22
+ * @LastEditTime: 2022-03-01 15:43:32
+ */
 import SenseTable from './sense-table/index.vue'
 import Empty from './empty/index.vue'
 import SenseDictSelect from './sense-dict-select/index.vue'
 import Resizable from './resizable'
 import { PageTitle, PageHandle, PageHandleItem } from './page-table'
 import Navigation from './navigation-slider'
+import TransferModal from './transfer-modal'
+
 import { matchPermission } from '../utils/match-permission'
 
 function install(Vue) {
@@ -18,7 +25,8 @@ function install(Vue) {
   Vue.component('SPageHandleItem', PageHandleItem)
   Vue.component('SNavigation', Navigation)
   Vue.component('SResizable', Resizable)
-
+  Vue.component('STransferModal', TransferModal)
+  
   Vue.directive('permission', (el, binding, vnode) => {
     if (binding.value && !matchPermission(binding.value)) {
       const commentElm = document.createComment(binding.value)
