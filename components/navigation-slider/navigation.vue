@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="showNavigation">
     <!-- 按钮 -->
     <div
       class="admin-header__all-btn"
@@ -24,13 +24,13 @@
       :wrap-style="{
         position: 'fixed',
         top: '60px',
-        height: 'calc(100vh - 60px)',
+        height: 'calc(100vh - 60px)'
       }"
       :body-style="{
         padding: 0,
         display: 'flex',
         height: '100%',
-        overflow: 'hidden',
+        overflow: 'hidden'
       }"
       @close="headerBtnMenu = true"
       ><div class="flex">
@@ -56,8 +56,7 @@
               @click="open_url(menu)"
               v-for="(menu, index) in favorite"
               :key="index"
-              class="favorite_nav_button cursor-pointer select-none 
-              flex items-center justify-between my-2"
+              class="favorite_nav_button cursor-pointer select-none flex items-center justify-between my-2"
             >
               <div class="my-2 ml-6 inline-flex flex-shrink-1 overflow-hidden">
                 <i
@@ -65,7 +64,7 @@
                     'senses-icons favorite_font  mr-5',
                     `senses-icons-${
                       menu.icon ? menu.icon : 'actions-shape--except'
-                    } `,
+                    } `
                   ]"
                 />
                 <span class="favorite_font truncate">{{ menu.nodeName }}</span>
@@ -110,6 +109,7 @@ export default {
       visibleRightPanel: true, // 展开页全部展开
       menuCategory: [],
       favorite: [], // 收藏的栏目
+      showNavigation: true
     }
   },
   methods: {
@@ -162,6 +162,106 @@ export default {
     id_str(i) {
       return `{system:"${i.system}",nodeEnName:"${i.nodeEnName}"}`
     },
+    renderComp() {
+      this.showNavigation = !this?.dict?.hideNavigation
+      if(this?.dict?.hideNavigation){
+        return
+      }
+
+      // 生成哈希表方便操作
+      const hashMenu = _.keyBy(this.menuNavigator, (i) => this.id_str(i))
+      // assign 二级
+      Object.assign(
+        hashMenu,
+        _.keyBy(
+          hashMenu['{system:"stella",nodeEnName:"stella"}']?.children,
+          (i) => `{system:"${i.system}",nodeEnName:"${i.nodeEnName}"}`
+        ),
+        _.keyBy(
+          hashMenu[
+            '{system:"vulcan-assets-dev",nodeEnName:"vulcan-assets-dev"}'
+          ]?.children,
+          (i) => `{system:"${i.system}",nodeEnName:"${i.nodeEnName}"}`
+        )
+      )
+      // assign 三级
+      Object.assign(
+        hashMenu,
+        _.keyBy(
+          hashMenu['{system:"stella",nodeEnName:"assetDevelopment"}']?.children,
+          (i) => `{system:"${i.system}",nodeEnName:"${i.nodeEnName}"}`
+        ),
+        _.keyBy(
+          hashMenu['{system:"stella",nodeEnName:"dpDi"}']?.children,
+          (i) => `{system:"${i.system}",nodeEnName:"${i.nodeEnName}"}`
+        )
+      )
+      const ceres_demand = _.compact([
+        '需求平台',
+        hashMenu['{system:"ceres-demand",nodeEnName:"ceres-demand"}']
+      ])
+      const ceres_assets = _.compact([
+        '资产平台',
+        hashMenu['{system:"ceres-assets",nodeEnName:"ceres-assets"}']
+      ])
+      const ceres_appliance = _.compact([
+        '资产应用',
+        hashMenu['{system:"ceres-data",nodeEnName:"ceres-data"}'],
+        hashMenu['{system:"dataExplore",nodeEnName:"dataExplore"}'],
+        hashMenu['{system:"dashboard",nodeEnName:"dashboard"}'],
+        hashMenu['{system:"massrelay-api",nodeEnName:"massrelay-api"}']
+      ])
+      const ai_platform = _.compact([
+        'AI中台',
+        hashMenu['{system:"stella",nodeEnName:"aiPlatform"}']
+      ])
+      const assets_develop = _.compact([
+        '资产开发',
+        hashMenu['{system:"vulcan-assets-dev",nodeEnName:"vulcan-assets-dev"}'],
+        hashMenu['{system:"Stella-Sailfish",nodeEnName:"Stella-Sailfish"}'],
+        hashMenu['{system:"stella",nodeEnName:"vqI"}']
+      ])
+      const data_integration = _.compact([
+        '数据集成',
+        hashMenu['{system:"stella",nodeEnName:"dpDiPlatform"}'],
+        hashMenu['{system:"stella",nodeEnName:"dataExchange"}'],
+        hashMenu['{system:"stella",nodeEnName:"bumbleBee"}'],
+        hashMenu['{system:"stella",nodeEnName:"commander"}'],
+        hashMenu['{system:"stella",nodeEnName:"externalReport"}']
+      ])
+      const portal = _.compact([
+        '门户管理',
+        hashMenu['{system:"stella",nodeEnName:"model"}'],
+        hashMenu['{system:"stella",nodeEnName:"online"}'],
+        hashMenu['{system:"stella",nodeEnName:"system"}']
+      ])
+      const _menuCategory = [
+        ceres_demand,
+        ceres_assets,
+        ceres_appliance,
+        ai_platform,
+        assets_develop,
+        data_integration,
+        portal
+      ].filter((i) => i.length > 1)
+      this.menuCategory = _menuCategory
+
+      // 对于可能更新的资源列表数据进行更新（防范与未然）
+      const prefixFavorite = []
+      this.favorite.forEach((i) => {
+        if (hashMenu[this.id_str(i)]) {
+          prefixFavorite.push(hashMenu[this.id_str(i)])
+        } else {
+          prefixFavorite.push(i)
+        }
+      })
+      this.favorite = prefixFavorite
+      localStorage.setItem(
+        'components.favorite',
+        JSON.stringify(prefixFavorite)
+      )
+      this.$forceUpdate()
+    }
   },
   created() {
     // 初始化提取localStorage的值
@@ -174,99 +274,11 @@ export default {
         : true
   },
   computed: {
-    ...mapState('components', ['menuNavigator']),
+    ...mapState('components', ['menuNavigator', 'dict'])
   },
   mounted() {
-    // 生成哈希表方便操作
-    const hashMenu = _.keyBy(this.menuNavigator, (i) => this.id_str(i))
-    // assign 二级
-    Object.assign(
-      hashMenu,
-      _.keyBy(
-        hashMenu['{system:"stella",nodeEnName:"stella"}']?.children,
-        (i) => `{system:"${i.system}",nodeEnName:"${i.nodeEnName}"}`
-      ),
-      _.keyBy(
-        hashMenu['{system:"vulcan-assets-dev",nodeEnName:"vulcan-assets-dev"}']
-          ?.children,
-        (i) => `{system:"${i.system}",nodeEnName:"${i.nodeEnName}"}`
-      )
-    )
-    // assign 三级
-    Object.assign(
-      hashMenu,
-      _.keyBy(
-        hashMenu['{system:"stella",nodeEnName:"assetDevelopment"}']?.children,
-        (i) => `{system:"${i.system}",nodeEnName:"${i.nodeEnName}"}`
-      ),
-      _.keyBy(
-        hashMenu['{system:"stella",nodeEnName:"dpDi"}']?.children,
-        (i) => `{system:"${i.system}",nodeEnName:"${i.nodeEnName}"}`
-      )
-    )
-    const ceres_demand = _.compact([
-      '需求平台',
-      hashMenu['{system:"ceres-demand",nodeEnName:"ceres-demand"}'],
-    ])
-    const ceres_assets = _.compact([
-      '资产平台',
-      hashMenu['{system:"ceres-assets",nodeEnName:"ceres-assets"}'],
-    ])
-    const ceres_appliance = _.compact([
-      '资产应用',
-      hashMenu['{system:"ceres-data",nodeEnName:"ceres-data"}'],
-      hashMenu['{system:"dataExplore",nodeEnName:"dataExplore"}'],
-      hashMenu['{system:"dashboard",nodeEnName:"dashboard"}'],
-      hashMenu['{system:"massrelay-api",nodeEnName:"massrelay-api"}'],
-    ])
-    const ai_platform = _.compact([
-      'AI中台',
-      hashMenu['{system:"stella",nodeEnName:"aiPlatform"}'],
-    ])
-    const assets_develop = _.compact([
-      '资产开发',
-      hashMenu['{system:"vulcan-assets-dev",nodeEnName:"vulcan-assets-dev"}'],
-      hashMenu['{system:"Stella-Sailfish",nodeEnName:"Stella-Sailfish"}'],
-      hashMenu['{system:"stella",nodeEnName:"vqI"}'],
-    ])
-    const data_integration = _.compact([
-      '数据集成',
-      hashMenu['{system:"stella",nodeEnName:"dpDiPlatform"}'],
-      hashMenu['{system:"stella",nodeEnName:"dataExchange"}'],
-      hashMenu['{system:"stella",nodeEnName:"bumbleBee"}'],
-      hashMenu['{system:"stella",nodeEnName:"commander"}'],
-      hashMenu['{system:"stella",nodeEnName:"externalReport"}'],
-    ])
-    const portal = _.compact([
-      '门户管理',
-      hashMenu['{system:"stella",nodeEnName:"model"}'],
-      hashMenu['{system:"stella",nodeEnName:"online"}'],
-      hashMenu['{system:"stella",nodeEnName:"system"}'],
-    ])
-    const _menuCategory = [
-      ceres_demand,
-      ceres_assets,
-      ceres_appliance,
-      ai_platform,
-      assets_develop,
-      data_integration,
-      portal,
-    ].filter((i) => i.length > 1)
-    this.menuCategory = _menuCategory
-
-    // 对于可能更新的资源列表数据进行更新（防范与未然）
-    const prefixFavorite = []
-    this.favorite.forEach((i) => {
-      if (hashMenu[this.id_str(i)]) {
-        prefixFavorite.push(hashMenu[this.id_str(i)])
-      } else {
-        prefixFavorite.push(i)
-      }
-    })
-    this.favorite = prefixFavorite
-    localStorage.setItem('components.favorite', JSON.stringify(prefixFavorite))
-    this.$forceUpdate()
-  },
+    this.renderComp()
+  }
 }
 </script>
 
