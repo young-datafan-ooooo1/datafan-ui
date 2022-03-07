@@ -2,6 +2,9 @@
 @import url('./sense-tree.less');
 @import url('./sense-title.less');
 @import url('./sense-tabs.less');
+
+@light-yellow: #fff6ec;
+
 // 更多按钮弹出框样式
 .more-popover.ant-popover {
   &.ant-popover-placement-top {
@@ -57,8 +60,10 @@
   }
 }
 
-
-@light-yellow: #fff6ec;
+// 弹窗关闭按钮问题修复
+.ant-modal-close {
+  outline-width: 0!important;
+}
 
 // 低版本浏览器样式兼容
 a[type=button], span[type=button] {
