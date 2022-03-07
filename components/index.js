@@ -1,7 +1,7 @@
 /*
  * @Description: 组件/指令安装注册
  * @Date: 2022-03-01 15:14:22
- * @LastEditTime: 2022-03-01 15:43:32
+ * @LastEditTime: 2022-03-07 15:52:36
  */
 import SenseTable from './sense-table/index.vue'
 import Empty from './empty/index.vue'
@@ -10,6 +10,7 @@ import Resizable from './resizable'
 import { PageTitle, PageHandle, PageHandleItem } from './page-table'
 import Navigation from './navigation-slider'
 import TransferModal from './transfer-modal'
+import LargeSelect from './large-select'
 
 import { matchPermission } from '../utils/match-permission'
 
@@ -26,6 +27,7 @@ function install(Vue) {
   Vue.component('SNavigation', Navigation)
   Vue.component('SResizable', Resizable)
   Vue.component('STransferModal', TransferModal)
+  Vue.component('SLargeSelect', LargeSelect)
   
   Vue.directive('permission', (el, binding, vnode) => {
     if (binding.value && !matchPermission(binding.value)) {
