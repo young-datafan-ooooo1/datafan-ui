@@ -1,7 +1,7 @@
 /*
  * @Description: 组件/指令安装注册
  * @Date: 2022-03-01 15:14:22
- * @LastEditTime: 2022-03-08 20:27:59
+ * @LastEditTime: 2022-03-09 16:32:26
  */
 import SenseTable from './sense-table/index.vue'
 import Empty from './empty/index.vue'
@@ -12,6 +12,7 @@ import Navigation from './navigation-slider'
 import TransferModal from './transfer-modal'
 import LargeSelect from './large-select'
 import FullLoading from './full-loading'
+import confirmList from './confirm-list'
 
 import { matchPermission } from '../utils/match-permission'
 
@@ -20,6 +21,7 @@ function install(Vue) {
   install.installed = true
 
   Vue.use(FullLoading)
+  Vue.use(confirmList)
   Vue.component('SenseTable', SenseTable)
   Vue.component('Empty', Empty)
   Vue.component('SenseDictSelect', SenseDictSelect)
