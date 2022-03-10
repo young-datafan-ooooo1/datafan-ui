@@ -1,7 +1,7 @@
 <!--
  * @Description: 大数据量下拉组件（下拉数据分页处理）
  * @Date: 2022-03-02 18:23:42
- * @LastEditTime: 2022-03-07 15:46:25
+ * @LastEditTime: 2022-03-10 14:04:25
 -->
 
 <template>
@@ -31,13 +31,6 @@
 </template>
 
 <script>
-
-// 下拉框加载相关默认配置
-const CONFIG = function () {
-  return {
-   
-  }
-}
 
 export default {
   name: 'LargeSelect',  
@@ -74,7 +67,7 @@ export default {
         endIndex: 0, // 当前展示的数据区间结束坐标
         nextOffset: 100, // 触发加载下一页scrollTop距离
       }, 
-      originData: [], // 全部数据
+      originData: this.getOriginData(this.data), // 原数据
       filterData: [], // 筛选后的数据
       searchText: '', // 筛选字符串
       isLoading: false, // 下拉框加载状态
@@ -126,14 +119,7 @@ export default {
   watch: {
     // 更新获取源数据
     data(val) {
-      this.isLoading = true
-      // 区分单选/多选模式
-      if(this.isMultiple) {
-        const checkedItems = val.filter(item =>  this.selectOption.includes(item.value))
-        this.originData = [...new Set([...checkedItems, ...val])]
-      } else {
-        this.originData = val
-      }
+      this.originData = this.getOriginData(val)
     },
     // 更新获取加载状态
     loading(val) {
@@ -141,6 +127,10 @@ export default {
     }
   },
   methods: {
+    /**
+     * @description: 下拉列表滚动时的回调
+     * @param {Object} e
+     */    
     onPopupScroll(e) {
       const { scrollHeight, scrollTop, clientHeight } = e.target
       const { nextOffset, page, pageSize, maxPage } = this.config
@@ -178,6 +168,19 @@ export default {
      */    
     getFilterData(data, value) {
       return data.filter(item => item.title.toLowerCase().includes(value.toLowerCase()))
+    },
+    /**
+     * @description: 原数据处理，区分单选/多选模式
+     * @param {array} val
+     */    
+    getOriginData(val) {
+      // 多选模式，将选中项排序到列表头部
+      if(this.isMultiple) {
+        const checkedItems = val.filter(item =>  this.selectOption.includes(item.value))
+       return [...new Set([...checkedItems, ...val])]
+      } 
+      // 单选模式，直接设置原数据
+      return val
     },
     /**
      * @description: 获取需切割的区域下标
