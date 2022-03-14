@@ -1,7 +1,7 @@
 /*
  * @Description: 批量确认弹窗（批量导出/下载/删除等）
  * @Date: 2022-03-09 11:25:58
- * @LastEditTime: 2022-03-09 16:33:02
+ * @LastEditTime: 2022-03-14 15:34:10
  */
 
 export default {
@@ -35,7 +35,7 @@ export default {
           overflow: 'auto'
         }
       },
-      options.content?.map(item => h('li', {
+      options.content.map(item => h('li', {
         style: {
           margin: 0,
           color: 'rgba(0,0,0,.65)'
