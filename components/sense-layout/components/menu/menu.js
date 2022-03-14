@@ -1,6 +1,5 @@
 
  import Menu from 'ant-design-vue/es/menu'
- import fastEqual from 'fast-deep-equal'
  
  const { Item, SubMenu } = Menu
  
@@ -191,7 +190,7 @@
        this.selectedKeys = this.getSelectedKey(this.$route)
        let openKeys = matchedRoutes.map(item => item.path)
        openKeys = openKeys.slice(0, openKeys.length - 1)
-       if (!fastEqual(openKeys, this.sOpenKeys)) {
+       if (!_.isEqual(openKeys, this.sOpenKeys)) {
          this.collapsed || this.mode === 'horizontal' ? this.cachedOpenKeys = openKeys : this.sOpenKeys = openKeys
        }
      },
