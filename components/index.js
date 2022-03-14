@@ -1,9 +1,9 @@
 /*
  * @Description: 组件/指令安装注册
  * @Date: 2022-03-01 15:14:22
- * @LastEditTime: 2022-03-09 16:32:26
  */
 import SenseTable from './sense-table/index.vue'
+import AdminHeader from './sense-layout/sense-header/index.vue'
 import Empty from './empty/index.vue'
 import SenseDictSelect from './sense-dict-select/index.vue'
 import Resizable from './resizable'
@@ -23,6 +23,7 @@ function install(Vue) {
   Vue.use(FullLoading)
   Vue.use(confirmList)
   Vue.component('SenseTable', SenseTable)
+  Vue.component('AdminHeader',AdminHeader)
   Vue.component('Empty', Empty)
   Vue.component('SenseDictSelect', SenseDictSelect)
   Vue.component('SPageTitle', PageTitle)
