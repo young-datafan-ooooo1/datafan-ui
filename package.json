@@ -1,6 +1,12 @@
 {
   "name": "@young-datafan/datafan-ui",
+<<<<<<< HEAD
   "version": "1.4.9",
+||||||| merged common ancestors
+  "version": "1.4.7",
+=======
+  "version": "1.4.8",
+>>>>>>> 9f7287a2f580f70ff76a705ef8536554b5bd358e
   "description": "",
   "main": "index.js",
   "scripts": {
