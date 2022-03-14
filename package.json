@@ -1,6 +1,7 @@
 {
   "name": "@young-datafan/datafan-ui",
   "version": "1.4.9",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
