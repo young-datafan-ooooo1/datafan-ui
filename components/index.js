@@ -1,7 +1,6 @@
 /*
  * @Description: 组件/指令安装注册
  * @Date: 2022-03-01 15:14:22
- * @LastEditTime: 2022-03-14 14:30:48
  */
 import SenseTable from './sense-table/index.vue'
 import AdminHeader from './sense-layout/sense-header/index.vue'
