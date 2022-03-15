@@ -167,6 +167,9 @@ $vxe-table-border-radius: 4px;
   }
   &__list {
     padding: 10px 25px;
+    .ant-select-selection--multiple .ant-select-selection__placeholder {
+      margin-left: 0;
+    }
   }
   &__item {
     display: flex;
