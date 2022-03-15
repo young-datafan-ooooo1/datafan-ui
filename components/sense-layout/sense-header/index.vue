@@ -1,7 +1,3 @@
-<!--
- * @Description: 头部导航
- * @Date: 2022-03-14 10:56:38
--->
 <template>
   <a-layout-header :class="[headerTheme, 'admin-header']">
     <div
@@ -12,7 +8,7 @@
       <div class="inline-flex items-center">
         <SNavigation />
         <div class="admin-heaer__logo">
-          <router-link to="/homePage">
+          <router-link :to="toPath">
             <img :src="ASSETS_URL+ '/common/img/stella-logo.png'" style="height: 2rem">
           </router-link>
         </div>
@@ -20,7 +16,7 @@
         <div
           class="admin-header__title"
         >
-          {{ nodeName }}
+          {{ platName }}
         </div>
         <div
           v-if="layout !== 'side' && !isMobile"
@@ -70,9 +66,10 @@ import { ASSETS_URL } from '@/services/api'
 export default {
   name: 'AdminHeader',
   components: { IMenu, HeaderAvatar },
-  props: ['collapsed', 'menuData','nodeName'],
+  props: ['collapsed', 'menuData','nodeName','nodeEnName','toPath'],
   data() {
     return {
+      platName:'',
       ASSETS_URL,
       langList: [
         { key: 'CN', name: '简体中文', alias: '简体' },
@@ -115,8 +112,9 @@ export default {
 
   },
   created() {
-    this.nodeName = document.title =
-      this.menuNavigator.find((i) => i.nodeEnName === 'ceres-demand')?.nodeName ??
+    console.log("---------")
+    this.platName = document.title =
+      this.menuNavigator.find((i) => i.nodeEnName === this.nodeEnName)?.nodeName ??
       this.nodeName
   },
   methods: {
