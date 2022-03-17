@@ -4,6 +4,7 @@
  */
 import SenseTable from './sense-table/index.vue'
 import AdminHeader from './sense-layout/sense-header/index.vue'
+import SideMenu from './sense-layout/components/menu/side-menu.vue'
 import Empty from './empty/index.vue'
 import SenseDictSelect from './sense-dict-select/index.vue'
 import Resizable from './resizable'
@@ -33,6 +34,7 @@ function install(Vue) {
   Vue.component('SResizable', Resizable)
   Vue.component('STransferModal', TransferModal)
   Vue.component('SLargeSelect', LargeSelect)
+  Vue.component('SideMenu',SideMenu)
   
   Vue.directive('permission', (el, binding, vnode) => {
     if (binding.value && !matchPermission(binding.value)) {

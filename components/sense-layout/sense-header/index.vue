@@ -112,7 +112,6 @@ export default {
 
   },
   created() {
-    console.log("---------")
     this.platName = document.title =
       this.menuNavigator.find((i) => i.nodeEnName === this.nodeEnName)?.nodeName ??
       this.nodeName
