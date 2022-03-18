@@ -5,6 +5,7 @@
 import SenseTable from './sense-table/index.vue'
 import AdminHeader from './sense-layout/sense-header/index.vue'
 import SideMenu from './sense-layout/components/menu/side-menu.vue'
+import SenseLayout from './sense-layout/index.vue'
 import Empty from './empty/index.vue'
 import SenseDictSelect from './sense-dict-select/index.vue'
 import Resizable from './resizable'
@@ -24,6 +25,7 @@ function install(Vue) {
   Vue.use(FullLoading)
   Vue.use(confirmList)
   Vue.component('SenseTable', SenseTable)
+  Vue.component('SenseLayout',SenseLayout)
   Vue.component('AdminHeader',AdminHeader)
   Vue.component('Empty', Empty)
   Vue.component('SenseDictSelect', SenseDictSelect)
