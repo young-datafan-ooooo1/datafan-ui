@@ -4,16 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy-gh": "GH=1 yarn docs:build && bash scripts/deploy-gh.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ant-design-vue": "1.7.2",
+    "less": "^4.1.2",
+    "vuepress": "^1.9.7",
+    "vuepress-plugin-demo-container": "^0.2.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JellyL/datafan-ui.git"
+    "url": "git+https://github.com/young-datafan/datafan-ui.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JellyL/datafan-ui/issues"
+    "url": "https://github.com/young-datafan/datafan-ui/issues"
   },
-  "homepage": "https://github.com/JellyL/datafan-ui#readme"
+  "homepage": "https://github.com/young-datafan/datafan-ui#readme"
 }
