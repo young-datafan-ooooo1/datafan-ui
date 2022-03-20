@@ -1,0 +1,36 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: docs publish
+
+on:
+  push:
+    branches: [ v1.4.0 ]
+    paths:
+      - 'docs/**'
+      - '.github/workflows/publish_npm.yml'
+
+jobs:
+  publishDocs:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodule: true
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          version: 10
+      # 生成静态文件
+      - name: Build
+        run: npm install && npm run docs:build && echo 'ui.young-datafan.com' > docs/.vuepress/dist/CNAME
+      # 部署到 GitHub Pages
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: docs/.vuepress/dist

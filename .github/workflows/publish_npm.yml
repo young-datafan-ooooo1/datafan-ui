@@ -6,7 +6,8 @@ name: npm publish
 on:
   push:
     branches: [ v1.4.0 ]
-
+    paths-ignore:
+      - 'docs/**'
 jobs:
   build:
 

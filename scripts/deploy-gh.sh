@@ -10,12 +10,12 @@ npm run docs:build
 cd docs/.vuepress/dist
 
 # 如果是发布到自定义域名
-# echo 'www.example.com' > CNAME
+echo 'ui.young-datafan.com' > CNAME
 
 git init
 git add -A
 git commit -m 'deploy'
 
-git push -f git@github.com:young-datafan/datafan-ui.git master:docs
+git push -f git@github.com:young-datafan/datafan-ui.git master:gh-pages
 
 cd -
