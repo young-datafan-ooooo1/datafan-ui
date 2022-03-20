@@ -17,12 +17,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JellyL/datafan-ui.git"
+    "url": "git+https://github.com/young-datafan/datafan-ui.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JellyL/datafan-ui/issues"
+    "url": "https://github.com/young-datafan/datafan-ui/issues"
   },
-  "homepage": "https://github.com/JellyL/datafan-ui#readme"
+  "homepage": "https://github.com/young-datafan/datafan-ui#readme"
 }
