@@ -1,0 +1,70 @@
+
+// 目录树样式
+.sense-tree {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #5A6373 !important;
+  list-style: none;
+  font-variant: tabular-nums;
+  font-size: 14px;
+  line-height: 1.5;
+
+  -webkit-font-feature-settings: 'tnum';
+  font-feature-settings: 'tnum';
+  li {
+    padding: 5px 0 !important;
+  }
+  // 左侧图标样式
+  li span.ant-tree-switcher,  li span.ant-tree-iconEle{
+    width: 20px !important;
+    height: 20px !important;
+    color: #FDC380 !important;
+    line-height: 20px !important;
+  }
+  li span.ant-tree-switcher.ant-tree-switcher_close .ant-tree-switcher-icon, 
+  li span.ant-tree-switcher.ant-tree-switcher_close .ant-select-switcher-icon,
+  li span.ant-tree-switcher.ant-tree-switcher_open .ant-tree-switcher-icon, 
+  li span.ant-tree-switcher.ant-tree-switcher_open .ant-select-switcher-icon{
+     font-size: 18px !important;
+  }
+  // 一级目录样式
+  li .ant-tree-node-content-wrapper .ant-tree-title span{
+    display: inline-block;
+    margin: 0;
+    padding: 0 6px;
+    height: 24px;
+    border-radius: 2px;
+    color: #5A6373 !important;
+    vertical-align: top;
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 24px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  
+  // 子目录样式
+  & > li .ant-tree-node-content-wrapper-normal .ant-tree-title span{
+    color: #787a81 !important;
+    font-weight: 300 !important;
+  }
+
+  & > li > ul > li > ul > li .ant-tree-node-content-wrapper {
+    color: #787a81 !important;
+    font-weight: 300;
+  }
+
+  li .ant-tree-node-content-wrapper .ant-tree-title span,
+  li .ant-tree-treenode-selected .ant-tree-node-selected .ant-tree-title span{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0) !important;
+    color: #F36F4E !important;
+  }
+  li .ant-tree-node-content-wrapper .ant-tree-node-content-wrapper-normal:hover{
+    background-color: rgba(255, 255, 255, 0) !important;
+    color: #f36f4e6e;
+  }
+}
