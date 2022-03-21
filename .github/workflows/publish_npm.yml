@@ -5,7 +5,8 @@ name: npm publish
 
 on:
   push:
-    branches: [ v1.4.0 ]
+    tags:
+      - 'v*'
     paths-ignore:
       - 'docs/**'
 jobs:
@@ -31,7 +32,7 @@ jobs:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
-          node-version: 10
+          node-version: 14
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
