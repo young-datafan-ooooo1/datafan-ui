@@ -5,7 +5,8 @@ name: docs publish
 
 on:
   push:
-    branches: [ v1.* ]
+    branches:
+      - 'v*'
     paths:
       - 'docs/**'
       - '.github/workflows/publish_npm.yml'
