@@ -12,10 +12,16 @@ module.exports = {
     sidebar: require('./sidebar'),
     sidebarDepth: 2,
   },
+  markdown: {
+    extendMarkdown: (md) => {
+      md.use(require('markdown-it-vuese'), { /* options */ })
+    }
+  },
   chainWebpack (config) {
     config.resolve.alias.set('core-js/library/fn', 'core-js/features');
   },
   head: [],
-  plugins: ['demo-container'], // 配置插件
+  // 配置插件
+  plugins: ['demo-container'], 
   markdown: {}
 }

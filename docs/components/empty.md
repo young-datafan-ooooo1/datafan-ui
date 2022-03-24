@@ -29,3 +29,13 @@
 </template>
 
 :::
+
+## API
+
+### Props
+
+|参数|说明|类型|默认值|
+|---|---|---|---|
+|text|空状态提示|`String`|`暂无数据`|
+|description|空状态提示详情|`String`|-|
+|color|提示字体颜色|`String`|-|
