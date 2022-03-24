@@ -1,5 +1,5 @@
 <p align="center">
-  <strong>基于数据中台场景高级封装的UI组件库</strong>
+  <strong>基于vue3、Typescript、Ant Design高级封装的UI组件库</strong>
 </p>
 
 <p align="center">
