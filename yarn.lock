@@ -2464,21 +2464,6 @@ charcodes@^0.2.0:
   resolved "http://mvn.senses-ai.com:8081/repository/npm-group/charcodes/-/charcodes-0.2.0.tgz#5208d327e6cc05f99eb80ffc814707572d1f14e4"
   integrity sha512-Y4kiDb+AM4Ecy58YkuZrrSRJBDQdQ2L+NyS1vHHFtNtUjgutcZfx3yp1dAONI/oPaPmyGfCLx5CxL+zauIMyKQ==
 
-"chokidar@>=2.0.0 <4.0.0", chokidar@^3.4.1:
-  version "3.5.3"
-  resolved "http://mvn.senses-ai.com:8081/repository/npm-group/chokidar/-/chokidar-3.5.3.tgz#1cf37c8707b932bd1af1ae22c0432e2acd1903bd"
-  integrity sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==
-  dependencies:
-    anymatch "~3.1.2"
-    braces "~3.0.2"
-    glob-parent "~5.1.2"
-    is-binary-path "~2.1.0"
-    is-glob "~4.0.1"
-    normalize-path "~3.0.0"
-    readdirp "~3.6.0"
-  optionalDependencies:
-    fsevents "~2.3.2"
-
 chokidar@^2.0.3, chokidar@^2.1.8:
   version "2.1.8"
   resolved "http://mvn.senses-ai.com:8081/repository/npm-group/chokidar/-/chokidar-2.1.8.tgz#804b3a7b6a99358c3c5c61e71d8728f041cff917"
@@ -2497,6 +2482,21 @@ chokidar@^2.0.3, chokidar@^2.1.8:
     upath "^1.1.1"
   optionalDependencies:
     fsevents "^1.2.7"
+
+chokidar@^3.4.1:
+  version "3.5.3"
+  resolved "http://mvn.senses-ai.com:8081/repository/npm-group/chokidar/-/chokidar-3.5.3.tgz#1cf37c8707b932bd1af1ae22c0432e2acd1903bd"
+  integrity sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==
+  dependencies:
+    anymatch "~3.1.2"
+    braces "~3.0.2"
+    glob-parent "~5.1.2"
+    is-binary-path "~2.1.0"
+    is-glob "~4.0.1"
+    normalize-path "~3.0.0"
+    readdirp "~3.6.0"
+  optionalDependencies:
+    fsevents "~2.3.2"
 
 chownr@^1.1.1:
   version "1.1.4"
@@ -2561,15 +2561,6 @@ cliui@^5.0.0:
     string-width "^3.1.0"
     strip-ansi "^5.2.0"
     wrap-ansi "^5.1.0"
-
-clone-deep@^4.0.1:
-  version "4.0.1"
-  resolved "http://mvn.senses-ai.com:8081/repository/npm-group/clone-deep/-/clone-deep-4.0.1.tgz#c19fd9bdbbf85942b4fd979c84dcf7d5f07c2387"
-  integrity sha1-wZ/Zvbv4WUK0/ZechNz31fB8I4c=
-  dependencies:
-    is-plain-object "^2.0.4"
-    kind-of "^6.0.2"
-    shallow-clone "^3.0.0"
 
 clone-response@^1.0.2:
   version "1.0.2"
@@ -7241,24 +7232,6 @@ safe-regex@^1.1.0:
   resolved "http://mvn.senses-ai.com:8081/repository/npm-group/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha1-RPoWGwGHuVSd2Eu5GAL5vYOFzWo=
 
-sass-loader@8.0.2:
-  version "8.0.2"
-  resolved "http://mvn.senses-ai.com:8081/repository/npm-group/sass-loader/-/sass-loader-8.0.2.tgz#debecd8c3ce243c76454f2e8290482150380090d"
-  integrity sha1-3r7NjDziQ8dkVPLoKQSCFQOACQ0=
-  dependencies:
-    clone-deep "^4.0.1"
-    loader-utils "^1.2.3"
-    neo-async "^2.6.1"
-    schema-utils "^2.6.1"
-    semver "^6.3.0"
-
-sass@1.26.2:
-  version "1.26.2"
-  resolved "http://mvn.senses-ai.com:8081/repository/npm-group/sass/-/sass-1.26.2.tgz#4e17c5c2394e2ee7ffd653ac1d862314a6a5767b"
-  integrity sha1-ThfFwjlOLuf/1lOsHYYjFKaldns=
-  dependencies:
-    chokidar ">=2.0.0 <4.0.0"
-
 sax@^1.2.4, sax@~1.2.4:
   version "1.2.4"
   resolved "http://mvn.senses-ai.com:8081/repository/npm-group/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
@@ -7273,7 +7246,7 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
-schema-utils@^2.6.1, schema-utils@^2.6.5, schema-utils@^2.7.0:
+schema-utils@^2.6.5, schema-utils@^2.7.0:
   version "2.7.1"
   resolved "http://mvn.senses-ai.com:8081/repository/npm-group/schema-utils/-/schema-utils-2.7.1.tgz#1ca4f32d1b24c590c203b8e7a50bf0ea4cd394d7"
   integrity sha1-HKTzLRskxZDCA7jnpQvw6kzTlNc=
@@ -7417,13 +7390,6 @@ sha.js@^2.4.0, sha.js@^2.4.8:
   dependencies:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
-
-shallow-clone@^3.0.0:
-  version "3.0.1"
-  resolved "http://mvn.senses-ai.com:8081/repository/npm-group/shallow-clone/-/shallow-clone-3.0.1.tgz#8f2981ad92531f55035b01fb230769a40e02efa3"
-  integrity sha1-jymBrZJTH1UDWwH7IwdppA4C76M=
-  dependencies:
-    kind-of "^6.0.2"
 
 shallow-equal@^1.0.0:
   version "1.2.1"
@@ -8483,11 +8449,6 @@ vuex@^3.4.0:
   resolved "http://mvn.senses-ai.com:8081/repository/npm-group/vuex/-/vuex-3.6.2.tgz#236bc086a870c3ae79946f107f16de59d5895e71"
   integrity sha1-I2vAhqhww655lG8QfxbeWdWJXnE=
 
-vxe-table@^3.3.12:
-  version "3.5.2"
-  resolved "http://mvn.senses-ai.com:8081/repository/npm-group/vxe-table/-/vxe-table-3.5.2.tgz#62b0a025aabdd0756d43939de701e8536f3a1b06"
-  integrity sha512-RHxUrQH3J/4SHSepWXkMnqz/qv9Jp+1C3aO6KpnQKqyvRBwNhF+04Gms7CXBZv/17maP6QK6B5FY4/1svX8f1w==
-
 warning@^4.0.0:
   version "4.0.3"
   resolved "http://mvn.senses-ai.com:8081/repository/npm-group/warning/-/warning-4.0.3.tgz#16e9e077eb8a86d6af7d64aa1e05fd85b4678ca3"
@@ -8743,11 +8704,6 @@ xdg-basedir@^4.0.0:
   version "4.0.0"
   resolved "http://mvn.senses-ai.com:8081/repository/npm-group/xdg-basedir/-/xdg-basedir-4.0.0.tgz#4bc8d9984403696225ef83a1573cbbcb4e79db13"
   integrity sha1-S8jZmEQDaWIl74OhVzy7y0552xM=
-
-xe-utils@^3.3.2:
-  version "3.5.4"
-  resolved "http://mvn.senses-ai.com:8081/repository/npm-group/xe-utils/-/xe-utils-3.5.4.tgz#d4335633fede280c68c1c0c9a4c8f3a533cfd831"
-  integrity sha512-oH7VOgvHv34pn198dhKPVKnuEHV22Q06YpCTVnAS3JuutylmZj/rtJGvn0BxxWQ37w2LgCknoebLA4uIGXwFtw==
 
 xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.2"

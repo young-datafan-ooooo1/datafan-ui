@@ -1,7 +1,5 @@
 <!--
  * @Description: 数据为空提示图片/文字组件
- * @Date: 2021-09-01 18:58:43
- * @LastEditTime: 2022-03-23 18:04:58
 -->
 <template>
   <div class="empty" :style="`color: ${color}`">
@@ -16,12 +14,12 @@
 export default {
   name: 'Empty',
   props: {
-    // 空数据提示
+    // 空状态提示
     text: {
       type: String,
       default: '暂无数据'
     },
-    // 空数据提示详情
+    // 空状态提示详情
     description: {
       type: String,
       default: ''
@@ -30,17 +28,6 @@ export default {
     color: {
       type: String,
       default: ''
-    },
-    // 提示图片路径
-    imgPath: {
-      type: String,
-      default: ''
-    }
-  },
-  data() {
-    return {
-      // 空数据提示图片
-      src: this.imgPath
     }
   }
 }
