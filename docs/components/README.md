@@ -1,20 +1,38 @@
+# 组件指南
 
-# 安装
+## 这里是组件指南
 
-## npm安装
 
-推荐使用 npm 的方式安装，它能更好地和 webpack 打包工具配合使用。
+## 配置模版
 
-```
-npm i element-ui -S
-```
+## API 
 
-## CDN
-目前可以通过 unpkg.com/element-ui 获取到最新版本的资源，在页面上引入 js 和 css 文件即可开始使用。
+### Props
 
-``` html
-<!-- 引入样式 -->
-<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-<!-- 引入组件库 -->
-<script src="https://unpkg.com/element-ui/lib/index.js"></script>
-```
+|参数|说明|类型|默认值|
+|---|---|---|---|
+|name|The name of the form, up to 8 characters|`String` /  `Number`|`true`|
+
+
+### Events
+
+|事件名|说明|参数|
+|---|---|---|
+|onclear|Fire when the form is cleared|The argument is a boolean value representing xxx|
+
+
+### Slots
+
+|名称|说明|默认值|
+|---|---|---|
+|header|Form header|`<th>title</th>`|
+
+
+### Methods
+
+|方法名|说明|参数|
+|---|---|---|
+|clear|Used to manually clear the form|-|
+
+
+

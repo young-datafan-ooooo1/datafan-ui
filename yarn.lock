@@ -2569,6 +2569,11 @@ clone-response@^1.0.2:
   dependencies:
     mimic-response "^1.0.0"
 
+clone@^2.1.2:
+  version "2.1.2"
+  resolved "http://mvn.senses-ai.com:8081/repository/npm-group/clone/-/clone-2.1.2.tgz#1b7f4b9f591f1e8f83670401600345a02887435f"
+  integrity sha1-G39Ln1kfHo+DZwQBYANFoCiHQ18=
+
 coa@^2.0.2:
   version "2.0.2"
   resolved "http://mvn.senses-ai.com:8081/repository/npm-group/coa/-/coa-2.0.2.tgz#43f6c21151b4ef2bf57187db0d73de229e3e7ec3"
@@ -5281,6 +5286,32 @@ latest-version@^5.0.0:
   dependencies:
     package-json "^6.3.0"
 
+less-loader@^6.1.1:
+  version "6.2.0"
+  resolved "http://mvn.senses-ai.com:8081/repository/npm-group/less-loader/-/less-loader-6.2.0.tgz#8b26f621c155b342eefc24f5bd6e9dc40c42a719"
+  integrity sha1-iyb2IcFVs0Lu/CT1vW6dxAxCpxk=
+  dependencies:
+    clone "^2.1.2"
+    less "^3.11.3"
+    loader-utils "^2.0.0"
+    schema-utils "^2.7.0"
+
+less@^3.11.3:
+  version "3.13.1"
+  resolved "http://mvn.senses-ai.com:8081/repository/npm-group/less/-/less-3.13.1.tgz#0ebc91d2a0e9c0c6735b83d496b0ab0583077909"
+  integrity sha1-DryR0qDpwMZzW4PUlrCrBYMHeQk=
+  dependencies:
+    copy-anything "^2.0.1"
+    tslib "^1.10.0"
+  optionalDependencies:
+    errno "^0.1.1"
+    graceful-fs "^4.1.2"
+    image-size "~0.5.0"
+    make-dir "^2.1.0"
+    mime "^1.4.1"
+    native-request "^1.0.5"
+    source-map "~0.6.0"
+
 less@^4.1.2:
   version "4.1.2"
   resolved "http://mvn.senses-ai.com:8081/repository/npm-group/less/-/less-4.1.2.tgz#6099ee584999750c2624b65f80145f8674e4b4b0"
@@ -5333,6 +5364,15 @@ loader-utils@^1.0.2, loader-utils@^1.1.0, loader-utils@^1.2.3, loader-utils@^1.4
     big.js "^5.2.2"
     emojis-list "^3.0.0"
     json5 "^1.0.1"
+
+loader-utils@^2.0.0:
+  version "2.0.2"
+  resolved "http://mvn.senses-ai.com:8081/repository/npm-group/loader-utils/-/loader-utils-2.0.2.tgz#d6e3b4fb81870721ae4e0868ab11dd638368c129"
+  integrity sha512-TM57VeHptv569d/GKh6TAYdzKblwDNiumOdkFnejjD0XwTH87K90w3O7AiJRqdQoXygvi1VQTJTLGhJl7WqA7A==
+  dependencies:
+    big.js "^5.2.2"
+    emojis-list "^3.0.0"
+    json5 "^2.1.2"
 
 locate-path@^3.0.0:
   version "3.0.0"
@@ -5791,6 +5831,11 @@ nanopop@^2.1.0:
   version "2.1.0"
   resolved "http://mvn.senses-ai.com:8081/repository/npm-group/nanopop/-/nanopop-2.1.0.tgz#23476513cee2405888afd2e8a4b54066b70b9e60"
   integrity sha1-I0dlE87iQFiIr9LopLVAZrcLnmA=
+
+native-request@^1.0.5:
+  version "1.1.0"
+  resolved "http://mvn.senses-ai.com:8081/repository/npm-group/native-request/-/native-request-1.1.0.tgz#acdb30fe2eefa3e1bc8c54b3a6852e9c5c0d3cb0"
+  integrity sha1-rNsw/i7vo+G8jFSzpoUunFwNPLA=
 
 needle@^2.5.2:
   version "2.9.1"
@@ -7201,7 +7246,7 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
-schema-utils@^2.6.5:
+schema-utils@^2.6.5, schema-utils@^2.7.0:
   version "2.7.1"
   resolved "http://mvn.senses-ai.com:8081/repository/npm-group/schema-utils/-/schema-utils-2.7.1.tgz#1ca4f32d1b24c590c203b8e7a50bf0ea4cd394d7"
   integrity sha1-HKTzLRskxZDCA7jnpQvw6kzTlNc=
@@ -7961,6 +8006,11 @@ tough-cookie@~2.5.0:
     psl "^1.1.28"
     punycode "^2.1.1"
 
+tslib@^1.10.0:
+  version "1.14.1"
+  resolved "http://mvn.senses-ai.com:8081/repository/npm-group/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
+  integrity sha1-zy04vcNKE0vK8QkcQfZhni9nLQA=
+
 tslib@^2.3.0:
   version "2.3.1"
   resolved "http://mvn.senses-ai.com:8081/repository/npm-group/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
@@ -8393,6 +8443,11 @@ vuepress@^1.9.7:
     envinfo "^7.2.0"
     opencollective-postinstall "^2.0.2"
     update-notifier "^4.0.0"
+
+vuex@^3.4.0:
+  version "3.6.2"
+  resolved "http://mvn.senses-ai.com:8081/repository/npm-group/vuex/-/vuex-3.6.2.tgz#236bc086a870c3ae79946f107f16de59d5895e71"
+  integrity sha1-I2vAhqhww655lG8QfxbeWdWJXnE=
 
 warning@^4.0.0:
   version "4.0.3"
