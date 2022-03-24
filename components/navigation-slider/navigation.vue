@@ -99,7 +99,7 @@
 <script>
 import NavigationSystem from './navigation-system.vue'
 import { mapState } from 'vuex'
-import { ROUTE_URL } from '@sense70/common-component-vue'
+// import { ROUTE_URL } from '@sense70/common-component-vue'
 export default {
   name: 'Navigation',
   components: { NavigationSystem },
@@ -125,14 +125,14 @@ export default {
     // 打开链接
     open_url(menu) {
       // 为了方便开发环境也能跳转，使用环境变量跳转
-      const BASE =
-        process.env.NODE_ENV === 'development'
-          ? process.env.VUE_APP_API_BASE_URL.substring(
-              0,
-              (process.env.VUE_APP_API_BASE_URL?.length ?? 0) - 4
-            )
-          : ROUTE_URL
-      window.open(menu.iframe === 0 ? BASE + menu.link : menu.link)
+      // const BASE =
+      //   process.env.NODE_ENV === 'development'
+      //     ? process.env.VUE_APP_API_BASE_URL.substring(
+      //         0,
+      //         (process.env.VUE_APP_API_BASE_URL?.length ?? 0) - 4
+      //       )
+      //     : ROUTE_URL
+      // window.open(menu.iframe === 0 ? BASE + menu.link : menu.link)
     },
 
     // 更改favorite的状态并实时保存
@@ -287,11 +287,11 @@ export default {
 .admin-header__all-btn {
   width: 60px;
   height: 60px;
-  background: #f36f4e;
   border-radius: 0px 6px 6px 0px;
-  transition: all 0.2s ease-out 0s;
+  background: #f36f4e;
   text-align: center;
   font-size: 1rem;
+  transition: all 0.2s ease-out 0s;
   &:hover {
     background: #f78264;
   }
@@ -299,9 +299,9 @@ export default {
     background: #ee623f;
   }
   > span {
-    display: block;
     position: absolute;
     left: 18px;
+    display: block;
     width: 20px;
     height: 2px;
     background: rgb(255, 255, 255);
@@ -312,36 +312,36 @@ export default {
 .header-icon-status-menu {
   span:first-child {
     top: 20px;
-    transform-origin: left center;
     transform: rotate(0deg);
+    transform-origin: left center;
   }
   span:nth-child(2) {
     top: 27px;
   }
   span:nth-child(3) {
     top: 34px;
-    transform-origin: left center;
     transform: rotate(0deg);
+    transform-origin: left center;
   }
 }
 // cross状态
 .header-icon-status-cross {
   border-radius: 0;
   span:first-child {
-    left: 22px;
     top: 20px;
-    transform-origin: left center;
+    left: 22px;
     transform: rotate(45deg);
+    transform-origin: left center;
   }
   span:nth-child(2) {
     top: 27px;
     opacity: 0;
   }
   span:nth-child(3) {
-    left: 22px;
     top: 34px;
-    transform-origin: left center;
+    left: 22px;
     transform: rotate(-45deg);
+    transform-origin: left center;
   }
 }
 
@@ -357,15 +357,15 @@ export default {
 }
 .navigation_left {
   z-index: 1;
-  width: 220px;
   flex-shrink: 0;
+  width: 220px;
   background-color: #2d2e31;
 }
 .right_panel {
   overflow: auto;
+  padding-bottom: 1rem;
   background: #3f393b;
   transition-duration: 0.2s;
-  padding-bottom: 1rem;
   &.is_invisible {
     transform: translateX(-100%);
   }
@@ -401,17 +401,17 @@ export default {
 }
 
 .title_font {
-  font-weight: 500;
   color: #ffffff;
+  font-weight: 500;
   font-size: 16px;
 }
 .favorite_font {
-  transition-duration: 0.1s;
   color: #9fa5b3;
+  transition-duration: 0.1s;
 }
 .close-label {
-  transition-duration: 0.1s;
   opacity: 0;
+  transition-duration: 0.1s;
   &:hover {
     transform: scale(1.4);
   }

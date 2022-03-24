@@ -1,10 +1,34 @@
 module.exports = {
-  '/guide/': [
-    '', // 默认README.md
-    '/guide/product.md'
+  // 设计规范文档
+  '/design/': [
+    '/design/'
   ],
+  // 开发手册
+  '/document/': [
+    '/document/'
+  ],
+  // 组件中心
   '/components/': [
-    '',// 默认README.md
-    '/components/select.md'
+    {
+      title: '组件指南',
+      path: '/components/'
+    }, {
+      title: '安装使用',
+      path: '/components/install'
+    }, {
+      title: '组件中心',
+      collapsable: false,
+      children: [
+        '/components/empty',
+        '/components/select'
+      ]
+    }, {
+      title: '内部组件',
+      collapsable: false,
+      children: [
+        '/components/private/',
+      ]
+    }
   ]
 }
+
