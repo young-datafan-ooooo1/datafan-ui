@@ -10,10 +10,9 @@
 ::: demo
 
 ```html
-<template>
   <DEmpty />
-</template>
 
+```
 :::
 
 
@@ -24,9 +23,9 @@
 ::: demo
 
 ```html
-<template>
   <DEmpty text="这里是提示" description="这里是详细说明"/>
-</template>
+  
+```
 
 :::
 

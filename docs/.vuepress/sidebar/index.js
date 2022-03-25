@@ -19,12 +19,16 @@ module.exports = {
     }, {
       title: '安装使用',
       path: '/components/install'
+    },
+    {
+      title: '内置样式',
+      path: '/components/built-in-style'
     }, {
       title: '组件中心',
       collapsable: false,
       children: [
         '/components/empty',
-        '/components/select'
+        '/components/select',
       ]
     }, {
       title: '内部组件',
@@ -34,6 +38,9 @@ module.exports = {
         '/components/private/s-layout/layout',
         '/components/private/s-header/header',
         '/components/private/s-menu/menu',
+        '/components/private/s-dict-select/',
+        '/components/private/s-input-lengthlimit/',
+
       ]
     }
   ]
