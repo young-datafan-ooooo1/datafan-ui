@@ -59,7 +59,7 @@
 };
 </script>
 :::
-## 修改最小长度、最大长度、提示语
+## 配置最小长度、最大长度、提示语
 
 项目规范中名称类输入框最大长度50个字符，备注类输入框最大长度200个字符
 
@@ -172,3 +172,18 @@
 };
 </script>
 :::
+
+## API
+
+### Props
+
+|参数|说明|类型|可选值|默认值|
+|---|---|---|---|---|
+|validate|是否开启长度校验|Boolean|false / true |true|
+|rules|表单验证规则|Object / Array|-|-|
+|ruleSetLocation|表单规则设置位置|String|form / formItem|form|
+|prop|表单域 model 字段|String|-|-|
+|min|字符最小长度|Number|-|-|
+|max|字符最大长度|Number|-|-|
+|message|错误提示语|String|-|-|
+|type|声明 input 类型|String|-|-|
