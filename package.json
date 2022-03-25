@@ -2,7 +2,7 @@
   "name": "@young-datafan/datafan-ui",
   "version": "1.5.0",
   "description": "",
-  "main": "index.js",
+  "main": "components/index.js",
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
@@ -14,12 +14,11 @@
     "vuex": "^3.4.0",
     "less": "^4.1.2",
     "less-loader": "^6.1.1",
-    "sass": "1.26.2",
-    "sass-loader": "8.0.2",
-    "vxe-table": "^3.3.12",
-    "xe-utils": "^3.3.2",
     "vuepress": "^1.9.7",
     "vuepress-plugin-demo-container": "^0.2.0"
+  },
+  "devDependencies":{
+
   },
   "repository": {
     "type": "git",

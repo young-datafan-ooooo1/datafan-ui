@@ -19,6 +19,23 @@ h2 {
   border-bottom: 0;
 }
 
+table {
+  width: 100%;
+}
+table th,
+table td {
+  &:first-child {
+    width: 220px;
+  }
+  &:nth-child(2) {
+    width: 60%;
+  }
+  &:last-child {
+    max-width: 200px;
+  }
+  width: 40%;
+  min-width: 150px;
+}
 .page-nav, .theme-default-content:not(.custom) {
   max-width: 80% !important;
 }

@@ -10,10 +10,9 @@
 ::: demo
 
 ```html
-<template>
   <DEmpty />
-</template>
 
+```
 :::
 
 
@@ -24,8 +23,18 @@
 ::: demo
 
 ```html
-<template>
   <DEmpty text="这里是提示" description="这里是详细说明"/>
-</template>
+  
+```
 
 :::
+
+## API
+
+### Props
+
+|参数|说明|类型|默认值|
+|---|---|---|---|
+|text|空状态提示|`String`|`暂无数据`|
+|description|空状态提示详情|`String`|-|
+|color|提示字体颜色|`String`|-|

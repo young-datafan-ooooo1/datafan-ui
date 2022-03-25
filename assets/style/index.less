@@ -1,0 +1,25 @@
+@import url('./filters.less');
+@import url('./more-popover.less');
+@import url('./scrollbar.less');
+@import url('./status.less');
+@import url('./sense-tree.less');
+@import url('./sense-title.less');
+@import url('./sense-tabs.less');
+
+// 弹窗关闭按钮问题修复
+.ant-modal-close {
+  outline-width: 0!important;
+}
+
+// 低版本浏览器样式兼容
+a[type=button], span[type=button] {
+  appearance: none;
+}
+
+// 下拉框在loading时屏蔽value显示值
+.ant-select.ant-select-loading {
+  .ant-select-selection-selected-value, .ant-select-selection__rendered {
+    opacity: 0 !important;
+    transition: all .3s;
+  }
+}

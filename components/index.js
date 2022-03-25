@@ -11,6 +11,8 @@ import LargeSelect from './large-select'
 import FullLoading from './full-loading'
 import confirmList from './confirm-list'
 
+export { default as watermark } from './watermark'
+
 
 function install(Vue) {
   if (install.installed) return

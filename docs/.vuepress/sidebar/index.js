@@ -15,6 +15,10 @@ module.exports = {
     }, {
       title: '安装使用',
       path: '/components/install'
+    },
+    {
+      title: '内置样式',
+      path: '/components/built-in-style'
     }, {
       title: '组件中心',
       collapsable: false,
@@ -27,6 +31,7 @@ module.exports = {
       collapsable: false,
       children: [
         '/components/private/',
+        '/components/private/s-dict-select/',
       ]
     }
   ]
