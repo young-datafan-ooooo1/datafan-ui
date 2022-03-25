@@ -1,5 +1,5 @@
 
-# s-input-lengthlimit
+# SInputLengthlimit
 
 带长度校验的名称/备注输入框
 

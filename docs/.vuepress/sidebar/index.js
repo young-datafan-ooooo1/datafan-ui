@@ -32,7 +32,7 @@ module.exports = {
       children: [
         '/components/private/',
         '/components/private/s-dict-select/',
-        '/components/private/sInputLengthlimit/',
+        '/components/private/s-input-lengthlimit/',
       ]
     }
   ]
