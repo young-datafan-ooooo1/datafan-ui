@@ -10,6 +10,7 @@ import TransferModal from './transfer-modal'
 import LargeSelect from './large-select'
 import FullLoading from './full-loading'
 import confirmList from './confirm-list'
+import InputLengthlimit from './input-lengthlimit'
 
 export { default as watermark } from './watermark'
 
@@ -28,6 +29,7 @@ function install(Vue) {
   Vue.component('SResizable', Resizable)
   Vue.component('STransferModal', TransferModal)
   Vue.component('SLargeSelect', LargeSelect)
+  Vue.component('SInputLengthlimit', InputLengthlimit)
 }
 
 const Plugins = { install }
