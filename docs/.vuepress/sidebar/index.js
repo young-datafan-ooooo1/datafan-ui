@@ -24,7 +24,7 @@ module.exports = {
       collapsable: false,
       children: [
         '/components/empty',
-        '/components/select'
+        '/components/select',
       ]
     }, {
       title: '内部组件',
@@ -32,6 +32,7 @@ module.exports = {
       children: [
         '/components/private/',
         '/components/private/s-dict-select/',
+        '/components/private/sInputLengthlimit/',
       ]
     }
   ]

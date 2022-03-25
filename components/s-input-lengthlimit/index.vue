@@ -11,9 +11,8 @@
   />
 </template>
 <script>
-import { regLength } from '@/utils/regular.js'
 export default {
-  name: 'SNameInput',
+  name: 'SInputLengthlimit',
   model: {
     prop: 'value',
     event: 'input-value'
@@ -54,6 +53,11 @@ export default {
       type: Number,
       default: undefined
     },
+    // 提示语
+    message:{
+      type: String,
+      default: undefined
+    },
     // 声明 input 类型
     type: {
       type: String,
@@ -61,8 +65,7 @@ export default {
     }
   },
   data() {
-    return {
-    }
+    return {}
   },
   computed: {
     name: {
@@ -90,7 +93,7 @@ export default {
       handler(newName, oldName) {
         if (newName) {
           let obj = this.rules
-          const rule = { validator: regLength, min: this.minLength, max: this.maxLength, trigger: 'blur' }
+          const rule = { validator: this.regLength, min: this.minLength, max: this.maxLength, trigger: 'blur',message:this.message }
           if (!this.rules) {
             console.error('sense-name-input组建校验字符长度必须双向绑定rules')
             return
@@ -123,6 +126,19 @@ export default {
         }
       },
       immediate: true
+    }
+  },
+  methods: {
+    regLength(rule, value, callback) {
+      const min = rule.min || 0
+      const max = rule.max || 50
+      const reg = (new RegExp('^.{' + min + ',' + max + '}$')).test(value) || !value
+      const tips = rule.message || `长度在${min}~${max}个字符之间`
+      if (reg) {
+        callback()
+      } else {
+        callback(new Error(tips))
+      }
     }
   }
 }
