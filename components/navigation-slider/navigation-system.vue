@@ -1,36 +1,24 @@
 <template>
   <div>
-    <s-page-title :title="menuData[0]" class="mx-6 mt-2"> </s-page-title>
-    <div class="flex flex-wrap content-menu">
+    <s-page-title :title="menuData[0]" class="s-page"> </s-page-title>
+    <div class="content-menu">
       <div
-        class="block-menu w-56 h-10 rounded px-4 py-2 mx-6 my-1 
-        items-center cursor-pointer flex justify-between"
+        class="block-menu"
         v-for="(menu, index) in menuData.slice(1, menuData.length)"
         :key="index"
         @click="open_url(menu)"
       >
-        <div>
-          <i
-            :class="[
-              'senses-icons',
-              `senses-icons-${
-                menu.icon ? menu.icon : 'actions-shape--except'
-              } `,
-              'text-gray-400',
-              'mr-5',
-            ]"
-          />
-          <span class="font-menu">{{ menu.nodeName }}</span>
-        </div>
+        <slot name="title" :menu="menu" />
         <span
-          ><i
+          >
+          <img
             @click.stop="dispatch_favorite(menu)"
+            src="./actions-star--filled.svg"
             :class="[
-              'senses-icons senses-icons-actions-star--filled',
-              favorite.map((i) => i.nodeEnName).includes(menu.nodeEnName)
-                ? 'text-yellow-400 opacity-100'
-                : 'text-gray-400 opacity-0',
-              'star',
+              favorite.map((i) => i[replaceKey]).includes(menu[replaceKey])
+                ? 'active'
+                : 'inactive',
+              'star'
             ]"
         /></span>
       </div>
@@ -43,39 +31,65 @@ export default {
   name: 'NavigationSystem',
   props: {
     menuData: {
-      type: Array,
+      type: Array
     },
     favorite: {
-      type: Array,
+      type: Array
+    },
+    replaceKey:{
+      // 判断项（用于收藏）的key值
+      type:String,
     },
   },
-  // created() {
-  //   this.favorite = JSON.parse(localStorage.getItem('components.favorite') ?? '[]')
-  // },
   methods: {
     open_url(menu) {
       this.$emit('open_url', menu)
     },
     dispatch_favorite(menu) {
       this.$emit('dispatch_favorite', menu)
-    },
-  },
+    }
+  }
 }
 </script>
 
 <style lang="less" scoped>
+.s-page {
+  margin: 0.5rem 1.5rem 0 1.5rem;
+}
+.active {
+  filter: invert(87%) sepia(40%) saturate(2705%) hue-rotate(339deg) brightness(102%) contrast(97%);
+  opacity: 1;
+}
+.inactive {
+  filter: invert(67%) sepia(15%) saturate(212%) hue-rotate(179deg) brightness(94%) contrast(90%);
+  opacity: 0;
+}
 /deep/.page-title__label {
   color: #ffffff !important;
 }
 .content-menu {
   width: 100%;
-}
-.font-menu {
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: #b7b9bd;
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
 }
 .block-menu {
+  display: flex;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 14rem;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
   transition: all 0.1s;
   &:hover {
     background-color: #585053;
@@ -85,13 +99,13 @@ export default {
   }
 }
 .star {
+  width: 1.2rem;
   transition: all 0.1s;
   &:hover {
-    transform: scaleY(0.5);
-    font-size: 20px;
+    width: 1.4rem;
   }
   &:active {
-    font-size: 14px;
+    width: 1.2rem;
   }
 }
 </style>
