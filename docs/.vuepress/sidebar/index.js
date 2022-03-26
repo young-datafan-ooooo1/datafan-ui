@@ -29,6 +29,9 @@ module.exports = {
       children: [
         '/components/empty',
         '/components/select',
+        '/components/navigation',
+        '/components/resizable',
+        '/components/watermark',
       ]
     }, {
       title: '内部组件',
@@ -40,7 +43,6 @@ module.exports = {
         '/components/private/s-menu/menu',
         '/components/private/s-dict-select/',
         '/components/private/s-input-lengthlimit/',
-
       ]
     }
   ]
