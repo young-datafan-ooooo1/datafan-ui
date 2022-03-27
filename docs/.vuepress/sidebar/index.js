@@ -28,7 +28,8 @@ module.exports = {
       collapsable: false,
       children: [
         '/components/empty',
-        '/components/select',
+        '/components/full-loading',
+        '/components/confirm-list',
         '/components/navigation',
         '/components/resizable',
         '/components/watermark',
