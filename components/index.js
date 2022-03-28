@@ -31,7 +31,7 @@ function install(Vue) {
   Vue.component('DTransferModal', TransferModal)
   Vue.component('DLargeSelect', LargeSelect)
   Vue.component('DInputLengthlimit', InputLengthlimit)
-  Vue.prototype.$rules = rules;
+  Vue.prototype.$rules = rules
 
 }
 const Plugins = { install }
