@@ -19,6 +19,13 @@ module.exports = {
     {
       title: '内置样式',
       path: '/components/built-in-style'
+    },{
+      title: '公共方法',
+      collapsable: false,
+      children: [
+        '/components/public-method/',
+        '/components/public-method/Srules/',
+      ]
     }, {
       title: '组件中心',
       collapsable: false,
