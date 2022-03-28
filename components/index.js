@@ -11,7 +11,7 @@ import LargeSelect from './large-select'
 import FullLoading from './full-loading'
 import confirmList from './confirm-list'
 import InputLengthlimit from './input-lengthlimit'
-import Srules from '../utils/regular'
+import rules from '../utils/regular'
 export { default as watermark } from './watermark'
 export { Resizable }
 
@@ -31,7 +31,7 @@ function install(Vue) {
   Vue.component('STransferModal', TransferModal)
   Vue.component('SLargeSelect', LargeSelect)
   Vue.component('DInputLengthlimit', InputLengthlimit)
-  Vue.prototype.$Srules = Srules;
+  Vue.prototype.$rules = rules;
 
 }
 const Plugins = { install }
