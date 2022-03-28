@@ -25,11 +25,11 @@ function install(Vue) {
   Vue.component('DEmpty', Empty)
   Vue.component('DNavigation', Navigation)
   Vue.component('DResizable', Resizable)
-  Vue.component('SPageTitle', PageTitle)
-  Vue.component('SPageHandle', PageHandle)
-  Vue.component('SPageHandleItem', PageHandleItem)
-  Vue.component('STransferModal', TransferModal)
-  Vue.component('SLargeSelect', LargeSelect)
+  Vue.component('DPageTitle', PageTitle)
+  Vue.component('DPageHandle', PageHandle)
+  Vue.component('DPageHandleItem', PageHandleItem)
+  Vue.component('DTransferModal', TransferModal)
+  Vue.component('DLargeSelect', LargeSelect)
   Vue.component('DInputLengthlimit', InputLengthlimit)
   Vue.prototype.$Srules = Srules;
 

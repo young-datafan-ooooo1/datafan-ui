@@ -1,7 +1,7 @@
 <!--
  * @Description: 穿梭弹窗组件（共享用户、授权用户等，需要在多个可选项中进行多选时的场景）
  * @Date: 2021-03-01 10:05:26
- * @LastEditTime: 2022-03-01 14:15:13
+ * @LastEditTime: 2022-03-28 22:42:10
 -->
 <template>
   <a-modal 
@@ -49,7 +49,7 @@ export default {
     // 弹窗宽度
     width: {
       type: String,
-      default: 'auto'
+      default: 'fit-content'
     },
     // 全部数据 [{ key: string, title: string }]
     allData: {
