@@ -6,10 +6,12 @@
 ## 基本用法
 
 ``` js
-import { watermark } from "@young-datafan/datafan-ui"
+import { watermark } from "@sense70/common-component-vue"
 
 mounted(){
   watermark.set('水印')
 }
 ```
+
+ ![watermark](./watermark.png)
 
