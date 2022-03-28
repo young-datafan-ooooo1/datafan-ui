@@ -13,6 +13,7 @@ import confirmList from './confirm-list'
 import InputLengthlimit from './input-lengthlimit'
 import Srules from '../utils/regular'
 export { default as watermark } from './watermark'
+export { Resizable }
 
 
 function install(Vue) {
@@ -22,18 +23,16 @@ function install(Vue) {
   Vue.use(FullLoading)
   Vue.use(confirmList)
   Vue.component('DEmpty', Empty)
+  Vue.component('DNavigation', Navigation)
+  Vue.component('DResizable', Resizable)
   Vue.component('SPageTitle', PageTitle)
   Vue.component('SPageHandle', PageHandle)
   Vue.component('SPageHandleItem', PageHandleItem)
-  Vue.component('SNavigation', Navigation)
-  Vue.component('SResizable', Resizable)
   Vue.component('STransferModal', TransferModal)
   Vue.component('SLargeSelect', LargeSelect)
   Vue.component('SInputLengthlimit', InputLengthlimit)
   Vue.prototype.$Srules = Srules;
 
 }
-
 const Plugins = { install }
-
 export default Plugins
