@@ -4,9 +4,11 @@
 
  ## 基本用法
 
- #### 在项目根目录的package.json文件中添加"@sense70/common-component-vue": "~1.5.0",执行 yarn install或者npm install
- ![acatar](../s-layout/s-layout.jpg)
- ::: demo
+ #### 在项目根目录的package.json文件中添加依赖"@sense70/common-component-vue": "~1.5.0",执行 yarn install或者npm install
+ 头部导航条:
+ ![acatar](./header.png)
+ 菜单导航:
+ ![acatar](./header-menu.png)
  ```html
  <template>
   <SHeader
@@ -17,7 +19,7 @@
       logo-url="http://192.168.10.241:18180/static/common/img/stella-logo.png"
     />
 </template>
-:::
+```
 
 ## API
 
