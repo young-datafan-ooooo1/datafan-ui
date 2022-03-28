@@ -1,9 +1,3 @@
-<!--
- * @Description: 页面标题组件
- * @Date: 2021-08-12 15:58:57
- * @LastEditTime: 2021-08-13 18:44:20
--->
-
 <template>
   <div class="resizable" :class="vertical && 'flex-col'">
     <!-- start -->
