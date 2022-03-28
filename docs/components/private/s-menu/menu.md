@@ -1,13 +1,13 @@
-# SHeader头部导航条
+# SMenu 菜单导航
  
  用于左侧菜单导航
 
  ## 基本用法
 
- #### 在项目根目录的package.json文件中添加"@sense70/common-component-vue": "~1.5.0",执行 yarn install或者npm install
- ![acatar](../s-layout/s-layout.jpg)
+ #### 在项目根目录的package.json文件中添加依赖"@sense70/common-component-vue": "~1.5.0",执行 yarn install或者npm install
+ 
+ ![acatar](./menu.png)
 
- ::: demo
 
  ```html
  <template>
@@ -19,7 +19,7 @@
     @toggleCollapse="toggleCollapse"
   />
 </template>
-:::
+```
 ## API
 
 ### Props
