@@ -23,6 +23,13 @@ module.exports = {
     {
       title: '内置样式',
       path: '/components/built-in-style'
+    },{
+      title: '公共方法',
+      collapsable: false,
+      children: [
+        '/components/public-method/',
+        '/components/public-method/Srules/',
+      ]
     }, {
       title: '组件中心',
       collapsable: false,
@@ -33,6 +40,7 @@ module.exports = {
         '/components/navigation',
         '/components/resizable',
         '/components/watermark',
+        '/components/input-lengthlimit',
       ]
     }, {
       title: '内部组件',
@@ -43,7 +51,6 @@ module.exports = {
         '/components/private/s-header/header',
         '/components/private/s-menu/menu',
         '/components/private/s-dict-select/',
-        '/components/private/s-input-lengthlimit/',
       ]
     }
   ]

@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-  name: 'SInputLengthlimit',
+  name: 'DInputLengthlimit',
   model: {
     prop: 'value',
     event: 'input-value'
@@ -78,7 +78,7 @@ export default {
     },
     maxLength: {
       get() {
-        const num = this.type === 'textarea' ? 200 : 5
+        const num = this.type === 'textarea' ? 200 : 50
         return this.max || num
       }
     },
