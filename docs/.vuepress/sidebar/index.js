@@ -40,6 +40,7 @@ module.exports = {
         '/components/navigation',
         '/components/resizable',
         '/components/watermark',
+        '/components/input-lengthlimit',
       ]
     }, {
       title: '内部组件',
@@ -50,7 +51,6 @@ module.exports = {
         '/components/private/s-header/header',
         '/components/private/s-menu/menu',
         '/components/private/s-dict-select/',
-        '/components/private/s-input-lengthlimit/',
       ]
     }
   ]

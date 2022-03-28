@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-  name: 'SInputLengthlimit',
+  name: 'DInputLengthlimit',
   model: {
     prop: 'value',
     event: 'input-value'

@@ -30,7 +30,7 @@ function install(Vue) {
   Vue.component('SPageHandleItem', PageHandleItem)
   Vue.component('STransferModal', TransferModal)
   Vue.component('SLargeSelect', LargeSelect)
-  Vue.component('SInputLengthlimit', InputLengthlimit)
+  Vue.component('DInputLengthlimit', InputLengthlimit)
   Vue.prototype.$Srules = Srules;
 
 }
