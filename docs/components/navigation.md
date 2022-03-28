@@ -4,7 +4,6 @@
 
 ## 基本用法
 
-
 ::: demo
 
 ```html
@@ -47,8 +46,11 @@
         let favorite_local = JSON.parse(
           localStorage.getItem('components.favorite') ?? '[]'
         )
-        favorite_local.filter(i=>i.nodeEnName === menu.nodeEnName).length > 0
-          ? favorite_local = favorite_local.filter(i => i.nodeEnName !== menu.nodeEnName)
+        favorite_local.filter((i) => i.nodeEnName === menu.nodeEnName).length >
+        0
+          ? (favorite_local = favorite_local.filter(
+              (i) => i.nodeEnName !== menu.nodeEnName
+            ))
           : favorite_local.push(menu)
         this.favorite = favorite_local
         localStorage.setItem(
@@ -56,22 +58,38 @@
           JSON.stringify(favorite_local)
         )
         this.$forceUpdate()
-      },
+      }
     },
     data() {
       return {
-        visibleRightPanel:true,
+        visibleRightPanel: true,
         favorite: [], // 收藏的栏目
         menuCategory: [
           [
             '标题1',
-            { nodeEnName: 'thisone', nodeName: '第一个', link:'https://github.com' },
-            { nodeEnName: 'thistwo', nodeName: '第二个', link:'https://github.com' }
+            {
+              nodeEnName: 'thisone',
+              nodeName: '第一个',
+              link: 'https://github.com'
+            },
+            {
+              nodeEnName: 'thistwo',
+              nodeName: '第二个',
+              link: 'https://github.com'
+            }
           ],
           [
             '标题2',
-            { nodeEnName: 'thisthree', nodeName: '第三个', link:'https://github.com' },
-            { nodeEnName: 'thisfour', nodeName: '第四个', link:'https://github.com' }
+            {
+              nodeEnName: 'thisthree',
+              nodeName: '第三个',
+              link: 'https://github.com'
+            },
+            {
+              nodeEnName: 'thisfour',
+              nodeName: '第四个',
+              link: 'https://github.com'
+            }
           ]
         ]
       }
@@ -79,20 +97,24 @@
   }
 </script>
 ```
+
 :::
 
 ## API
 
 ## Props
-| 参数              | **说明**                                                     | **类型** | 默认值 |
-| ----------------- | ------------------------------------------------------------ | -------- | ------ |
-| maskClosable      | 是否可以点击蒙层关闭                                         | Boolean  | true   |
-| replaceKey        | 菜单条目的唯一标识符                                         | String   | "key"  |
-| favorite          | 左侧的喜欢菜单                                               | Array    | []     |
-| visibleRightPanel | 右侧导航栏是否展开                                           | Boolean  | true   |
+
+| 参数              | **说明**                                                           | **类型** | 默认值 |
+| ----------------- | ------------------------------------------------------------------ | -------- | ------ |
+| maskClosable      | 是否可以点击蒙层关闭                                               | Boolean  | true   |
+| iconHeight        | 按钮高度                                                           | Number   | 60     |
+| replaceKey        | 菜单条目的唯一标识符                                               | String   | "key"  |
+| favorite          | 左侧的喜欢菜单                                                     | Array    | []     |
+| visibleRightPanel | 右侧导航栏是否展开                                                 | Boolean  | true   |
 | menuCategory      | 菜单条目列表（第一个为字符串代表该栏中文名，后面的为他下面的条目） | Array    | []     |
 
 ## Event
+
 | 参数   | **说明**                                           | **类型**    |
 | ------ | -------------------------------------------------- | ----------- |
 | click  | 点击菜单条目的点击事件，可配置跳转页面等           | function(e) |

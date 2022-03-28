@@ -16,7 +16,7 @@ export function validate(reg, value, callback, tips) {
         callback(new Error(tips))
     }
 }
-const Srules = {
+const rules = {
     /**
      * @description: 只包含英文、数字、下划线
      * @param {*} rule
@@ -100,4 +100,4 @@ const Srules = {
     }
 }
 
-export default Srules
+export default rules

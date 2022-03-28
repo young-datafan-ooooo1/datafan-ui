@@ -5,8 +5,10 @@ name: npm publish
 
 on:
   push:
-    tags:
+    branches:
       - 'v*'
+    paths-ignore:
+      - 'docs/**'
 jobs:
   build:
 
