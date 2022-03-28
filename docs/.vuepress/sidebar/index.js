@@ -37,7 +37,6 @@ module.exports = {
         '/components/transfer-modal',
         '/components/navigation',
         '/components/resizable',
-        '/components/watermark',
         '/components/input-lengthlimit',
       ]
     }, {
