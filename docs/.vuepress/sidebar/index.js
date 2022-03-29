@@ -47,6 +47,7 @@ module.exports = {
         '/components/private/s-layout/layout',
         '/components/private/s-header/header',
         '/components/private/s-menu/menu',
+        '/components/private/s-table/',
         '/components/private/s-dict-select/',
         '/components/private/watermark/watermark',
       ]
