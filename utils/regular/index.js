@@ -34,7 +34,7 @@ const rules = {
      * @param {*} value
      * @param {*} callback
      */
-    regEngStarNumLine(rule, value, callback) {
+    regEngStartNumLine(rule, value, callback) {
         const reg = /^[a-zA-Z][a-zA-Z0-9_]*$/.test(value) || !value
         const tips = rule.message || '以英文开始，可包含英文、数字、下划'
         validate(reg, value, callback, tips)
@@ -67,11 +67,34 @@ const rules = {
      * @param {*} value
      * @param {*} callback
      */
-    regIsNumber(rule, value, callback) {
+    regIsPositiveInteger(rule, value, callback) {
         const reg = /^[+]{0,1}(\d+)$/.test(value) || !value
         const tips = rule.message || '请输入正整数'
         validate(reg, value, callback, tips)
     },
+    /**
+     * @description: 只能输入数字,允许负数、小数
+     * @param {*} rule
+     * @param {*} value
+     * @param {*} callback
+     */
+     regIsNumber(rule, value, callback) {
+        const reg = /^\-?[0-9]+(.[0-9]+)?$/.test(value) || !value
+        const tips = rule.message || '请输入数字'
+        validate(reg, value, callback, tips)
+    },
+    /**
+     * @description: 非零开头的正整数
+     * @param {*} rule
+     * @param {*} value
+     * @param {*} callback
+     */
+     regNonZeroDigit(rule, value, callback) {
+        const reg = /^(0|[1-9][0-9]*)$/.test(value) || !value
+        const tips = rule.message || '请输入非零开头的正整数'
+        validate(reg, value, callback, tips)
+    },
+   
     /**
      * @description: 校验字符长度,默认0-50
      * @param {*} rule
@@ -96,6 +119,42 @@ const rules = {
             "[`~!@#$^&*()=|{}':;',\\[\\].<>《》/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？]"
         )).test(value) || !value
         const tips = rule.message || `不能包含特殊字符`
+        validate(reg, value, callback, tips)
+    },
+    /**
+     * @description: 只支持输入英文、数字、_、-、/
+     * @param {*} rule
+     * @param {*} value
+     * @param {*} callback
+     */
+     regEngNumSpecial(rule, value, callback) {
+        const reg = /^[a-zA-Z0-9_\-\/]{1,}$/.test(value) || !value
+        const tips = rule.message || `请输入英文、数字、_、-、/`
+        validate(reg, value, callback, tips)
+    },
+    
+    /**
+     * @description: 只支持输入汉字、英文、数字、下划线，且只能以英文和汉字开头
+     * @param {*} rule
+     * @param {*} value
+     * @param {*} callback
+     */
+     regChineseEngStartNumline(rule, value, callback) {
+        const reg = /^[\u4E00-\u9FA5a-z][\u4E00-\u9FA5a-z0-9_]*$/.test(value) || !value
+        const tips = rule.message || `请输入中文、英文、数字、下划线，且只能以英文和中文开头`
+        validate(reg, value, callback, tips)
+    },
+    
+    /**
+     * @description: 校验是否是手机号码
+     * @param {*} rule
+     * @param {*} value
+     * @param {*} callback
+     */
+     regIsPhoneNumber(rule, value, callback) {
+        const reg =/^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/
+        .test(value) || !value
+        const tips = rule.message || `请输入正确手机号码`
         validate(reg, value, callback, tips)
     }
 }
