@@ -81,23 +81,6 @@ $vxe-table-border-radius: 4px;
       color: #2d3b4f;
     }
   }
-  /* 图标按钮 */
-  .icon-btn {
-    color: #f36f4e;
-    font-size: 17px;
-    cursor: pointer;
-    &.disabled {
-      color: #9395a2;
-    }
-    & + .icon-btn {
-      margin-left: 15px;
-    }
-    &[disabled] {
-      color: rgba(0, 0, 0, 0.25);
-      cursor: not-allowed;
-      pointer-events: none;
-    }
-  }
 }
 
 /* loading相关 */

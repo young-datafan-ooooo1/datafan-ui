@@ -10,3 +10,9 @@ yarn add @sense70/common-component-vue
 ```
 ## 组件版本
 使用内部组件时，根据当前项目迭代版本下载对应内部组件库；如当前项目迭代为`stella-1.5`，指定组件库版本为`@sense70/common-component-vue: "~1.5.0"` 或者 `@sense70/common-component-vue: "~1.5.x"`
+
+## 注意事项
+
+::: warning 关于内部组件扩展
+为了统一管理内部组件，如当前组件不完全满足你当前开发的功能，可讨论后优化迭代组件；避免私自修改或另写业务组件，不利于统一管理。
+:::
