@@ -140,11 +140,16 @@
 |方法名|说明|参数|
 |---|---|---|
 |regEngNumLine|只包含英文、数字、下划线|-|
-|regEngStarNumLine|以英文开头，只包含英文、数字、下划线|-|
+|regEngStartNumLine|以英文开头，只包含英文、数字、下划线|-|
 |regIsChinese|只能输入中文|-|
 |regIsEnglish|只能输入英文|-|
-|regIsNumber|只能输入正整数|-|
+|regIsPositiveInteger|只能输入正整数|-|
+|regIsNumber|只能输入数字,允许负数、小数|-|
+|regNonZeroDigit|非零开头的正整数|-|
 |regLength|校验字符长度,默认0-50|-|
 |regSpecialCharacter|不能包含特殊字符|-|
+|regEngNumSpecial|只支持输入英文、数字、_、-、/|-|
+|regChineseEngStartNumline|只支持输入汉字、英文、数字、下划线，且只能以英文和汉字开头|-|
+|regIsPhoneNumber|校验是否是手机号码|-|
 
 
