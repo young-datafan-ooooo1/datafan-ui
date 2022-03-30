@@ -1,38 +1,32 @@
 # 组件指南
+组件基于Ant Design高度封装，以风格高度统一、快速完成业务功能及减少重复代码为核心。
 
-## 这里是组件指南
+## 安装
+使用 `yarn|pnpm|npm` 来安装，充分利用 Javascript 包和工具的丰富生态系统。
 
+``` yaml
+yarn add @young-datafan/datafan-ui
+# 或者 pnpm add @young-datafan/datafan-ui
+# 或者 npm i @young-datafan/datafan-ui --save
+```
 
-## 配置模版
+## 使用
+使用组件库及各模块样式。
+``` js
+// main.js
 
-## API 
+import Vue from 'vue'
+import DataFanUI from '@young-datafan/datafan-ui'
 
-### Props
+// datafan-ui内置样式
+import '@young-datafan/datafan-ui/assets/index.less'
+// 列表布局及表格样式
+import '@young-datafan/datafan-ui/assets/page-table.scss'
+// 滚动条样式
+import '@young-datafan/datafan-ui/assets/scrollbar.less'
+// 字体图标库
+import '@young-datafan/datafan-ui/assets/fonts/iconfont.css'
 
-|参数|说明|类型|默认值|
-|---|---|---|---|
-|name|The name of the form, up to 8 characters|`String` /  `Number`|`true`|
+Vue.use(DataFanUI)
 
-
-### Events
-
-|事件名|说明|参数|
-|---|---|---|
-|onclear|Fire when the form is cleared|The argument is a boolean value representing xxx|
-
-
-### Slots
-
-|名称|说明|默认值|
-|---|---|---|
-|header|Form header|`<th>title</th>`|
-
-
-### Methods
-
-|方法名|说明|参数|
-|---|---|---|
-|clear|Used to manually clear the form|-|
-
-
-
+```

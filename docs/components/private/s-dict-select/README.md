@@ -30,5 +30,5 @@
 
 |事件名|说明|参数|
 |---|---|---|
-|change|当选中内容发生改变|`value` 选中项内容|
-|load-success|当字典内容加载完成|`Array` 字典列表数据|
+|change|当选中内容发生改变|`value`|
+|load-success|当字典内容加载完成|`Array`|

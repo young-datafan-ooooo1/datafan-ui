@@ -16,9 +16,6 @@ module.exports = {
     {
       title: '组件指南',
       path: '/components/'
-    }, {
-      title: '安装使用',
-      path: '/components/install'
     },
     {
       title: '内置样式',
@@ -29,15 +26,16 @@ module.exports = {
       children: [
         '/components/empty',
         '/components/full-loading',
-        '/components/rules',
-        '/components/confirm-list',
         '/components/page-title',
         '/components/page-handle',
+        '/components/rules',
+        '/components/input-lengthlimit',
+        '/components/confirm-list',
+        '/components/more-popover',
         '/components/large-select',
         '/components/transfer-modal',
         '/components/navigation',
         '/components/resizable',
-        '/components/input-lengthlimit',
       ]
     }, {
       title: '内部组件',
@@ -47,6 +45,7 @@ module.exports = {
         '/components/private/s-layout/layout',
         '/components/private/s-header/header',
         '/components/private/s-menu/menu',
+        '/components/private/permission',
         '/components/private/s-table/',
         '/components/private/s-dict-select/',
         '/components/private/watermark/watermark',

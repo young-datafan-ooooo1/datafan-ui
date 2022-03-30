@@ -5,6 +5,8 @@
 import Empty from './empty/index.vue'
 import Resizable from './resizable'
 import { PageTitle, PageHandle, PageHandleItem } from './page-table'
+import { FiltersPopover, FiltersPopoverItem } from './filters-popover'
+import { MorePopover, MorePopoverItem } from './more-popover'
 import Navigation from './navigation-slider'
 import TransferModal from './transfer-modal'
 import LargeSelect from './large-select'
@@ -28,6 +30,10 @@ function install(Vue) {
   Vue.component('DPageTitle', PageTitle)
   Vue.component('DPageHandle', PageHandle)
   Vue.component('DPageHandleItem', PageHandleItem)
+  Vue.component('DFiltersPopover', FiltersPopover)
+  Vue.component('DFiltersPopoverItem', FiltersPopoverItem)
+  Vue.component('DMorePopover', MorePopover)
+  Vue.component('DMorePopoverItem', MorePopoverItem)
   Vue.component('DTransferModal', TransferModal)
   Vue.component('DLargeSelect', LargeSelect)
   Vue.component('DInputLengthlimit', InputLengthlimit)
