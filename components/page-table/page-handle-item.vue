@@ -1,7 +1,7 @@
 <!--
  * @Description: 页面头部组件控件项
  * @Date: 2021-08-12 16:31:29
- * @LastEditTime: 2021-09-26 14:51:09
+ * @LastEditTime: 2022-03-30 11:18:53
 -->
 <template>
   <div class="page-handle__item">
@@ -56,14 +56,7 @@ export default {
     border-radius: 32px;
     font-size: 13px;
     line-height: 1 !important;
-    /* 筛选过滤按钮 */
-    &.filter-btn {
-      padding-right: 18px;
-      padding-left: 18px;
-      height: 40px;
-      border-radius: 6px;
-      background-color: #ffffff !important;
-    }
+   
     /* 查询按钮 */
     &.search-btn {
       padding-right: 10px;

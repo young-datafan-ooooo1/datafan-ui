@@ -49,66 +49,52 @@
 :::
 
 
-## 复杂筛选
+## FiltersPopover 复杂筛选
 
-适用于超过两个及以上的搜索条件时（可填充任意筛选条件 `单选｜多选｜单个日期｜日期范围｜时间范围等` ）
+适用于超过两个及以上的搜索条件时（可自定义筛选条件 `单选｜多选｜单个日期｜日期范围｜时间范围等条件` ）
 
 ::: demo
 
 ```html
 <template>
-    <DPageHandle>
-      <!-- 筛选项 -->
-      <div slot="filters">
-        <DPageHandleItem>
-          <a-input v-model="filters.code" allow-clear placeholder="请输入编码"/>
-        </DPageHandleItem>
-        <DPageHandleItem>
-          <a-input v-model="filters.title" allow-clear placeholder="请输入标题"/>
-        </DPageHandleItem>
-        <DPageHandleItem>
-         <a-popover
-            placement="bottom"
-            trigger="click"
-            overlay-class-name="filters-popover"
-          >
-            <template slot="content">
-              <div class="filters-content">
-                <div class="filters-content__header">筛选过滤条件</div>
-                <div class="filters-content__list">
-                  <div class="filters-content__item" label="运行状态">
-                    <a-select v-model="filters.status" placeholder="运行状态" allow-clear>
-                      <a-select-option v-for="(item,index) in 10" :key="index" :value="item" :label="item">
-                        选项：{{ item }}
-                      </a-select-option>
-                    </a-select>
-                  </div>
-                  <div class="filters-content__item" label="用户名">
-                    <a-input v-model="filters.userName" placeholder="用户名" />
-                  </div>
-                  <div class="filters-content__item" label="内容">
-                    <a-input v-model="filters.content" placeholder="内容" />
-                  </div>
-                </div>
-                <div class="filters-content__footer">
-                  <a-button ghost type="primary" @click="reset">
-                    重置
-                  </a-button>
-                </div>
-              </div>
-            </template>
-            <a-button class="filter-btn" ghost type="primary">
-              筛选过滤
-              <a-icon type="filter" />
+  <DPageHandle>
+    <!-- 筛选项 -->
+    <div slot="filters">
+      <DPageHandleItem>
+        <a-input v-model="filters.code" allow-clear placeholder="请输入编码"/>
+      </DPageHandleItem>
+      <DPageHandleItem>
+        <a-input v-model="filters.title" allow-clear placeholder="请输入标题"/>
+      </DPageHandleItem>
+      <DPageHandleItem>
+        <!-- DFiltersPopover 过滤筛选框 -->
+        <DFiltersPopover>
+          <DFiltersPopoverItem label="运行状态">
+            <a-select v-model="filters.status" placeholder="运行状态" allow-clear>
+                <a-select-option v-for="(item,index) in 10" :key="index" :value="item" :label="item">
+                  选项：{{ item }}
+                </a-select-option>
+              </a-select>
+          </DFiltersPopoverItem>
+          <DFiltersPopoverItem label="用户名">
+            <a-input v-model="filters.userName" placeholder="用户名"/>
+          </DFiltersPopoverItem>
+          <DFiltersPopoverItem label="内容">
+            <a-input v-model="filters.content" placeholder="内容"/>
+          </DFiltersPopoverItem>
+          <template slot="footer">
+            <a-button ghost type="primary" @click="reset">
+              重置
             </a-button>
-          </a-popover>
-        </DPageHandleItem>
-        <DPageHandleItem>
-          <a-button class="search-btn" type="primary">查询</a-button>
-        </DPageHandleItem>
-      </div>
-    </DPageHandle>
-  </template> 
+          </template>
+        </DFiltersPopover>
+      </DPageHandleItem>
+      <DPageHandleItem>
+        <a-button class="search-btn" type="primary">查询</a-button>
+      </DPageHandleItem>
+    </div>
+  </DPageHandle>
+</template> 
 
   <script>
     const GET_FILTERS = function() {
@@ -137,10 +123,10 @@
 ```
 :::
 
-## 注意事项
-1. 此处筛选过滤按钮为内置样式 `class="filter-btn"`
-2. 此处查询按钮为内置样式 `class="search-btn"`
 
+::: warning 注意事项
+此处查询按钮为内置样式 `class="search-btn"`
+:::
 
 ## API
 

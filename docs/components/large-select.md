@@ -1,6 +1,6 @@
 # LargeSelect 大数据量下拉框
 
-基于antdesign1.x版本select组件，针对大数据量下拉框展示、滚动及查询卡顿问题封装。
+基于Ant Design1.x版本select组件，针对大数据量下拉框展示、滚动及查询卡顿问题封装。
 
 ## 基本用法
 
