@@ -14,9 +14,9 @@ export default async ({
   Vue
 }) => {
   Vue.prototype._ = _
-  if (typeof process === 'undefined') {
+  // if (typeof process === 'undefined') {
     Vue.use(Antd)
     // Vue.use(components)
     Vue.use(DataFanUI)
-  }
+  // }
 }
