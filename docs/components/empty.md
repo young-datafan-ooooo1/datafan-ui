@@ -10,7 +10,7 @@
 ::: demo
 
 ```html
-<DEmpty/>
+<DEmpty />
 
 ```
 :::
@@ -23,20 +23,7 @@
 ::: demo
 
 ```html
-<template>
-  <DEmpty :text="text" :description="description"></DEmpty>
-</template>
-
-<script>
-  export default {
-    data(){
-      return {
-        text: '这里是提示',
-        description: '这里是详细说明'
-      }
-    }
-  }
-</script>
+<DEmpty text="这里是提示" description="这里是详细说明" />
   
 ```
 
