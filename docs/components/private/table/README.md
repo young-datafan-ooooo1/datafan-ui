@@ -1,4 +1,4 @@
-# STable 表格
+# Table 表格
 
 基于 `vxe-grid` 组件高度封装的表格，包含常用的表格展示、列宽拖拽、自动获取api数据、自动分页等功能；`vxe-grid` 本身的属性&事件均可正常使用，详见官方属性配置: 
 [vxe-grid](https://xuliangzhan_admin.gitee.io/vxe-table/#/grid/api)

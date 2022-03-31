@@ -42,12 +42,12 @@ module.exports = {
       collapsable: false,
       children: [
         '/components/private/',
-        '/components/private/s-layout/layout',
-        '/components/private/s-header/header',
-        '/components/private/s-menu/menu',
+        '/components/private/layout/layout',
+        '/components/private/header/header',
+        '/components/private/menu/menu',
         '/components/private/permission',
-        '/components/private/s-table/',
-        '/components/private/s-dict-select/',
+        '/components/private/table/',
+        '/components/private/dict-select/',
         '/components/private/watermark/watermark',
       ]
     }
