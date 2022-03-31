@@ -38,13 +38,13 @@
         rules: {
           fieldA: [
             {
-              validator: this.$rules.regEngNumLine,
+              // validator: this.$rules.regEngNumLine,
               trigger: 'blur',
             },
           ],
           fieldB: [
             {
-              validator: this.$rules.regLength,
+              // validator: this.$rules.regLength,
               trigger: 'blur',
             },
           ],
@@ -103,14 +103,14 @@
         rules: {
           fieldA: [
             {
-              validator: this.$rules.regEngNumLine,
+              // validator: this.$rules.regEngNumLine,
               trigger: 'blur',
               message:'自定义提示语'
             },
           ],
           fieldB: [
             {
-              validator: this.$rules.regLength,
+              // validator: this.$rules.regLength,
               trigger: 'blur',
               min:2,
               max:5,

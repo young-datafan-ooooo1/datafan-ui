@@ -3,7 +3,6 @@
  * @使用方式: 
  * 1. 打开loading提示: this.$loading('加载中...') 
  * 2. 关闭loading: this.$loading.close()
- * @Date: 2022-03-07 17:50:38
 */
 import FullLoading from './full-loading'
 
