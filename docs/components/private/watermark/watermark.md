@@ -1,4 +1,3 @@
-
 # Watermark 水印
 
 为所有页面加上水印。
@@ -8,7 +7,7 @@
 ``` js
 import { watermark } from "@sense70/common-component-vue"
 
-mounted(){
+mounted() {
   watermark.set('水印')
 }
 ```

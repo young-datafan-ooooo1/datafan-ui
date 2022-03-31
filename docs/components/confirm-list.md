@@ -9,33 +9,34 @@
 ::: demo
 
 ```html
-  <template>
-    <a-space>
-      <a-button @click="onClick('删除')">批量删除</a-button>
-      <a-button @click="onClick('下载')">批量下载</a-button>
-      <a-button @click="onClick('导出')">批量导出</a-button>
-    </a-space>
-  </template>
+<template>
+  <a-space>
+    <a-button @click="onClick('删除')">批量删除</a-button>
+    <a-button @click="onClick('下载')">批量下载</a-button>
+    <a-button @click="onClick('导出')">批量导出</a-button>
+  </a-space>
+</template>
 
-  <script>
-    export default {
-      methods: {
-        onClick(operation) {
-          const chooseList = ['项目1', '项目2', '项目3', '项目4', '...']
-          this.$confirmList({
-            title: `注意：是否${operation}以下内容（${chooseList.length}）项？`,
-            content: chooseList,
-            onOk() {
-              console.log('OK');
-            },
-            onCancel() {
-              console.log('Cancel');
-            },
-          })
-        }
+<script>
+  export default {
+    methods: {
+      onClick(operation) {
+        const chooseList = ['项目1', '项目2', '项目3', '项目4', '...']
+        this.$confirmList({
+          title: `注意：是否${operation}以下内容（${chooseList.length}）项？`,
+          content: chooseList,
+          onOk() {
+            console.log('OK');
+          },
+          onCancel() {
+            console.log('Cancel');
+          },
+        })
       }
     }
-  </script>
+  }
+</script>
+
 ```
 :::
 

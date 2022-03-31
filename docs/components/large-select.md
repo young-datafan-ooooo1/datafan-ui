@@ -10,32 +10,33 @@
 
 ```html
 <template>
-    <DLargeSelect v-model="value" :data="data" placeholder="请选择"/>
-  </template> 
+  <DLargeSelect v-model="value" :data="data" placeholder="请选择"/>
+</template> 
 
-  <script>
-    export default {
-      data() {
-        return {
-          value: '',
-          data: [],
-        }
-      },
-      mounted() {
-        const list = []
-        for(var i = 0; i < 10000; i++ ) {
-          list.push({ value: i, title: `选项${i}` })
-        }
-        this.data = list
+<script>
+  export default {
+    data() {
+      return {
+        value: '',
+        data: [],
       }
+    },
+    mounted() {
+      const list = []
+      for(var i = 0; i < 10000; i++ ) {
+        list.push({ value: i, title: `选项${i}` })
+      }
+      this.data = list
     }
-  </script>
+  }
+</script>
 
-  <style>
-    .large-select {
-      width: 150px;
-    }
-  </style>
+<style>
+  .large-select {
+    width: 150px;
+  }
+</style>
+
 ```
 :::
 

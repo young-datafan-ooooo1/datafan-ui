@@ -56,5 +56,4 @@ columns: [
     visible: matchPermission(['Edit', 'Delete','ResetPassword', 'Grant'])
   }
 ]
-
 ```
