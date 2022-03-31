@@ -10,40 +10,40 @@
 
 ```html
 <template>
-    <DPageHandle>
-      <!-- 筛选项 -->
-      <div slot="filters">
-        <DPageHandleItem>
-          <a-input v-model="value" allow-clear placeholder="请输入检索内容"/>
-        </DPageHandleItem>
-        <DPageHandleItem>
-          <a-button class="search-btn" type="primary">查询</a-button>
-        </DPageHandleItem>
-      </div>
-      <!-- 操作项 -->
-      <div slot="actions">
-        <DPageHandleItem>
-          <a-button type="primary" ghost>上传</a-button>
-        </DPageHandleItem>
-        <DPageHandleItem>
-          <a-button type="primary" ghost>下载</a-button>
-        </DPageHandleItem>
-        <DPageHandleItem>
-          <a-button type="primary" ghost>批量删除</a-button>
-        </DPageHandleItem>
-      </div>
-    </DPageHandle>
-  </template> 
+  <DPageHandle>
+    <!-- 筛选项 -->
+    <div slot="filters">
+      <DPageHandleItem>
+        <a-input v-model="value" allow-clear placeholder="请输入检索内容"/>
+      </DPageHandleItem>
+      <DPageHandleItem>
+        <a-button class="search-btn" type="primary">查询</a-button>
+      </DPageHandleItem>
+    </div>
+    <!-- 操作项 -->
+    <div slot="actions">
+      <DPageHandleItem>
+        <a-button type="primary" ghost>上传</a-button>
+      </DPageHandleItem>
+      <DPageHandleItem>
+        <a-button type="primary" ghost>下载</a-button>
+      </DPageHandleItem>
+      <DPageHandleItem>
+        <a-button type="primary" ghost>批量删除</a-button>
+      </DPageHandleItem>
+    </div>
+  </DPageHandle>
+</template> 
 
-  <script>
-    export default {
-      data(){
-        return {
-          value: ''
-        }
+<script>
+  export default {
+    data(){
+      return {
+        value: ''
       }
     }
-  </script>
+  }
+</script>
 
 ```
 :::
@@ -96,29 +96,29 @@
   </DPageHandle>
 </template> 
 
-  <script>
-    const GET_FILTERS = function() {
+<script>
+  const GET_FILTERS = function() {
+    return {
+      code: '',
+      title: '',
+      content: '',
+      status: undefined,
+      userName: ''
+    }
+  }
+  export default {
+    data() {
       return {
-        code: '',
-        title: '',
-        content: '',
-        status: undefined,
-        userName: ''
+        filters: GET_FILTERS()
+      }
+    }, 
+    methods: {
+      reset() {
+        this.filters = GET_FILTERS()
       }
     }
-    export default {
-      data() {
-        return {
-          filters: GET_FILTERS()
-        }
-      }, 
-      methods: {
-        reset() {
-          this.filters = GET_FILTERS()
-        }
-      }
-    }
-  </script>
+  }
+</script>
 
 ```
 :::
