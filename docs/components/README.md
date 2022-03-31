@@ -19,13 +19,13 @@ import Vue from 'vue'
 import DataFanUI from '@young-datafan/datafan-ui'
 
 // datafan-ui内置样式
-import '@young-datafan/datafan-ui/assets/index.less'
+import '@young-datafan/datafan-ui/assets/style/index.less'
 // 列表布局及表格样式
-import '@young-datafan/datafan-ui/assets/page-table.scss'
+import '@young-datafan/datafan-ui/assets/style/page-table.scss'
 // 滚动条样式
-import '@young-datafan/datafan-ui/assets/scrollbar.less'
+import '@young-datafan/datafan-ui/assets/style/scrollbar.less'
 // 字体图标库
-import '@young-datafan/datafan-ui/assets/fonts/iconfont.css'
+import '@young-datafan/datafan-ui/assets/style/fonts/iconfont.css'
 
 Vue.use(DataFanUI)
 

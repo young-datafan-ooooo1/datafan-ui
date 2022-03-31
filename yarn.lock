@@ -1618,6 +1618,18 @@
   resolved "http://mvn.senses-ai.com:8081/repository/npm-group/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha1-0pHGpOl5ibXGHZrPOWrk/hM6cY0=
 
+"@young-datafan/datafan-ui@~1.5.0":
+  version "1.5.101"
+  resolved "http://mvn.senses-ai.com:8081/repository/npm-group/@young-datafan/datafan-ui/-/datafan-ui-1.5.101.tgz#480548bc938ff05f5fc8fecb706f8f3baf471596"
+  integrity sha512-tpUsUFM50QKAJxPX9PQdBSFTuhQ7Q5cRmzavBuYYWcnn9t+TayjXr/z4/ZsTvY7dascpiD0/lYUFZBMm0yIxug==
+  dependencies:
+    ant-design-vue "1.7.2"
+    less "^4.1.2"
+    less-loader "^6.1.1"
+    vuepress "^1.9.7"
+    vuepress-plugin-demo-container "^0.2.0"
+    vuex "^3.4.0"
+
 abbrev@1:
   version "1.1.1"
   resolved "http://mvn.senses-ai.com:8081/repository/npm-group/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
