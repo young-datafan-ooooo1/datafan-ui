@@ -174,7 +174,7 @@ Vue.use(VXETable)
 
 ## 表格列
 1. 列插槽 `slots: { default: 'custom' }` 用于自定义列内容，`columns` 中设置slots后，在 `STable` 下使用定义的具名插槽。
-2. 操作列建议最多展示三个功能图标，超过三个时使用 [MorePopover 更多操作弹层](/components/private/v-permission)组件来展示更多。
+2. 操作列建议最多展示三个功能图标，超过三个时使用 [MorePopover 更多操作弹层](/components/more-popover)组件来展示更多。
 3. 列/功能权限判断，详见：[鉴权工具：Permission](/components/private/permission)
 4. 列状态设置，详见：[内置样式：状态颜色](/components/built-in-style)
 ::: warning 列宽设置

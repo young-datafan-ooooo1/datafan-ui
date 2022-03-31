@@ -14,7 +14,6 @@ import FullLoading from './full-loading'
 import confirmList from './confirm-list'
 import InputLengthlimit from './input-lengthlimit'
 import rules from '../utils/regular'
-export { default as watermark } from './watermark'
 export { Resizable }
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@young-datafan/datafan-ui",
-  "version": "1.5.101",
+  "version": "1.5.102",
   "description": "",
   "main": "components/index.js",
   "scripts": {
@@ -11,13 +11,14 @@
   },
   "dependencies": {
     "ant-design-vue": "1.7.2",
-    "vuex": "^3.4.0",
-    "less": "^4.1.2",
-    "less-loader": "^6.1.1",
-    "vuepress": "^1.9.7",
-    "vuepress-plugin-demo-container": "^0.2.0"
+    "@young-datafan/datafan-ui": "~1.5.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "vuepress": "^1.9.7",
+    "vuepress-plugin-demo-container": "^0.2.0",
+    "less": "^4.1.2",
+    "less-loader": "^6.1.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/young-datafan/datafan-ui.git"
