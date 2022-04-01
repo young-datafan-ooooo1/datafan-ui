@@ -18,10 +18,10 @@
     :wrapper-col="wrapperCol"
   >
   <a-form-model-item ref="name" label="名称" prop="name">
-        <D-input-lengthlimit :rules.sync="rules" prop="name" v-model="form.name"/>
+        <D-input-lengthlimit placeholder="长度在1～50个字符之间"  :rules.sync="rules" prop="name" v-model="form.name"/>
     </a-form-model-item>
     <a-form-model-item ref="remarks" label="备注" prop="remarks">
-        <D-input-lengthlimit :rules.sync="rules" prop="remarks" v-model="form.remarks" type="textarea"/>
+        <D-input-lengthlimit placeholder="长度在0～200个字符之间" :rules.sync="rules" prop="remarks" v-model="form.remarks" type="textarea"/>
     </a-form-model-item>
     <a-form-model-item :wrapper-col="{ span: 14, offset: 4 }">
       <a-button type="primary" @click="onSubmit">
@@ -74,10 +74,10 @@
     :wrapper-col="wrapperCol"
   >
   <a-form-model-item ref="name" label="名称" prop="name">
-        <D-input-lengthlimit :rules.sync="rules" prop="name" :min="2" :max="5" message="自定义提示语" v-model="form.name"/>
+        <D-input-lengthlimit placeholder="长度在2～5个字符之间"   :rules.sync="rules" prop="name" :min="2" :max="5" message="自定义提示语" v-model="form.name"/>
     </a-form-model-item>
     <a-form-model-item ref="remarks" label="备注" prop="remarks">
-        <D-input-lengthlimit :rules.sync="rules" prop="remarks" :min="2" :max="5" message="自定义提示语" v-model="form.remarks" type="textarea"/>
+        <D-input-lengthlimit :rules.sync="rules" prop="remarks" placeholder="长度在2～5个字符之间" :min="2" :max="5" message="自定义提示语" v-model="form.remarks" type="textarea"/>
     </a-form-model-item>
     <a-form-model-item :wrapper-col="{ span: 14, offset: 4 }">
       <a-button type="primary" @click="onSubmit">
@@ -130,10 +130,10 @@
     :wrapper-col="wrapperCol"
   >
   <a-form-model-item ref="name" label="名称" prop="name" :rules="nameRules">
-        <D-input-lengthlimit :rules.sync="nameRules" prop="name" ruleSetLocation="formItem"  v-model="form.name"/>
+        <D-input-lengthlimit  placeholder="长度在1～50个字符之间" :rules.sync="nameRules" prop="name" ruleSetLocation="formItem"  v-model="form.name"/>
     </a-form-model-item>
     <a-form-model-item ref="remarks" label="备注" prop="remarks">
-        <D-input-lengthlimit :rules.sync="rules" prop="remarks"  v-model="form.remarks" type="textarea"/>
+        <D-input-lengthlimit placeholder="长度在0～200个字符之间" :rules.sync="rules" prop="remarks"  v-model="form.remarks" type="textarea"/>
     </a-form-model-item>
     <a-form-model-item :wrapper-col="{ span: 14, offset: 4 }">
       <a-button type="primary" @click="onSubmit">
