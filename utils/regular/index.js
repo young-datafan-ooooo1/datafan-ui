@@ -103,7 +103,10 @@ const rules = {
   regLength(rule, value, callback) {
     let min = rule.min || 0
     let max = rule.max || 50
-    const reg = (new RegExp('^.{' + min + ',' + max + '}$')).test(value) || !value
+    let reg = (new RegExp('^.{' + min + ',' + max + '}$')).test(value) 
+    if(min>0){
+      reg=value?true:false&&reg
+    }
     const tips = rule.message || `长度在${min}~${max}个字符之间`
     validate(reg, value, callback, tips)
   },

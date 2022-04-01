@@ -37,7 +37,6 @@ function install(Vue) {
   Vue.component('DLargeSelect', LargeSelect)
   Vue.component('DInputLengthlimit', InputLengthlimit)
   Vue.prototype.$rules = rules
-
 }
 const Plugins = { install }
 export default Plugins

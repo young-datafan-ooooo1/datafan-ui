@@ -14,10 +14,10 @@
     :wrapper-col="wrapperCol"
   >
     <a-form-model-item ref="fieldA" label="field A" prop="fieldA">
-      <a-input v-model="form.fieldA" placeholder="input placeholder" />
+      <a-input v-model="form.fieldA" placeholder="请输入英文、数字、下划线" />
     </a-form-model-item>
     <a-form-model-item ref="fieldB" label="field B" prop="fieldB">
-      <a-input v-model="form.fieldB" placeholder="input placeholder" />
+      <a-input v-model="form.fieldB" placeholder="请输入中文" />
     </a-form-model-item>
     <a-form-model-item :wrapper-col="{ span: 14, offset: 4 }">
       <a-button type="primary" @click="onSubmit"> 确定 </a-button>
@@ -38,13 +38,13 @@
         rules: {
           fieldA: [
             {
-              // validator: this.$rules.regEngNumLine,
+              validator: this.$rules.regEngNumLine,
               trigger: 'blur',
             },
           ],
           fieldB: [
             {
-              // validator: this.$rules.regLength,
+              validator: this.$rules.regIsChinese,
               trigger: 'blur',
             },
           ],
@@ -55,7 +55,6 @@
       onSubmit() {
         this.$refs.ruleForm.validate((valid) => {
           if (valid) {
-            alert('submit!')
           } else {
             console.log('error submit!!')
             return false
@@ -79,10 +78,10 @@
     :wrapper-col="wrapperCol"
   >
     <a-form-model-item ref="fieldA" label="field A" prop="fieldA">
-      <a-input v-model="form.fieldA" placeholder="input placeholder" />
+      <a-input v-model="form.fieldA" placeholder="不能包含特殊字符" />
     </a-form-model-item>
     <a-form-model-item ref="fieldB" label="field B" prop="fieldB">
-      <a-input v-model="form.fieldB" placeholder="input placeholder" />
+      <a-input v-model="form.fieldB" placeholder="长度在2～5个字符" />
     </a-form-model-item>
     <a-form-model-item :wrapper-col="{ span: 14, offset: 4 }">
       <a-button type="primary" @click="onSubmit"> 确定 </a-button>
@@ -91,6 +90,7 @@
 </template>
 
 <script>
+  // import test from '../../utils/regular'
   export default {
     data() {
       return {
@@ -103,14 +103,14 @@
         rules: {
           fieldA: [
             {
-              // validator: this.$rules.regEngNumLine,
+              validator: this.$rules.regSpecialCharacter,
               trigger: 'blur',
               message:'自定义提示语'
             },
           ],
           fieldB: [
             {
-              // validator: this.$rules.regLength,
+              validator: this.$rules.regLength,
               trigger: 'blur',
               min:2,
               max:5,

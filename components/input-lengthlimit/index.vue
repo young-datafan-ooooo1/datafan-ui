@@ -84,7 +84,8 @@ export default {
     },
     minLength: {
       get() {
-        return this.min || 0
+        const num = this.type === 'textarea' ? 0 : 1
+        return this.min || num
       }
     }
   },
@@ -132,7 +133,10 @@ export default {
     regLength(rule, value, callback) {
       const min = rule.min || 0
       const max = rule.max || 50
-      const reg = (new RegExp('^.{' + min + ',' + max + '}$')).test(value) || !value
+      let reg=(new RegExp('^.{' + min + ',' + max + '}$')).test(value) 
+      if(min>0){
+        reg=value?true:false&&reg
+      }
       const tips = rule.message || `长度在${min}~${max}个字符之间`
       if (reg) {
         callback()
