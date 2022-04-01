@@ -29,7 +29,7 @@ module.exports = {
         '/components/page-title',
         '/components/page-handle',
         '/components/rules',
-        '/components/input-lengthlimit',
+        '/components/input-limit',
         '/components/confirm-list',
         '/components/more-popover',
         '/components/large-select',
