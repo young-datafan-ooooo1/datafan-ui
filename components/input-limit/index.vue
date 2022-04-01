@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-  name: 'DInputLengthlimit',
+  name: 'DInputLimit',
   model: {
     prop: 'value',
     event: 'input-value'
@@ -96,12 +96,12 @@ export default {
           let obj = this.rules
           const rule = { validator: this.regLength, min: this.minLength, max: this.maxLength, trigger: 'blur',message:this.message }
           if (!this.rules) {
-            console.error('sense-name-input组建校验字符长度必须双向绑定rules')
+            console.error('D-Input-Limit组建校验字符长度必须双向绑定rules')
             return
           }
           if (this.ruleSetLocation === 'form') {
             if (!this.prop) {
-              console.error('sense-name-input组建校验字符长度必须传入prop属性')
+              console.error('D-Input-Limit组建校验字符长度必须传入prop属性')
               return
             }
             if (this.rules[this.prop]) {

@@ -12,7 +12,7 @@ import TransferModal from './transfer-modal'
 import LargeSelect from './large-select'
 import FullLoading from './full-loading'
 import confirmList from './confirm-list'
-import InputLengthlimit from './input-lengthlimit'
+import InputLimit from './input-limit'
 import rules from '../utils/regular'
 export { Resizable }
 
@@ -35,7 +35,7 @@ function install(Vue) {
   Vue.component('DMorePopoverItem', MorePopoverItem)
   Vue.component('DTransferModal', TransferModal)
   Vue.component('DLargeSelect', LargeSelect)
-  Vue.component('DInputLengthlimit', InputLengthlimit)
+  Vue.component('DInputLimit', InputLimit)
   Vue.prototype.$rules = rules
 }
 const Plugins = { install }
