@@ -43,7 +43,7 @@ export default {
     & + .filters-content__item {
       margin-top: 10px;
     }
-    /deep/ .ant-input {
+    /deep/ input {
       padding-right: 25px;
       padding-left: 25px;
       height: 100%;
