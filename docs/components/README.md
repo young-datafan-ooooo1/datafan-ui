@@ -23,7 +23,7 @@ import '@young-datafan/datafan-ui/assets/style/index.less'
 // 滚动条样式
 import '@young-datafan/datafan-ui/assets/style/scrollbar.less'
 // 字体图标库
-import '@young-datafan/datafan-ui/assets/style/fonts/iconfont.css'
+import '@young-datafan/datafan-ui/assets/fonts/iconfont.css'
 
 Vue.use(DataFanUI)
 

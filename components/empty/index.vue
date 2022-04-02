@@ -41,8 +41,7 @@ export default {
   margin: auto;
   color: #AAAAAA;
   .empty__img {
-    min-width: 90px;
-    width: 25%;
+    width: 120px;
   }
   &__text {
     margin: 10px 0 0 0;
