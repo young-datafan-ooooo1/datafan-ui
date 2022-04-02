@@ -9,9 +9,9 @@
  ![acatar](./menu.png)
 
 
- ```html
+ ``` html
  <template>
-  <SMenu
+  <DMenu
     :menu-data="[]"
     :collapsed="true"
     :all-open-keys="[]"
