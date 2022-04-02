@@ -8,6 +8,17 @@ yarn add @sense70/common-component-vue
 # 或者 pnpm add @sense70/common-component-vue
 # 或者 npm i @sense70/common-component-vue --save
 ```
+## 使用
+使用组件库及各模块样式。
+``` js
+// main.js
+
+import Vue from 'vue'
+// 内部组件库
+import SenseComponent from '@sense70/common-component-vue'
+// 全局组件注册
+Vue.use(SenseComponent)
+```
 ## 组件版本
 使用内部组件时，根据当前项目迭代版本下载对应内部组件库；如当前项目迭代为`stella-1.5`，指定组件库版本为`@sense70/common-component-vue: "~1.5.0"` 或者 `@sense70/common-component-vue: "~1.5.x"`
 

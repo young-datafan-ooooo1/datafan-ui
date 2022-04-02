@@ -9,15 +9,18 @@
 ### 安装版本
 ``` json
 // package.json
+
 "vxe-table": "^3.3.12",
 "xe-utils": "^3.3.2",
 ```
 ### 使用依赖
 ``` js
 // main.js
+
 import 'xe-utils'
 import VXETable from 'vxe-table'
-import '@young-datafan/datafan-ui/assets/page-table.scss'
+// vxe-grid表格样式覆盖
+import '@sense70/common-component-vue/assets/page-table.scss'
 Vue.use(VXETable)
 ```
 
@@ -25,11 +28,11 @@ Vue.use(VXETable)
 
 适用大部分表格数据展示场景，使用内置数据代理及分页功能。
 
-![avatar](./s-table.jpg)
+![avatar](./table.jpg)
 
 ```html
 <template>
-  <STable ref="STable" v-bind="tableOptions" />
+  <DTable ref="DTable" v-bind="tableOptions" />
 </template>
 
 <script>
@@ -38,7 +41,7 @@ Vue.use(VXETable)
   export default {
     data() {
       return {
-        // v-bind绑定表格配置项；也可直接绑定在组件上如：<STable height="auto">
+        // v-bind绑定表格配置项；也可直接绑定在组件上如：<DTable height="auto">
         tableOptions: {
           // 获取数据的API（由组件内代理获取数据&分页，无需再处理data、loading）
           api: getList,
@@ -61,7 +64,7 @@ Vue.use(VXETable)
         // 使用内置数据代理时，查询表格数据方法
         onSearch() {
           // 通过ref调用内置search方法，根据筛选条件重新查询数据
-          this.$refs.STable.search() 
+          this.$refs.DTable.search() 
         }
       }
     }
@@ -74,7 +77,7 @@ Vue.use(VXETable)
 
 ```html
 <template>
-  <STable   
+  <DTable   
     :columns="columns"
     :data="tableData"
     :loading="isLoading"
@@ -137,7 +140,7 @@ Vue.use(VXETable)
         sortChange({ sortList }) {
           this.filters.sorts = sortList.map((item) => `${item.property}:${item.order.toUpperCase()}`).join(',')
           this.onSearch()
-          // 内置数据代理时更新查询，可用 this.$refs.STable.search()
+          // 内置数据代理时更新查询，可用 this.$refs.DTable.search()
         },
         /**
          * @description: 分页获取列表
@@ -173,7 +176,7 @@ Vue.use(VXETable)
 
 
 ## 表格列
-1. 列插槽 `slots: { default: 'custom' }` 用于自定义列内容，`columns` 中设置slots后，在 `STable` 下使用定义的具名插槽。
+1. 列插槽 `slots: { default: 'custom' }` 用于自定义列内容，`columns` 中设置slots后，在 `DTable` 下使用定义的具名插槽。
 2. 操作列建议最多展示三个功能图标，超过三个时使用 [MorePopover 更多操作弹层](/components/more-popover)组件来展示更多。
 3. 列/功能权限判断，详见：[鉴权工具：Permission](/components/private/permission)
 4. 列状态设置，详见：[内置样式：状态颜色](/components/built-in-style)
@@ -187,7 +190,7 @@ Vue.use(VXETable)
 
 ``` html
 <template>
- <STable ref="STable" v-bind="tableOptions">
+ <DTable ref="DTable" v-bind="tableOptions">
     <!-- 列slot自定义配置 -->
     <template #pwdOrSecret="{ row }">
       <span>{{ row.type === 'pwd'? '密码' : '秘钥' }}</span>
@@ -219,7 +222,7 @@ Vue.use(VXETable)
           <a-button type="link">用户授权</a-button>
         </DMorePopoverItem>
       </DMorePopover>
-  </STable>
+  </DTable>
 </template>
 <script>
   // 引用鉴权方法

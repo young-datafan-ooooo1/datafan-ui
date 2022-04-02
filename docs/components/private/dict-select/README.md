@@ -6,10 +6,10 @@
 
 适用大部分默认场景
 
-![avatar](./s-dict-select.jpg)
+![avatar](./dict-select.jpg)
 
 ```html
-<SDictSelect 
+<DDictSelect 
   v-model="value" 
   dictType="DT_TYPE" 
   placeholder="请选择数据类型"

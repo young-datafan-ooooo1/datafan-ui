@@ -9,7 +9,7 @@
  
  ```html
  <template>
-  <SLayout>
+  <DLayout>
     <div slot="header">
      <p>这里是头部导航</p>
     <div slot="menu">
@@ -18,6 +18,6 @@
     <div slot="content" class="content-item">
       <p>这里是内容区域</p>
     </div>
-  </SLayout>
+  </DLayout>
 </template>
 ```
