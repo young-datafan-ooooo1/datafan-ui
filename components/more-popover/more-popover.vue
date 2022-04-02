@@ -8,7 +8,7 @@
         <slot />
       </ul>
     </template>
-    <a-icon type="ellipsis" class="icon-btn" />
+    <a-icon type="ellipsis" class="more-popover__btn icon-btn" />
   </a-popover>
 </template>
 
