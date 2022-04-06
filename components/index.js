@@ -13,6 +13,7 @@ import LargeSelect from './large-select'
 import FullLoading from './full-loading'
 import confirmList from './confirm-list'
 import InputLimit from './input-limit'
+import {breadcrumb,breadcrumbItem} from './breadcrumb'
 import rules from '../utils/regular'
 export { Resizable }
 
@@ -36,6 +37,8 @@ function install(Vue) {
   Vue.component('DTransferModal', TransferModal)
   Vue.component('DLargeSelect', LargeSelect)
   Vue.component('DInputLimit', InputLimit)
+  Vue.component('DBreadcrumb', breadcrumb)
+  Vue.component('DBreadcrumbItem', breadcrumbItem)
   Vue.prototype.$rules = rules
 }
 const Plugins = { install }

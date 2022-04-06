@@ -36,6 +36,7 @@ module.exports = {
         '/components/transfer-modal',
         '/components/navigation',
         '/components/resizable',
+        '/components/breadcrumb',
       ]
     }, {
       title: '内部组件',

@@ -7,6 +7,7 @@ import Antd from 'ant-design-vue'
 // 引用npm包组件&样式库
 import DataFanUI from '../../components/index.js'
 import '../../assets/style/index.less'
+import '../../assets/fonts/iconfont.css'
 import _ from 'lodash'
 
 export default async ({

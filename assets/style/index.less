@@ -4,6 +4,7 @@
 @import url('./sense-tree.less');
 @import url('./sense-title.less');
 @import url('./sense-tabs.less');
+@import url('./breadcrumb.less');
 
 // 列表页面基础类
 .page-container {
@@ -13,6 +14,7 @@
   width: 100%;
   height: 100%;
   background-color: #f4f5f7;
+
   /* 表格容器相关 */
   .table-container {
     overflow: hidden;
@@ -29,17 +31,20 @@
 
 // 弹窗关闭按钮问题修复
 .ant-modal-close {
-  outline-width: 0!important;
+  outline-width: 0 !important;
 }
 
 // 低版本浏览器样式兼容
-a[type=button], span[type=button] {
+a[type=button],
+span[type=button] {
   appearance: none;
 }
 
 // 下拉框在loading时屏蔽value显示值
 .ant-select.ant-select-loading {
-  .ant-select-selection-selected-value, .ant-select-selection__rendered {
+
+  .ant-select-selection-selected-value,
+  .ant-select-selection__rendered {
     opacity: 0 !important;
     transition: all .3s;
   }
@@ -50,12 +55,15 @@ a[type=button], span[type=button] {
   color: #f36f4e;
   font-size: 17px;
   cursor: pointer;
+
   &.disabled {
     color: #9395a2;
   }
-  & + .icon-btn {
+
+  &+.icon-btn {
     margin-left: 15px;
   }
+
   &[disabled] {
     color: rgba(0, 0, 0, 0.25);
     cursor: not-allowed;
