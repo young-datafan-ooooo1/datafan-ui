@@ -1,6 +1,6 @@
 <template>
   <div>
-    <s-page-title :title="menuData[0]" class="s-page"> </s-page-title>
+    <d-page-title :title="menuData[0]" class="s-page"> </d-page-title>
     <div class="content-menu">
       <div
         class="block-menu"

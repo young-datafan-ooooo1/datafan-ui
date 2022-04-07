@@ -1,4 +1,4 @@
-# ComfirmList 确认列表
+# ConfirmList 确认列表
 
 当需要向用户批量确认内容时，使用确认列表组件提示。
 
