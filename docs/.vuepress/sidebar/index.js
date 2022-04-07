@@ -49,6 +49,7 @@ module.exports = {
         '/components/private/permission',
         '/components/private/table/',
         '/components/private/dict-select/',
+        '/components/private/navigation-comp',
         '/components/private/watermark/watermark',
       ]
     }
