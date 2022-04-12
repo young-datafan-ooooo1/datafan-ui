@@ -1,8 +1,8 @@
 @font-face {
   font-family: "senses-icons"; /* Project id 2669995 */
-  src: url('iconfont.woff2?t=1640254892504') format('woff2'),
-       url('iconfont.woff?t=1640254892504') format('woff'),
-       url('iconfont.ttf?t=1640254892504') format('truetype');
+  src: url('iconfont.woff2?t=1649759782230') format('woff2'),
+       url('iconfont.woff?t=1649759782230') format('woff'),
+       url('iconfont.ttf?t=1649759782230') format('truetype');
 }
 
 .senses-icons {
@@ -11,6 +11,54 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.senses-icons-a-bianji2:before {
+  content: "\e621";
+}
+
+.senses-icons-biaoxing-2:before {
+  content: "\e624";
+}
+
+.senses-icons-chakan:before {
+  content: "\e62a";
+}
+
+.senses-icons-suoyou:before {
+  content: "\e62b";
+}
+
+.senses-icons-chengyuanshezhi1:before {
+  content: "\e62c";
+}
+
+.senses-icons-xiangmu:before {
+  content: "\e62e";
+}
+
+.senses-icons-a-APIguanli21:before {
+  content: "\e62f";
+}
+
+.senses-icons-xiala:before {
+  content: "\e63e";
+}
+
+.senses-icons-Oracle:before {
+  content: "\ea23";
+}
+
+.senses-icons-mysql:before {
+  content: "\ec6d";
+}
+
+.senses-icons-postgresql:before {
+  content: "\e6ec";
+}
+
+.senses-icons-chakanxiangqing:before {
+  content: "\e616";
 }
 
 .senses-icons-shanchuwenjian:before {
