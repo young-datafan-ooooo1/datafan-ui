@@ -6,6 +6,90 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "28913877",
+      "name": "编辑 (2)",
+      "font_class": "a-bianji2",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "28913919",
+      "name": "标星-2",
+      "font_class": "biaoxing-2",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "28913920",
+      "name": "查看",
+      "font_class": "chakan",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "28913921",
+      "name": "所有",
+      "font_class": "suoyou",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "28913922",
+      "name": "成员设置",
+      "font_class": "chengyuanshezhi1",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "28913923",
+      "name": "项目",
+      "font_class": "xiangmu",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "28913924",
+      "name": "API管理 (2)",
+      "font_class": "a-APIguanli21",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "28116490",
+      "name": "下拉",
+      "font_class": "xiala",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "3176822",
+      "name": "Oracle",
+      "font_class": "Oracle",
+      "unicode": "ea23",
+      "unicode_decimal": 59939
+    },
+    {
+      "icon_id": "5961392",
+      "name": "mysql",
+      "font_class": "mysql",
+      "unicode": "ec6d",
+      "unicode_decimal": 60525
+    },
+    {
+      "icon_id": "7108751",
+      "name": "postgresql",
+      "font_class": "postgresql",
+      "unicode": "e6ec",
+      "unicode_decimal": 59116
+    },
+    {
+      "icon_id": "10199181",
+      "name": "查看详情",
+      "font_class": "chakanxiangqing",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
       "icon_id": "1121",
       "name": "删除文件",
       "font_class": "shanchuwenjian",
