@@ -6,6 +6,55 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "29055188",
+      "name": "保存 ",
+      "font_class": "a-baocun3",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "29055269",
+      "name": "复制",
+      "font_class": "fuzhi",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "29055298",
+      "name": "移动",
+      "font_class": "a-bianzu15",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "29055598",
+      "name": "删除 ",
+      "font_class": "a-shanchu7",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "28986951",
+      "name": "流计算 (1)",
+      "font_class": "a-liujisuan1",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "28986957",
+      "name": "编辑",
+      "font_class": "bianji",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "28986972",
+      "name": "文档",
+      "font_class": "wendang",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
       "icon_id": "28913877",
       "name": "编辑 (2)",
       "font_class": "a-bianji2",
