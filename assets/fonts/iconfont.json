@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "29128954",
+      "name": "回滚",
+      "font_class": "huigun",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "29071984",
+      "name": "取消 ",
+      "font_class": "quxiao",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "29071992",
+      "name": "添加",
+      "font_class": "tianjia",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "29072381",
+      "name": "复制到 ",
+      "font_class": "fuzhidao1",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
       "icon_id": "29055188",
       "name": "保存 ",
       "font_class": "a-baocun3",

@@ -1,8 +1,8 @@
 @font-face {
   font-family: "senses-icons"; /* Project id 2669995 */
-  src: url('iconfont.woff2?t=1650252961444') format('woff2'),
-       url('iconfont.woff?t=1650252961444') format('woff'),
-       url('iconfont.ttf?t=1650252961444') format('truetype');
+  src: url('iconfont.woff2?t=1650438026273') format('woff2'),
+       url('iconfont.woff?t=1650438026273') format('woff'),
+       url('iconfont.ttf?t=1650438026273') format('truetype');
 }
 
 .senses-icons {
@@ -11,6 +11,22 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.senses-icons-huigun:before {
+  content: "\e63c";
+}
+
+.senses-icons-quxiao:before {
+  content: "\e639";
+}
+
+.senses-icons-tianjia:before {
+  content: "\e63a";
+}
+
+.senses-icons-fuzhidao1:before {
+  content: "\e63b";
 }
 
 .senses-icons-a-baocun3:before {
