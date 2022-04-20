@@ -1,6 +1,6 @@
 {
   "name": "@young-datafan/datafan-ui",
-  "version": "1.6.106",
+  "version": "1.6.107",
   "description": "",
   "main": "components/index.js",
   "scripts": {
