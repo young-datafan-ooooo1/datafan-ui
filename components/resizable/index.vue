@@ -1,5 +1,8 @@
 <template>
   <div class="resizable" :class="vertical && 'flex-col'">
+    <div id="icon" ref="icon">
+      <i class="senses-icons senses-icons-actions-drag--horizontal" />
+    </div>
     <!-- start -->
     <div ref="start" class="resize-box-start" :class="vertical && 'flex'">
       <div
@@ -60,20 +63,64 @@ export default {
       return ['y', 'vertical'].includes(this.direction)
     },
     _min() {
-      return _.isNumber(this.min)
-        ? `${this.min}px`
-        : `${this.min}`
+      return _.isNumber(this.min) ? `${this.min}px` : `${this.min}`
     },
     _max() {
-      return _.isNumber(this.max)
-        ? `${this.max}px`
-        : `${this.max}`
+      return _.isNumber(this.max) ? `${this.max}px` : `${this.max}`
+    }
+  },
+  mounted() {
+    (this.getChromeVersion() <= 69) && this.fixOldChrome()
+  },
+  methods: {
+    getChromeVersion() {
+      var arr = navigator.userAgent.split(' ')
+      var chromeVersion = ''
+      for (var i = 0; i < arr.length; i++) {
+        if (/chrome/i.test(arr[i])) chromeVersion = arr[i]
+      }
+      if (chromeVersion) {
+        return Number(chromeVersion.split('/')[1].split('.')[0])
+      } else {
+        return false
+      }
+    },
+    fixOldChrome() {
+      const rsz = this.$refs.start?.childNodes?.[0]
+      const icon = this.$refs.icon
+      document.body.appendChild(icon)
+
+      rsz.addEventListener('mouseenter', function (e) {
+        const x = e.clientX
+        const y = e.clientY
+        icon.style.top = y - 15 + 'px'
+        icon.style.left = x - 10 + 'px'
+        icon.style.visibility = 'visible'
+      })
+
+      rsz.addEventListener('mousemove', function (e) {
+        const x = e.clientX
+        const y = e.clientY
+        icon.style.top = y - 15 + 'px'
+        icon.style.left = x - 10 + 'px'
+        icon.style.visibility = 'visible'
+      })
+
+      rsz.addEventListener('mouseleave', function (e) {
+        icon.style.visibility = 'hidden'
+      })
     }
   }
 }
 </script>
 
 <style lang="less" scoped>
+#icon {
+  position: absolute;
+  pointer-events: none;
+  z-index: 100;
+  visibility: hidden;
+}
 .flex-col {
   flex-direction: column;
 }
@@ -103,7 +150,7 @@ export default {
       opacity: 0;
       resize: horizontal;
       transform: scaleY(500);
-      pointer-events: none;
+      // pointer-events: none;
       transform-origin: center top;
     }
 
@@ -121,9 +168,9 @@ export default {
 
     .vertical {
       overflow: scroll;
-      z-index:50;
+      z-index: 50;
       height: 100%;
-      pointer-events: none;
+      // pointer-events: none;
       width: inherit;
       opacity: 0;
       resize: vertical;
