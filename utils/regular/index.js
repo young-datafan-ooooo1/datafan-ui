@@ -8,7 +8,7 @@
  * @param {Function} callback 回调函数
  * @param {string} tips 提示语
  */
- export function validate(reg, value, callback, tips) {
+export function validate(reg, value, callback, tips) {
   if (reg) {
     callback()
   } else {
@@ -93,19 +93,51 @@ const rules = {
     const tips = rule.message || '请输入非零开头的正整数'
     validate(reg, value, callback, tips)
   },
-  
+
   /**
    * @description: 校验字符长度,默认0-50
    * @param {*} rule
    * @param {*} value
    * @param {*} callback
-  */
+   */
   regLength(rule, value, callback) {
     let min = rule.min || 0
     let max = rule.max || 50
-    let reg = (new RegExp('^.{' + min + ',' + max + '}$')).test(value) 
-    if(min>0){
-      reg=value&&reg
+    let reg = new RegExp('^.{' + min + ',' + max + '}$').test(value)
+    if (min > 0) {
+      reg = value && reg
+    }
+    const tips = rule.message || `长度在${min}~${max}个字符之间`
+    validate(reg, value, callback, tips)
+  },
+  /**
+   * @description: 校验名称长度,默认1-50
+   * @param {*} rule
+   * @param {*} value
+   * @param {*} callback
+   */
+  regName(rule, value, callback) {
+    let min = rule.min || 1
+    let max = rule.max || 50
+    let reg = new RegExp('^.{' + min + ',' + max + '}$').test(value)
+    if (min > 0) {
+      reg = value && reg
+    }
+    const tips = rule.message || `长度在${min}~${max}个字符之间`
+    validate(reg, value, callback, tips)
+  },
+  /**
+   * @description: 校验备注长度,默认0-200
+   * @param {*} rule
+   * @param {*} value
+   * @param {*} callback
+   */
+  regDesc(rule, value, callback) {
+    let min = rule.min || 0
+    let max = rule.max || 200
+    let reg = new RegExp('^.{' + min + ',' + max + '}$').test(value)
+    if (min > 0) {
+      reg = value && reg
     }
     const tips = rule.message || `长度在${min}~${max}个字符之间`
     validate(reg, value, callback, tips)
@@ -117,9 +149,10 @@ const rules = {
    * @param {*} callback
    */
   regSpecialCharacter(rule, value, callback) {
-    const reg = !(new RegExp(
+    const reg =
+      !new RegExp(
         "[`~!@#$^&*()=|{}':;',\\[\\].<>《》/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？]"
-    )).test(value) || !value
+      ).test(value) || !value
     const tips = rule.message || `不能包含特殊字符`
     validate(reg, value, callback, tips)
   },
@@ -134,7 +167,7 @@ const rules = {
     const tips = rule.message || `请输入英文、数字、_、-、/`
     validate(reg, value, callback, tips)
   },
-  
+
   /**
    * @description: 只支持输入汉字、英文、数字、下划线，且只能以英文和汉字开头
    * @param {*} rule
@@ -142,11 +175,13 @@ const rules = {
    * @param {*} callback
    */
   regChineseEngStartNumline(rule, value, callback) {
-    const reg = /^[\u4E00-\u9FA5a-z][\u4E00-\u9FA5a-z0-9_]*$/.test(value) || !value
-    const tips = rule.message || `请输入中文、英文、数字、下划线，且只能以英文和中文开头`
+    const reg =
+      /^[\u4E00-\u9FA5a-z][\u4E00-\u9FA5a-z0-9_]*$/.test(value) || !value
+    const tips =
+      rule.message || `请输入中文、英文、数字、下划线，且只能以英文和中文开头`
     validate(reg, value, callback, tips)
   },
-  
+
   /**
    * @description: 校验是否是手机号码
    * @param {*} rule
@@ -154,11 +189,13 @@ const rules = {
    * @param {*} callback
    */
   regIsPhoneNumber(rule, value, callback) {
-    const reg =/^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/
-    .test(value) || !value
+    const reg =
+      /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/.test(
+        value
+      ) || !value
     const tips = rule.message || `请输入正确手机号码`
     validate(reg, value, callback, tips)
-  }
+  },
 }
 
 export default rules

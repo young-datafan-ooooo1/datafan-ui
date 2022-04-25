@@ -65,6 +65,116 @@
   }
 </script>
 :::
+## 名称长度校验
+::: demo
+```html
+<template>
+  <a-form-model
+    ref="ruleForm"
+    :model="form"
+    :rules="rules"
+    :label-col="labelCol"
+    :wrapper-col="wrapperCol"
+  >
+    <a-form-model-item  label="名称" prop="name">
+      <a-input v-model="form.name" placeholder="长度在1～50个字符" />
+    </a-form-model-item>
+    <a-form-model-item :wrapper-col="{ span: 14, offset: 4 }">
+      <a-button type="primary" @click="onSubmit"> 确定 </a-button>
+    </a-form-model-item>
+  </a-form-model>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        labelCol: { span: 4 },
+        wrapperCol: { span: 12 },
+        form: {
+          name: undefined,
+          desc: undefined,
+        },
+        rules: {
+          name: [
+            {
+              validator: this.$rules.regName,
+              trigger: 'blur',
+            },
+          ],
+        },
+      }
+    },
+  methods: {
+    onSubmit() {
+      this.$refs.ruleForm.validate(valid => {
+        if (valid) {
+          alert('submit!');
+        } else {
+          console.log('error submit!!');
+          return false;
+        }
+      });
+    },
+  },
+};
+</script>
+:::
+## 备注长度校验
+::: demo
+```html
+<template>
+  <a-form-model
+    ref="ruleForm"
+    :model="form"
+    :rules="rules"
+    :label-col="labelCol"
+    :wrapper-col="wrapperCol"
+  >
+    <a-form-model-item  label="备注" prop="desc">
+      <a-textarea v-model="form.desc" placeholder="长度在0～200个字符" />
+    </a-form-model-item>
+    <a-form-model-item :wrapper-col="{ span: 14, offset: 4 }">
+      <a-button type="primary" @click="onSubmit"> 确定 </a-button>
+    </a-form-model-item>
+  </a-form-model>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        labelCol: { span: 4 },
+        wrapperCol: { span: 12 },
+        form: {
+          name: undefined,
+          desc: undefined,
+        },
+        rules: {
+          desc: [
+            {
+              validator: this.$rules.regDesc,
+              trigger: 'blur',
+            },
+          ],
+        },
+      }
+    },
+  methods: {
+    onSubmit() {
+      this.$refs.ruleForm.validate(valid => {
+        if (valid) {
+          alert('submit!');
+        } else {
+          console.log('error submit!!');
+          return false;
+        }
+      });
+    },
+  },
+};
+</script>
+:::
 ## 修改提示语、最大长度、最小长度
 
 ::: demo
@@ -90,7 +200,6 @@
 </template>
 
 <script>
-  // import test from '../../utils/regular'
   export default {
     data() {
       return {
@@ -139,6 +248,9 @@
 
 |方法名|说明|参数|
 |---|---|---|
+|regName|校验名称长度（1-50）|-|
+|regDesc|校验备注长度（0-200）|-|
+|regEngNumLine|只包含英文、数字、下划线|-|
 |regEngNumLine|只包含英文、数字、下划线|-|
 |regEngStartNumLine|以英文开头，只包含英文、数字、下划线|-|
 |regIsChinese|只能输入中文|-|

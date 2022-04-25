@@ -6,6 +6,41 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "29246449",
+      "name": "报错",
+      "font_class": "baocuo",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "29246470",
+      "name": "统计",
+      "font_class": "tongji",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "29244071",
+      "name": "移出",
+      "font_class": "yichuwenjianjia",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "29225369",
+      "name": "成功",
+      "font_class": "chenggong",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "29139045",
+      "name": "解除授权",
+      "font_class": "jiechushouquan",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
       "icon_id": "29128954",
       "name": "回滚",
       "font_class": "huigun",
