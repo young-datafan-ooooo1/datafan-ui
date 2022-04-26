@@ -6,6 +6,90 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "29308315",
+      "name": "置顶",
+      "font_class": "zhiding",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    },
+    {
+      "icon_id": "29308319",
+      "name": "进入箭头 ",
+      "font_class": "jinrujiantou",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "29308325",
+      "name": "我的申请记录",
+      "font_class": "wodeshenqingjilu",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
+      "icon_id": "29308459",
+      "name": "API 默认icon",
+      "font_class": "a-APImorenicon",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "29308718",
+      "name": "查看 次数",
+      "font_class": "a-chakancishu",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "29308722",
+      "name": "申请次数",
+      "font_class": "shenqingcishu",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "29297984",
+      "name": "项目管理",
+      "font_class": "xiangmuguanli",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "29297985",
+      "name": "运维中心",
+      "font_class": "yunweizhongxin",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "29297987",
+      "name": "首页icon",
+      "font_class": "shouyeicon",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "29297988",
+      "name": "API管理",
+      "font_class": "APIguanli",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "29297989",
+      "name": "应用管理",
+      "font_class": "yingyongguanli",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "29297990",
+      "name": "监控中心",
+      "font_class": "jiankongzhongxin",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
       "icon_id": "29246449",
       "name": "报错",
       "font_class": "baocuo",
