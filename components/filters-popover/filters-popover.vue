@@ -41,7 +41,7 @@ export default {
     align-items: center;
     padding: 25px;
     height: 40px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid @border-color-base;
     color: #44454d;
     font-weight: 400;
     font-size: 14px;
@@ -64,7 +64,7 @@ export default {
     justify-content: flex-end;
     padding: 0 25px;
     height: 55px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid @border-color-base;
   }
 }
 .filters-btn {
