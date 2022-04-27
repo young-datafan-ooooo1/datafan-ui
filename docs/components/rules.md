@@ -173,6 +173,66 @@
 };
 </script>
 :::
+## 名称多重校验
+必传，以英文开头，只包含英文、数字、下划线，长度不超过50个字符
+::: demo
+```html
+<template>
+  <a-form-model
+    ref="ruleForm"
+    :model="form"
+    :rules="rules"
+    :label-col="labelCol"
+    :wrapper-col="wrapperCol"
+  >
+    <a-form-model-item  label="名称" prop="name">
+      <a-input v-model="form.name" placeholder="请输入名称" />
+    </a-form-model-item>
+    <a-form-model-item :wrapper-col="{ span: 14, offset: 4 }">
+      <a-button type="primary" @click="onSubmit"> 确定 </a-button>
+    </a-form-model-item>
+  </a-form-model>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        labelCol: { span: 4 },
+        wrapperCol: { span: 12 },
+        form: {
+          name: undefined,
+        },
+        rules: {
+          name: [
+            { required: true, message: '请输入名称', trigger: 'blur' },
+            {
+              validator: this.$rules.regEngStartNumLine,
+              trigger: 'blur',
+            },
+            {
+              validator: this.$rules.regName,
+              trigger: 'blur',
+            },
+          ],
+        },
+      }
+    },
+  methods: {
+    onSubmit() {
+      this.$refs.ruleForm.validate(valid => {
+        if (valid) {
+          alert('submit!');
+        } else {
+          console.log('error submit!!');
+          return false;
+        }
+      });
+    },
+  },
+};
+</script>
+:::
 ## 修改提示语、最大长度、最小长度
 
 ::: demo
@@ -185,10 +245,10 @@
     :label-col="labelCol"
     :wrapper-col="wrapperCol"
   >
-    <a-form-model-item ref="fieldA" label="field A" prop="fieldA">
+    <a-form-model-item  label="field A" prop="fieldA">
       <a-input v-model="form.fieldA" placeholder="不能包含特殊字符" />
     </a-form-model-item>
-    <a-form-model-item ref="fieldB" label="field B" prop="fieldB">
+    <a-form-model-item  label="field B" prop="fieldB">
       <a-input v-model="form.fieldB" placeholder="长度在2～5个字符" />
     </a-form-model-item>
     <a-form-model-item :wrapper-col="{ span: 14, offset: 4 }">
@@ -249,7 +309,6 @@
 |regName|校验名称长度（不超过50）|-|
 |regDesc|校验备注长度（不超过200）|-|
 |regLength|校验字符长度,默认不校验,可配置最小值（min）、最大值（max）|-|
-|regEngNumLine|只包含英文、数字、下划线|-|
 |regEngNumLine|只包含英文、数字、下划线|-|
 |regEngStartNumLine|以英文开头，只包含英文、数字、下划线|-|
 |regIsChinese|只能输入中文|-|
