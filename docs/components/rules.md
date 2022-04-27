@@ -77,7 +77,7 @@
     :wrapper-col="wrapperCol"
   >
     <a-form-model-item  label="名称" prop="name">
-      <a-input v-model="form.name" placeholder="长度在1～50个字符" />
+      <a-input v-model="form.name" placeholder="长度不超过50个字符" />
     </a-form-model-item>
     <a-form-model-item :wrapper-col="{ span: 14, offset: 4 }">
       <a-button type="primary" @click="onSubmit"> 确定 </a-button>
@@ -132,7 +132,7 @@
     :wrapper-col="wrapperCol"
   >
     <a-form-model-item  label="备注" prop="desc">
-      <a-textarea v-model="form.desc" placeholder="长度在0～200个字符" />
+      <a-textarea v-model="form.desc" placeholder="长度不超过200个字符" />
     </a-form-model-item>
     <a-form-model-item :wrapper-col="{ span: 14, offset: 4 }">
       <a-button type="primary" @click="onSubmit"> 确定 </a-button>
@@ -248,8 +248,8 @@
 
 |方法名|说明|参数|
 |---|---|---|
-|regName|校验名称长度（1-50）|-|
-|regDesc|校验备注长度（0-200）|-|
+|regName|校验名称长度（不超过50）|-|
+|regDesc|校验备注长度（不超过200）|-|
 |regEngNumLine|只包含英文、数字、下划线|-|
 |regEngNumLine|只包含英文、数字、下划线|-|
 |regEngStartNumLine|以英文开头，只包含英文、数字、下划线|-|
@@ -258,7 +258,7 @@
 |regIsPositiveInteger|只能输入正整数|-|
 |regIsNumber|只能输入数字,允许负数、小数|-|
 |regNonZeroDigit|非零开头的正整数|-|
-|regLength|校验字符长度,默认0-50|-|
+|regLength|校验字符长度,默认不超过50|-|
 |regSpecialCharacter|不能包含特殊字符|-|
 |regEngNumSpecial|只支持输入英文、数字、_、-、/|-|
 |regChineseEngStartNumline|只支持输入汉字、英文、数字、下划线，且只能以英文和汉字开头|-|
