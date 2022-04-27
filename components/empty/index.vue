@@ -40,7 +40,7 @@ export default {
   flex-direction: column;
   margin: auto;
   color: #AAAAAA;
-  padding: 10px;
+  padding: 15px;
   .empty__img {
     width: 120px;
   }
