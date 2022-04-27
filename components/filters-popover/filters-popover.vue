@@ -33,6 +33,7 @@ export default {
 
 <style lang="less" >
 @input-bg-color: #fff;
+@border-color-base: #dbdbdb;
 /* 筛选条件-内容样式  */
 .filters-content {
   min-width: 270px;

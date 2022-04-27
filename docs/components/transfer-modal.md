@@ -28,8 +28,8 @@
       return {
         grant: {
           isShowModal: false, // 是否展示授权弹窗
-          confirmLoading: false, // 列表loading状态
-          loading: false, // 提交loading状态
+          confirmLoading: false, // 提交loading状态
+          loading: false, // 列表loading状态
           allUserData: [], // 所有用户数据
           grantUserList: [], // 已授权数据
         }
