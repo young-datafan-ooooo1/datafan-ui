@@ -1,8 +1,8 @@
 @font-face {
   font-family: "senses-icons"; /* Project id 2669995 */
-  src: url('iconfont.woff2?t=1650879948589') format('woff2'),
-       url('iconfont.woff?t=1650879948589') format('woff'),
-       url('iconfont.ttf?t=1650879948589') format('truetype');
+  src: url('iconfont.woff2?t=1650968365294') format('woff2'),
+       url('iconfont.woff?t=1650968365294') format('woff'),
+       url('iconfont.ttf?t=1650968365294') format('truetype');
 }
 
 .senses-icons {
@@ -11,6 +11,54 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.senses-icons-zhiding:before {
+  content: "\e649";
+}
+
+.senses-icons-jinrujiantou:before {
+  content: "\e64a";
+}
+
+.senses-icons-wodeshenqingjilu:before {
+  content: "\e64b";
+}
+
+.senses-icons-a-APImorenicon:before {
+  content: "\e64c";
+}
+
+.senses-icons-a-chakancishu:before {
+  content: "\e64d";
+}
+
+.senses-icons-shenqingcishu:before {
+  content: "\e64e";
+}
+
+.senses-icons-xiangmuguanli:before {
+  content: "\e643";
+}
+
+.senses-icons-yunweizhongxin:before {
+  content: "\e644";
+}
+
+.senses-icons-shouyeicon:before {
+  content: "\e645";
+}
+
+.senses-icons-APIguanli:before {
+  content: "\e646";
+}
+
+.senses-icons-yingyongguanli:before {
+  content: "\e647";
+}
+
+.senses-icons-jiankongzhongxin:before {
+  content: "\e648";
 }
 
 .senses-icons-baocuo:before {
