@@ -12,6 +12,7 @@
 
 <template>
   <vxe-grid
+    ref="VXEGRID"
     class="sense-table"
     :loading="isLoading"
     v-bind="{
