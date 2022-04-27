@@ -93,7 +93,6 @@
         wrapperCol: { span: 12 },
         form: {
           name: undefined,
-          desc: undefined,
         },
         rules: {
           name: [
@@ -147,7 +146,6 @@
         labelCol: { span: 4 },
         wrapperCol: { span: 12 },
         form: {
-          name: undefined,
           desc: undefined,
         },
         rules: {
@@ -250,6 +248,7 @@
 |---|---|---|
 |regName|校验名称长度（不超过50）|-|
 |regDesc|校验备注长度（不超过200）|-|
+|regLength|校验字符长度,默认不校验,可配置最小值（min）、最大值（max）|-|
 |regEngNumLine|只包含英文、数字、下划线|-|
 |regEngNumLine|只包含英文、数字、下划线|-|
 |regEngStartNumLine|以英文开头，只包含英文、数字、下划线|-|
@@ -258,7 +257,6 @@
 |regIsPositiveInteger|只能输入正整数|-|
 |regIsNumber|只能输入数字,允许负数、小数|-|
 |regNonZeroDigit|非零开头的正整数|-|
-|regLength|校验字符长度,默认不超过50|-|
 |regSpecialCharacter|不能包含特殊字符|-|
 |regEngNumSpecial|只支持输入英文、数字、_、-、/|-|
 |regChineseEngStartNumline|只支持输入汉字、英文、数字、下划线，且只能以英文和汉字开头|-|

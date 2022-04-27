@@ -101,29 +101,40 @@ const rules = {
    * @param {*} callback
    */
   regLength(rule, value, callback) {
-    let min = rule.min || 0
-    let max = rule.max || 50
-    let reg = new RegExp('^.{' + min + ',' + max + '}$').test(value)
-    if (min > 0) {
-      reg = value && reg
+    let min = rule.min?rule.min:0
+    let max = rule.max
+    let reg = true
+    let tips 
+    if(value){
+      if(min&&!max){
+        reg = new RegExp('^.{' + min + ',}$').test(value)
+        tips=`长度不小于${min}个字符`
+      }
+      if(!min&&max){
+        reg = new RegExp('^.{' + min + ',' + max + '}$').test(value)
+        tips=`长度不超过${max}个字符`
+  
+      }
+      if(min&&max){
+        reg = new RegExp('^.{' + min + ',' + max + '}$').test(value)
+        tips=`长度在${min}~${max}个字符`
+      }
     }
-    const tips = rule.message || `长度在${min}~${max}个字符之间`
+    
+    tips = rule.message || tips
     validate(reg, value, callback, tips)
   },
   /**
-   * @description: 校验名称长度,默认1-50
+   * @description: 校验名称长度,默认0-50
    * @param {*} rule
    * @param {*} value
    * @param {*} callback
    */
   regName(rule, value, callback) {
-    let min = rule.min || 1
-    let max = rule.max || 50
+    let min = 0
+    let max = 50
     let reg = new RegExp('^.{' + min + ',' + max + '}$').test(value)
-    if (min > 0) {
-      reg = value && reg
-    }
-    const tips = rule.message || `长度在${min}~${max}个字符之间`
+    const tips = rule.message || `长度不超过${max}个字符`
     validate(reg, value, callback, tips)
   },
   /**
@@ -133,13 +144,10 @@ const rules = {
    * @param {*} callback
    */
   regDesc(rule, value, callback) {
-    let min = rule.min || 0
-    let max = rule.max || 200
+    let min = 0
+    let max = 200
     let reg = new RegExp('^.{' + min + ',' + max + '}$').test(value)
-    if (min > 0) {
-      reg = value && reg
-    }
-    const tips = rule.message || `长度在${min}~${max}个字符之间`
+    const tips = rule.message || `长度不超过${max}个字符`
     validate(reg, value, callback, tips)
   },
   /**
