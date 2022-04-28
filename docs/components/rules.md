@@ -98,7 +98,7 @@
           name: [
             {
               validator: this.$rules.regName,
-              trigger: 'blur',
+              trigger: 'change',
             },
           ],
         },
@@ -152,7 +152,7 @@
           desc: [
             {
               validator: this.$rules.regDesc,
-              trigger: 'blur',
+              trigger: 'change',
             },
           ],
         },
@@ -212,7 +212,7 @@
             },
             {
               validator: this.$rules.regName,
-              trigger: 'blur',
+              trigger: 'change',
             },
           ],
         },
@@ -278,7 +278,7 @@
           fieldB: [
             {
               validator: this.$rules.regLength,
-              trigger: 'blur',
+              trigger: 'change',
               min:2,
               max:5,
             },
