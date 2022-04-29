@@ -74,6 +74,8 @@ export default {
       }
       .ant-select-selection {
         height: 100%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
         background-color: @input-bg-color;
       }
       .ant-select-selection__rendered {
@@ -85,12 +87,14 @@ export default {
       .ant-select-selection--multiple {
         padding-bottom: 0;
         .ant-select-selection__rendered {
+          margin-right: 20px;
+          margin-left: 20px;
           ul > li {
             margin-top: 5px;
           }
         }
-        .ant-select-selection__placeholder {
-          margin-left: 0;
+        .ant-select-search--inline .ant-select-search__field {
+          width: 5px;
         }
       }
     }
