@@ -76,7 +76,7 @@ export default {
         height: 100%;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
-        background-color: @input-bg-color;;
+        background-color: @input-bg-color;
       }
       .ant-select-selection__rendered {
         margin-right: 25px;
