@@ -29,13 +29,21 @@ export default {
     line-height: 38px;
   }
   /* 下拉框样式 */
-  & > .ant-select{
-    width: 180px;
+  & > .ant-select {
+    min-width: 180px;
     border-radius: 6px;
     /deep/ .ant-select-selection, /deep/ .ant-select-selection__rendered {
       height: 40px;
       border-radius: 6px;
       line-height: 38px;
+    }
+    /deep/ .ant-select-selection__rendered > ul > li {
+      margin-top: 7px;
+    }
+    /deep/ .ant-select-selection--multiple {
+      .ant-select-selection__clear, .ant-select-arrow {
+        top: 50%;
+      }
     }
   }
   /* 日期范围框样式 */
