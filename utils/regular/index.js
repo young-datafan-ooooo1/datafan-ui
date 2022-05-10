@@ -125,12 +125,12 @@ const rules = {
     validate(reg, value, callback, tips)
   },
   /**
-   * @description: 校验名称长度,默认0-50
+   * @description: 普通输入框长度校验,默认0-50
    * @param {*} rule
    * @param {*} value
    * @param {*} callback
    */
-  regName(rule, value, callback) {
+  regTextLength(rule, value, callback) {
     let min = 0
     let max = 50
     let reg = new RegExp('^.{' + min + ',' + max + '}$').test(value)
