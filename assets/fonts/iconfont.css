@@ -1,8 +1,8 @@
 @font-face {
   font-family: "senses-icons"; /* Project id 2669995 */
-  src: url('iconfont.woff2?t=1650968365294') format('woff2'),
-       url('iconfont.woff?t=1650968365294') format('woff'),
-       url('iconfont.ttf?t=1650968365294') format('truetype');
+  src: url('iconfont.woff2?t=1652341113147') format('woff2'),
+       url('iconfont.woff?t=1652341113147') format('woff'),
+       url('iconfont.ttf?t=1652341113147') format('truetype');
 }
 
 .senses-icons {
@@ -11,6 +11,146 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.senses-icons-fangda:before {
+  content: "\ea21";
+}
+
+.senses-icons-biaoge:before {
+  content: "\ea20";
+}
+
+.senses-icons-caidan:before {
+  content: "\e7ec";
+}
+
+.senses-icons-Excel:before {
+  content: "\e8eb";
+}
+
+.senses-icons-CSV:before {
+  content: "\e8ec";
+}
+
+.senses-icons-TXT:before {
+  content: "\e9eb";
+}
+
+.senses-icons-huanyuanhuabu:before {
+  content: "\ec13";
+}
+
+.senses-icons-value_mapper:before {
+  content: "\ea0b";
+}
+
+.senses-icons-jinrong-:before {
+  content: "\ea0c";
+}
+
+.senses-icons-liujisuan:before {
+  content: "\ec56";
+}
+
+.senses-icons-paixu:before {
+  content: "\ea0d";
+}
+
+.senses-icons-fenzu:before {
+  content: "\ea0e";
+}
+
+.senses-icons-baocun:before {
+  content: "\ea0f";
+}
+
+.senses-icons-lingcunwei:before {
+  content: "\ea10";
+}
+
+.senses-icons-fasong:before {
+  content: "\ea11";
+}
+
+.senses-icons-shuxiangfenbu:before {
+  content: "\ea12";
+}
+
+.senses-icons-hengxiangfenbu:before {
+  content: "\ea13";
+}
+
+.senses-icons-dibuduiqi:before {
+  content: "\ea14";
+}
+
+.senses-icons-shuxiangjuzhongduiqi:before {
+  content: "\ea15";
+}
+
+.senses-icons-dingbuduiqi:before {
+  content: "\ea16";
+}
+
+.senses-icons-zuoduiqi:before {
+  content: "\ea17";
+}
+
+.senses-icons-hengxiangjuzhongduiqi:before {
+  content: "\ea18";
+}
+
+.senses-icons-youduiqi:before {
+  content: "\ea19";
+}
+
+.senses-icons-beibaohan:before {
+  content: "\ea1a";
+}
+
+.senses-icons-juhejiedian:before {
+  content: "\ea1b";
+}
+
+.senses-icons-guanlian1:before {
+  content: "\ea1c";
+}
+
+.senses-icons-yunhang:before {
+  content: "\ea1d";
+}
+
+.senses-icons--hebing:before {
+  content: "\ea1e";
+}
+
+.senses-icons-030-shortcutscriptapp:before {
+  content: "\ea1f";
+}
+
+.senses-icons-zichanbao:before {
+  content: "\e634";
+}
+
+.senses-icons-key:before {
+  content: "\e614";
+}
+
+.senses-icons-tixingshixin:before {
+  content: "\ec72";
+}
+
+.senses-icons-yuechi:before {
+  content: "\e64f";
+}
+
+.senses-icons-xiazai:before {
+  content: "\e650";
+}
+
+.senses-icons-shijingku-yincang:before {
+  content: "\e651";
 }
 
 .senses-icons-zhiding:before {
