@@ -320,5 +320,6 @@
 |regEngNumSpecial|只支持输入英文、数字、_、-、/|-|
 |regChineseEngStartNumline|只支持输入汉字、英文、数字、下划线，且只能以英文和汉字开头|-|
 |regIsPhoneNumber|校验是否是手机号码|-|
+|regMailbox|校验是否是邮箱地址|-|
 
 
