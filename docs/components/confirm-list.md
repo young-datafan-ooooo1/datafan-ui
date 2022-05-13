@@ -23,7 +23,7 @@
       onClick(operation) {
         const chooseList = ['项目1', '项目2', '项目3', '项目4', '...']
         this.$confirmList({
-          title: `注意：是否${operation}以下内容（${chooseList.length}）项？`,
+          title: `注意：是否${operation}以下内容（${chooseList.length}项）？`,
           content: chooseList,
           onOk() {
             console.log('OK');
