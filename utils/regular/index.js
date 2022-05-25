@@ -125,16 +125,28 @@ const rules = {
     validate(reg, value, callback, tips)
   },
   /**
-   * @description: 校验名称长度,默认0-50
+   * @description: 普通输入框长度校验,默认0-50
    * @param {*} rule
    * @param {*} value
    * @param {*} callback
    */
-  regName(rule, value, callback) {
+  regTextLength(rule, value, callback) {
     let min = 0
     let max = 50
     let reg = new RegExp('^.{' + min + ',' + max + '}$').test(value)
     const tips = rule.message || `长度不超过${max}个字符`
+    validate(reg, value, callback, tips)
+  },
+  /**
+   * @description: 邮箱校验
+   * @param {*} rule
+   * @param {*} value
+   * @param {*} callback
+   * @return {*}
+   */ 
+  regMailbox(rule, value, callback){
+    const reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/.test(value) || !value
+    const tips = rule.message || `请输入正确的邮箱地址`
     validate(reg, value, callback, tips)
   },
   /**

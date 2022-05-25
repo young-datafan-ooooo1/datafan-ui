@@ -65,7 +65,7 @@
   }
 </script>
 :::
-## 名称长度校验
+## 输入框长度校验
 ::: demo
 ```html
 <template>
@@ -97,7 +97,7 @@
         rules: {
           name: [
             {
-              validator: this.$rules.regName,
+              validator: this.$rules.regTextLength,
               trigger: ['blur', 'change'] ,
             },
           ],
@@ -173,7 +173,7 @@
 };
 </script>
 :::
-## 名称多重校验
+## 输入框多重校验
 必传，以英文开头，只包含英文、数字、下划线，长度不超过50个字符
 ::: demo
 ```html
@@ -211,7 +211,7 @@
               trigger: 'blur',
             },
             {
-              validator: this.$rules.regName,
+              validator: this.$rules.regTextLength,
               trigger: ['blur', 'change'] ,
             },
           ],
@@ -306,7 +306,7 @@
 
 |方法名|说明|参数|
 |---|---|---|
-|regName|校验名称长度（不超过50）|-|
+|regTextLength|校验普通输入框长度（不超过50）|-|
 |regDesc|校验备注长度（不超过200）|-|
 |regLength|校验字符长度,默认不校验,可配置最小值（min）、最大值（max）|-|
 |regEngNumLine|只包含英文、数字、下划线|-|
@@ -320,5 +320,6 @@
 |regEngNumSpecial|只支持输入英文、数字、_、-、/|-|
 |regChineseEngStartNumline|只支持输入汉字、英文、数字、下划线，且只能以英文和汉字开头|-|
 |regIsPhoneNumber|校验是否是手机号码|-|
+|regMailbox|校验是否是邮箱地址|-|
 
 
