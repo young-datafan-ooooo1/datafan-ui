@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "30032322",
+      "name": "成员设置",
+      "font_class": "a-shezhi2",
+      "unicode": "ea22",
+      "unicode_decimal": 59938
+    },
+    {
+      "icon_id": "30033085",
+      "name": "API管理",
+      "font_class": "APIwangguan",
+      "unicode": "ea24",
+      "unicode_decimal": 59940
+    },
+    {
       "icon_id": "29563954",
       "name": "放大",
       "font_class": "fangda",
