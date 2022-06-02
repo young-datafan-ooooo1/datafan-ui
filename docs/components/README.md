@@ -20,8 +20,6 @@ import DataFanUI from '@young-datafan/datafan-ui'
 
 // datafan-ui内置样式
 import '@young-datafan/datafan-ui/assets/style/index.less'
-// 滚动条样式
-import '@young-datafan/datafan-ui/assets/style/scrollbar.less'
 // 字体图标库
 import '@young-datafan/datafan-ui/assets/fonts/iconfont.css'
 
