@@ -13,6 +13,7 @@
       line-class="opacity-0"
       :min="250"
       :max="600"
+      :initWidth="320"
       style="height:300px"
     >
       <template #start>
@@ -43,8 +44,9 @@
 | direction  | 排列方向（字符串 x 或者 y）                                      | 'x'  |
 | line-class | 拖拽线的 class（字符串）                                         | /    |
 | line-style | 拖拽线的 style（字符串）                                         | /    |
-| max        | start slot 内的最大宽度或高度值（数字或者字符串，字符串需带 px） | /    |
-| min        | start slot 内的最小宽度或高度值（数字或者字符串，字符串需带 px） | /    |
+| max        | start slot 内的最大宽度或高度值（数字或者字符串，字符串需带 px） | 800    |
+| min        | start slot 内的最小宽度或高度值（数字或者字符串，字符串需带 px） | 300    |
+| init-width | start slot 内的默认宽度或高度值（数字或者字符串，字符串需带 px） | /    |
 
 ## 注意事项
 
