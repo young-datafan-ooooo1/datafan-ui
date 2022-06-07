@@ -9,8 +9,8 @@
         :class="vertical ? 'vertical' : 'horizontal'"
         :style="
           vertical
-            ? { minHeight: _min, maxHeight: _max }
-            : { minWidth: _min, maxWidth: _max }
+            ? { minHeight: _min, maxHeight: _max, width: _initWidth }
+            : { minWidth: _min, maxWidth: _max, width: _initWidth }
         "
       />
       <div
@@ -37,13 +37,17 @@
 export default {
   name: 'Resizable',
   props: {
+    initWidth: {
+      type: [Number, String],
+      required: false
+    },
     min: {
       type: [Number, String],
       default: 300
     },
     max: {
       type: [Number, String],
-      default: 1300
+      default: 800
     },
     direction: {
       type: String,
@@ -67,6 +71,12 @@ export default {
     },
     _max() {
       return _.isNumber(this.max) ? `${this.max}px` : `${this.max}`
+    },
+    _initWidth() {
+      if(_.isUndefined(this.initWidth)) {
+        return 'auto'
+      }
+      return _.isNumber(this.initWidth) ? `${this.initWidth}px` : `${this.initWidth}`
     }
   },
   mounted() {
@@ -149,6 +159,7 @@ export default {
       height: inherit;
       opacity: 0;
       resize: horizontal;
+      min-height: 1px;
       transform: scaleY(500);
       // pointer-events: none;
       transform-origin: center top;
