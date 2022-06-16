@@ -10,8 +10,8 @@ module.exports = {
   // 开发手册
   '/document/': [
     {
-      title: '开发手册',
-      path: '/document/'
+        title: '开发手册',
+        path: '/document/'
     },
     {
         title: 'Pinia 新一代状态管理',
