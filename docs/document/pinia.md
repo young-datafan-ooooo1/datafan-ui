@@ -211,7 +211,6 @@ store.counter++
 
 ::: tip 
 Vuex 是 `store.state.counter++` ， Pinia 是 `store.counter++`
-
 :::
 
 
