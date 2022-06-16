@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pinia 新一代状态管理 | DataFan UI</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="所有的伟大，都源于一个勇敢的开始">
+    
+    <link rel="preload" href="/assets/css/0.styles.98e36636.css" as="style"><link rel="preload" href="/assets/js/app.0ebb6641.js" as="script"><link rel="preload" href="/assets/js/2.56ded47b.js" as="script"><link rel="preload" href="/assets/js/34.d5763b80.js" as="script"><link rel="prefetch" href="/assets/js/10.4af7af2e.js"><link rel="prefetch" href="/assets/js/11.0bb84042.js"><link rel="prefetch" href="/assets/js/12.c25b1ce3.js"><link rel="prefetch" href="/assets/js/13.023b947f.js"><link rel="prefetch" href="/assets/js/14.5a358e7c.js"><link rel="prefetch" href="/assets/js/15.40a29471.js"><link rel="prefetch" href="/assets/js/16.fa135c4f.js"><link rel="prefetch" href="/assets/js/17.c893509b.js"><link rel="prefetch" href="/assets/js/18.cc4d944e.js"><link rel="prefetch" href="/assets/js/19.1505326f.js"><link rel="prefetch" href="/assets/js/20.4056c803.js"><link rel="prefetch" href="/assets/js/21.d51b444f.js"><link rel="prefetch" href="/assets/js/22.1c071a83.js"><link rel="prefetch" href="/assets/js/23.c4d2d29b.js"><link rel="prefetch" href="/assets/js/24.b9b49c8f.js"><link rel="prefetch" href="/assets/js/25.0b38f595.js"><link rel="prefetch" href="/assets/js/26.b49c8d27.js"><link rel="prefetch" href="/assets/js/27.474118e0.js"><link rel="prefetch" href="/assets/js/28.763522b3.js"><link rel="prefetch" href="/assets/js/29.838768f2.js"><link rel="prefetch" href="/assets/js/3.ec7abf2f.js"><link rel="prefetch" href="/assets/js/30.ce7a90b3.js"><link rel="prefetch" href="/assets/js/31.3d454457.js"><link rel="prefetch" href="/assets/js/32.fae2fd3a.js"><link rel="prefetch" href="/assets/js/33.21836b62.js"><link rel="prefetch" href="/assets/js/4.a8ac2193.js"><link rel="prefetch" href="/assets/js/5.cdbaa970.js"><link rel="prefetch" href="/assets/js/6.d302e042.js"><link rel="prefetch" href="/assets/js/7.e285abc7.js"><link rel="prefetch" href="/assets/js/8.29519c3e.js"><link rel="prefetch" href="/assets/js/9.83a5d5f6.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.98e36636.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">DataFan UI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/components/" class="nav-link">
+  组件中心
+</a></div><div class="nav-item"><a href="/design/" class="nav-link">
+  规范文档
+</a></div><div class="nav-item"><a href="/document/" class="nav-link router-link-active">
+  开发手册
+</a></div><div class="nav-item"><a href="https://github.com/young-datafan/datafan-ui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/components/" class="nav-link">
+  组件中心
+</a></div><div class="nav-item"><a href="/design/" class="nav-link">
+  规范文档
+</a></div><div class="nav-item"><a href="/document/" class="nav-link router-link-active">
+  开发手册
+</a></div><div class="nav-item"><a href="https://github.com/young-datafan/datafan-ui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/document/" aria-current="page" class="sidebar-link">开发手册</a></li><li><a href="/document/pinia.html" aria-current="page" class="active sidebar-link">Pinia 新一代状态管理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/document/pinia.html#为什么要使用状态管理" class="sidebar-link">为什么要使用状态管理?</a></li><li class="sidebar-sub-header"><a href="/document/pinia.html#为什么要使用-pinia" class="sidebar-link">为什么要使用 Pinia？</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/document/pinia.html#与-vuex-3-x-4-x-的比较" class="sidebar-link">与 Vuex 3.x/4.x 的比较</a></li><li class="sidebar-sub-header"><a href="/document/pinia.html#状态树的结构" class="sidebar-link">状态树的结构</a></li></ul></li><li class="sidebar-sub-header"><a href="/document/pinia.html#安装和启用" class="sidebar-link">安装和启用</a></li><li class="sidebar-sub-header"><a href="/document/pinia.html#store" class="sidebar-link">Store</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/document/pinia.html#定义store" class="sidebar-link">定义Store</a></li><li class="sidebar-sub-header"><a href="/document/pinia.html#添加-state" class="sidebar-link">添加 state</a></li><li class="sidebar-sub-header"><a href="/document/pinia.html#访问-state✨" class="sidebar-link">访问 state✨</a></li><li class="sidebar-sub-header"><a href="/document/pinia.html#更新state" class="sidebar-link">更新state</a></li><li class="sidebar-sub-header"><a href="/document/pinia.html#重置state" class="sidebar-link">重置state</a></li><li class="sidebar-sub-header"><a href="/document/pinia.html#订阅-state" class="sidebar-link">订阅 state</a></li></ul></li><li class="sidebar-sub-header"><a href="/document/pinia.html#getters" class="sidebar-link">getters</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/document/pinia.html#添加getter" class="sidebar-link">添加getter</a></li><li class="sidebar-sub-header"><a href="/document/pinia.html#访问其他-getter" class="sidebar-link">访问其他 getter</a></li><li class="sidebar-sub-header"><a href="/document/pinia.html#将参数传递给-getter" class="sidebar-link">将参数传递给 getter</a></li><li class="sidebar-sub-header"><a href="/document/pinia.html#访问其他-store-的getter" class="sidebar-link">访问其他 Store 的getter</a></li><li class="sidebar-sub-header"><a href="/document/pinia.html#与-setup-一起使用" class="sidebar-link">与 setup() 一起使用</a></li><li class="sidebar-sub-header"><a href="/document/pinia.html#使用选项-api" class="sidebar-link">使用选项 API</a></li></ul></li><li class="sidebar-sub-header"><a href="/document/pinia.html#actions" class="sidebar-link">actions</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/document/pinia.html#添加action" class="sidebar-link">添加action</a></li><li class="sidebar-sub-header"><a href="/document/pinia.html#访问其他-store-操作" class="sidebar-link">访问其他 store 操作</a></li><li class="sidebar-sub-header"><a href="/document/pinia.html#与-setup-一起使用-2" class="sidebar-link">与 setup() 一起使用</a></li><li class="sidebar-sub-header"><a href="/document/pinia.html#使用选项-api-2" class="sidebar-link">使用选项 API</a></li></ul></li><li class="sidebar-sub-header"><a href="/document/pinia.html#添加多个-store" class="sidebar-link">添加多个 Store</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/document/pinia.html#目录结构建议" class="sidebar-link">目录结构建议</a></li><li class="sidebar-sub-header"><a href="/document/pinia.html#在-vue-组件-ts-文件里使用" class="sidebar-link">在 Vue 组件 / TS 文件里使用</a></li><li class="sidebar-sub-header"><a href="/document/pinia.html#store-之间互相引用" class="sidebar-link">Store 之间互相引用</a></li></ul></li><li class="sidebar-sub-header"><a href="/document/pinia.html#专属插件的使用" class="sidebar-link">专属插件的使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/document/pinia.html#数据持久化存储插件" class="sidebar-link">数据持久化存储插件</a></li><li class="sidebar-sub-header"><a href="/document/pinia.html#使用前" class="sidebar-link">使用前</a></li><li class="sidebar-sub-header"><a href="/document/pinia.html#使用后" class="sidebar-link">使用后</a></li></ul></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="pinia-新一代状态管理"><a href="#pinia-新一代状态管理" class="header-anchor">#</a> Pinia 新一代状态管理</h1> <h2 id="为什么要使用状态管理"><a href="#为什么要使用状态管理" class="header-anchor">#</a> 为什么要使用状态管理?</h2> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>对于简单组件，我们要实现状态共享可以<strong>提取状态到父组件</strong>，但是页面较复杂时，你会发现跨组件状态共享变得力不从心。比如：</p> <ul><li>组件层级太深，需要共享状态，此时状态要层层传递。</li> <li>子组件更新一个状态，可能有多个父组件，兄弟组件共用，实现困难。</li></ul> <p>这种情况下继续使用 “<strong>提取状态到父组件</strong>” 的方法你会发现很复杂。而且随着组件增多，嵌套层级加深，这个复杂度也越来越高。因为关联的状态多，传递复杂，很容易出现像某个组件莫名其妙的更新，某个组件死活不更新这样的问题，异常排查也会困难重重。为了解决这些问题，Vue 提供 <a href="https://next.vuex.vuejs.org/" target="_blank" rel="noopener noreferrer">Vuex<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p></div> <p><a href="https://pinia.vuejs.org/" target="_blank" rel="noopener noreferrer">Pinia<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 和 <a href="https://vuex.vuejs.org/" target="_blank" rel="noopener noreferrer">Vuex<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 都是Vue.js 应用程序的全局状态管理工具。由于 Vuex 4.x 版本只是个过渡版，Vuex 4 对 TypeScript 和 Composition API 都不是很友好，虽然官方团队在 GitHub 已有讨论 Vuex 5 的开发提案，但从 2022-02-07 在 Vue 3 被设置为默认版本开始， <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener noreferrer">Pinia<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>  已正式被官方推荐作为全局状态管理的工具。</p> <h2 id="为什么要使用-pinia"><a href="#为什么要使用-pinia" class="header-anchor">#</a> 为什么要使用 Pinia？</h2> <p><a href="https://pinia.vuejs.org/" target="_blank" rel="noopener noreferrer">Pinia<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> （发音为 /piːnjʌ/）支持 Vue 3 和 Vue 2 ，对 TypeScript 也有很完好的支持，与 <code>Vuex</code> 相比，<code>Pinia</code> 提供了一个更简单的 API，提供了 <code>Composition-API</code> 风格的 API，最重要的是，在与 TypeScript 一起使用时具有可靠的类型推断支持。状态管理弃用了 vuex 而采用Pinia 的 5个重要条件：</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <ul><li>Pinia 的 API 设计非常接近 Vuex 5 的提案。（作者是 Vue 核心团队成员）</li> <li>无需像 Vuex 4 自定义复杂的类型来支持 typescript，天生具备完美的类型推断。</li> <li>模块化设计，你引入的每一个 store 在打包时都可以自动拆分他们。</li> <li>无嵌套结构，但你可以在任意的 store 之间交叉组合使用。</li> <li>Pinia 与 Vue devtools 挂钩，不会影响 Vue 3 开发体验。</li></ul></div> <h3 id="与-vuex-3-x-4-x-的比较"><a href="#与-vuex-3-x-4-x-的比较" class="header-anchor">#</a> 与 Vuex 3.x/4.x 的比较</h3> <p>Pinia API 与 Vuex ≤4 有很大不同，即：</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <ul><li><code>mutations 不再存在</code>。他们经常被认为是非常冗长。他们最初带来了 devtools 集成，但这不再是问题。</li> <li>更好的TypeScript支持。无需创建自定义复杂包装器来支持 TypeScript，所有内容都是类型化的，并且 API 的设计方式尽可能利用 TS 类型推断。</li> <li>不再需要注入、导入函数、调用函数、享受自动完成功能！</li> <li>无需动态添加 Store，默认情况下它们都是动态的，您甚至都不会注意到。请注意，您仍然可以随时手	动使用 Store 进行注册，但因为它是自动的，您无需担心。</li> <li><code>不再有 modules 的嵌套结构</code>。您仍然可以通过在另一个 Store 中导入和 使用 来隐式嵌套 Store，但 Pinia 通过设计提供平面结构，同时仍然支持 Store 之间的交叉组合方式。 您甚至可以拥有 Store 的循环依赖关系。</li> <li><code>没有命名空间模块</code>。鉴于 Store 的扁平架构，“命名空间” Store 是其定义方式所固有的，您可以说 所有 Store 都是命名空间的。</li></ul></div> <p>有关如何将现有 Vuex ≤4 项目转换为使用 Pinia 的更详细说明，请参阅 <a href="https://pinia.vuejs.org/cookbook/migration-vuex.html" target="_blank" rel="noopener noreferrer">从Vuex 迁移指南<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p> <h3 id="状态树的结构"><a href="#状态树的结构" class="header-anchor">#</a> 状态树的结构</h3> <table><thead><tr><th style="text-align:left;">作用</th> <th>Vue Component</th> <th>Vuex</th> <th>Pinia</th></tr></thead> <tbody><tr><td style="text-align:left;">数据管理</td> <td>data</td> <td>state</td> <td>state</td></tr> <tr><td style="text-align:left;">数据计算</td> <td>computed</td> <td>getters</td> <td>getters</td></tr> <tr><td style="text-align:left;">行为方法</td> <td>methods</td> <td>mutations / actions</td> <td>actions</td></tr></tbody></table> <p>可以看到 Pinia 的结构和用途都和 Vuex 与 Component 非常相似，并且 Pinia 相对于 Vuex ，在行为方法部分<code>去掉了 mutations （同步操作）和 actions （异步操作）的区分</code>，更接近组件的结构，入门成本会更低一些。</p> <h2 id="安装和启用"><a href="#安装和启用" class="header-anchor">#</a> 安装和启用</h2> <p>Pinia 目前还没有被广泛的默认集成在各种脚手架里，所以如果你原来创建的项目没有 Pinia ，则需要手动安装它。</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code>yarn add pinia
+<span class="token comment"># 或者使用 npm</span>
+npm install pinia
+</code></pre></div><p>查看你的<code>package.json</code>，看看里面的 dependencies 是否成功加入了 Pinia 和它的版本号（下方是示例代码，以实际安装的最新版本号为准）：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;dependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;pinia&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.0.12&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>创建一个 pinia（根存储）并将其传递给应用程序：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createPinia <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span>
+
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">createPinia</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><p>如果您使用的是 Vue 2，您还需要安装一个插件并将创建的 pinia 注入应用程序的根目录：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createPinia<span class="token punctuation">,</span> PiniaVuePlugin <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>PiniaVuePlugin<span class="token punctuation">)</span>
+<span class="token keyword">const</span> pinia <span class="token operator">=</span> <span class="token function">createPinia</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+ <span class="token literal-property property">el</span><span class="token operator">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>
+ <span class="token comment">// 其他选项...</span>
+ <span class="token comment">// 注意同一个 `pinia` 实例可以在多个 Vue 应用程序中使用</span>
+ pinia<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="store"><a href="#store" class="header-anchor">#</a> Store</h2> <p>和 Vuex 一样， Pinia 的核心也是称之为 Store 。参照 Pinia 官网推荐的项目管理方案，我们也是先在 src 文件夹下创建一个 stores 文件夹，并在里面添加一个 <code>index.ts</code>文件，然后我们就可以来添加一个最基础的 Store 。</p> <h3 id="定义store"><a href="#定义store" class="header-anchor">#</a> 定义Store</h3> <p>Store 是通过 <code>defineStore</code> 方法来创建的，它有两种入参形式：</p> <h4 id="形式-1-接收两个参数"><a href="#形式-1-接收两个参数" class="header-anchor">#</a> 形式 1 ：接收两个参数</h4> <p>接收两个参数，第一个参数是 Store 的唯一 ID （即容器名称：可根据具体业务命名），第二个参数是 Store 的选项：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// Pinia</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> useStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'main'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token comment">/*
+  *	类似组件的data,用于存储全局状态
+  */</span>
+
+  <span class="token function-variable function">state</span><span class="token operator">:</span>（）<span class="token operator">=&gt;</span><span class="token punctuation">{</span>  <span class="token comment">//state必须是箭头函数：更好的TS类型推导</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">/*
+  *	类似组件的computed,用来封装计算属性
+  */</span>
+  getters<span class="token operator">:</span><span class="token punctuation">{</span>
+    <span class="token comment">//...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">/*
+  *	类似组件的methods,封装修改逻辑，修改state
+  */</span>
+  actions<span class="token operator">:</span><span class="token punctuation">{</span>
+    <span class="token comment">//...</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+
+<span class="token comment">// Vuex</span>
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">createStore</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token comment">//pinia使用箭头函数</span>
+  state<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">//...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  
+  getters<span class="token operator">:</span><span class="token punctuation">{</span>
+     <span class="token comment">//...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">//pinia无mutations</span>
+  mutations<span class="token operator">:</span> <span class="token punctuation">{</span>
+   <span class="token comment">//...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  actions<span class="token operator">:</span><span class="token punctuation">{</span>
+      <span class="token comment">//...</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h4 id="形式-2-接收一个参数"><a href="#形式-2-接收一个参数" class="header-anchor">#</a> 形式 2 ：接收一个参数</h4> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> defineStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> useStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  id<span class="token operator">:</span> <span class="token string">'main'</span><span class="token punctuation">,</span><span class="token comment">//</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span>（）<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  getters<span class="token operator">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  actions<span class="token operator">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>不论是哪种创建形式，都必须为 Store 指定一个<code>唯一ID</code>，Pinia会把所有容器挂载到根容器</p></div> <h3 id="添加-state"><a href="#添加-state" class="header-anchor">#</a> 添加 state</h3> <p>大多数时候，state 是 store 的核心部分。 我们通常从定义应用程序的状态开始。 在 Pinia 中，状态被定义为返回初始状态的函数。</p> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> defineStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span>
+
+<span class="token keyword">const</span> useStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'storeId'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 推荐使用 完整类型推断的箭头函数</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 所有这些属性都将自动推断其类型</span>
+      counter<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      name<span class="token operator">:</span> <span class="token string">'Eduardo'</span><span class="token punctuation">,</span>
+      isAdmin<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>如果您使用的是 Vue 2，您在 state 中创建的数据遵循与 Vue 实例中的 data 相同的规则，即 state 对象必须是普通的，并且您需要在以下情况下调用 Vue.set() 为其添加新的属性。</p> <h3 id="访问-state✨"><a href="#访问-state✨" class="header-anchor">#</a> 访问 state✨</h3> <p>用法上和 Vuex 很相似，但有一点区别是，数据直接是挂在 <code>store</code> 上的，而不是 <code>store.state</code> 上面！</p> <p>默认情况下，您可以通过 store 实例访问状态来直接读取和写入状态：</p> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">useStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+store<span class="token punctuation">.</span>counter<span class="token operator">++</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>Vuex 是 <code>store.state.counter++</code> ， Pinia 是 <code>store.counter++</code></p></div> <h3 id="更新state"><a href="#更新state" class="header-anchor">#</a> 更新state</h3> <p>除了直接用<code>store.counter++</code> 修改 store，你还可以调用<code>$patch</code> 方法。 它允许您使用部分state对象同时应用多个更改：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code>store<span class="token punctuation">.</span><span class="token function">$patch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  counter<span class="token operator">:</span> store<span class="token punctuation">.</span>counter <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  name<span class="token operator">:</span> <span class="token string">'Abalam'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>但是，使用这种语法应用某些突变非常困难或代价高昂：任何集合修改（例如，从数组中推送、删除、拼接元素）都需要您创建一个新集合。 正因为如此，<code>$patch</code>方法也接受一个函数来批量修改集合内部分对象的情况：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code>cartStore<span class="token punctuation">.</span><span class="token function">$patch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  state<span class="token punctuation">.</span>items<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'shoes'</span><span class="token punctuation">,</span> quantity<span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  state<span class="token punctuation">.</span>hasChanged <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>这里的主要区别是<code>$patch()</code> 允许您将批量更改的日志写入开发工具中的一个条目中。 注意两者，state 和 $patch() 的直接更改都出现在 devtools 中，并且可以进行 time travelled（在 Vue 3 中还没有）。</p> <h3 id="重置state"><a href="#重置state" class="header-anchor">#</a> 重置state</h3> <p>您可以通过调用 store 上的 <code>$reset()</code> 方法将状态 重置 到其初始值：</p> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">useStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+store<span class="token punctuation">.</span><span class="token function">$reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="订阅-state"><a href="#订阅-state" class="header-anchor">#</a> 订阅 state</h3> <p>可以通过 store 的 <code>$subscribe()</code> 方法查看状态及其变化，类似于 Vuex 的 subscribe 方法。 与常规的 <code>watch()</code>相比，使用<code>$subscribe()</code>的优点是 <strong>subscriptions 只会在 patches 之后触发一次</strong>。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code>cartStore<span class="token punctuation">.</span><span class="token function">$subscribe</span><span class="token punctuation">(</span><span class="token punctuation">(</span>mutation<span class="token punctuation">,</span> state<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// import { MutationType } from 'pinia'</span>
+  <span class="token comment">/**
+   * type：用于记录这次数据变化是通过什么途径，主要有三个分别是：
+   *        “direct” ：通过 action 变化的
+   *        ”patch object“ ：通过 $patch 传递对象的方式改变的
+   *        “patch function” ：通过 $patch 传递函数的方式改变的
+  **/</span>
+  mutation<span class="token punctuation">.</span><span class="token keyword">type</span> <span class="token comment">// 'direct' | 'patch object' | 'patch function'</span>
+  <span class="token comment">// 与 cartStore.$id 相同</span>
+  mutation<span class="token punctuation">.</span>storeId <span class="token comment">// 'cart'</span>
+  <span class="token comment">// 仅适用于 mutation.type === 'patch object'</span>
+  mutation<span class="token punctuation">.</span>payload <span class="token comment">// 补丁对象传递给 to cartStore.$patch()</span>
+
+  <span class="token comment">// 每当它发生变化时，将整个状态持久化到本地存储</span>
+  localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'cart'</span><span class="token punctuation">,</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>默认情况下，<code>state subscriptions</code> 绑定到添加它们的组件（如果 store 位于组件的 setup() 中）。 意思是，当组件被卸载时，它们将被自动删除。 如果要在卸载组件后保留它们，请将<code>{ detached: true }</code> 作为第二个参数传递给 detach 当前组件的 <code>state subscription</code>：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> someStore <span class="token operator">=</span> <span class="token function">useSomeStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// 此订阅将在组件卸载后保留</span>
+    someStore<span class="token punctuation">.</span><span class="token function">$subscribe</span><span class="token punctuation">(</span>callback<span class="token punctuation">,</span> <span class="token punctuation">{</span> detached<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="getters"><a href="#getters" class="header-anchor">#</a> getters</h2> <h3 id="添加getter"><a href="#添加getter" class="header-anchor">#</a> 添加getter</h3> <p>Getter 完全等同于 Store 状态的 计算值。 它们可以用 <code>defineStore()</code>中的 <code>getters</code> 属性定义。 他们接收<code>state</code>作为第一个参数以鼓励箭头函数的使用：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">export</span> <span class="token keyword">const</span> useStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'main'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    counter<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  getters<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">doubleCount</span><span class="token operator">:</span> <span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>counter <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>大多数时候，getter 只会依赖状态，但是，他们可能需要使用其他 getter。 正因为如此，我们可以在定义常规函数时通过 this 访问到 整个 store 的实例， 但是需要定义返回类型（在 TypeScript 中）。 这是由于 TypeScript 中的一个已知限制，并且不会影响使用箭头函数定义的 getter，也不会影响不使用 this 的 getter：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">export</span> <span class="token keyword">const</span> useStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'main'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    counter<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  getters<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 自动将返回类型推断为数字</span>
+    <span class="token function">doubleCount</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> state<span class="token punctuation">.</span>counter <span class="token operator">*</span> <span class="token number">2</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 返回类型必须明确设置</span>
+    <span class="token function">doublePlusOne</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>counter <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>然后你可以直接在 store 实例上访问 getter：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Double count <span class="token keyword">is</span> <span class="token punctuation">{</span><span class="token punctuation">{</span> store<span class="token punctuation">.</span>doubleCount <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">useStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> store <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><h3 id="访问其他-getter"><a href="#访问其他-getter" class="header-anchor">#</a> 访问其他 getter</h3> <p>与计算属性一样，您可以组合多个 getter。 通过 this 访问任何其他 getter。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">export</span> <span class="token keyword">const</span> useStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'main'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    counter<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  getters<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 类型是自动推断的，因为我们没有使用 `this`</span>
+    <span class="token function-variable function">doubleCount</span><span class="token operator">:</span> <span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>counter <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token comment">/**
+     * 返回计数器值乘以二加一。
+     */</span>
+    <span class="token function">doubleCountPlusOne</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>doubleCount <span class="token operator">+</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="将参数传递给-getter"><a href="#将参数传递给-getter" class="header-anchor">#</a> 将参数传递给 getter</h3> <p>Getters 只是幕后的 computed 属性，因此无法向它们传递任何参数。 但是，您可以从 getter 返回一个函数以接受任何参数：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">export</span> <span class="token keyword">const</span> useStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'main'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  getters<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">getUserById</span><span class="token operator">:</span> <span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">(</span>userId<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>users<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> user<span class="token punctuation">.</span>id <span class="token operator">===</span> userId<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><p>并在组件中使用：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>User <span class="token number">2</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token function">getUserById</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">useStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> getUserById<span class="token operator">:</span> store<span class="token punctuation">.</span>getUserById <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><p><strong>请注意：</strong> 在执行此操作时，getter 不再缓存，它们只是您调用的函数。 但是，您可以在 getter 本身内部缓存一些结果，这并不常见，但应该证明性能更高：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">export</span> <span class="token keyword">const</span> useStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'main'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  getters<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">getActiveUserById</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> activeUsers <span class="token operator">=</span> state<span class="token punctuation">.</span>users<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> user<span class="token punctuation">.</span>active<span class="token punctuation">)</span>
+      <span class="token keyword">return</span> <span class="token punctuation">(</span>userId<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> activeUsers<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> user<span class="token punctuation">.</span>id <span class="token operator">===</span> userId<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="访问其他-store-的getter"><a href="#访问其他-store-的getter" class="header-anchor">#</a> 访问其他 Store 的getter</h3> <p>要使用其他存储 getter，您可以直接在 getter 内部使用它：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> useOtherStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./other-store'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> useStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'main'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  getters<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">otherGetter</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> otherStore <span class="token operator">=</span> <span class="token function">useOtherStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token keyword">return</span> state<span class="token punctuation">.</span>localData <span class="token operator">+</span> otherStore<span class="token punctuation">.</span>data
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="与-setup-一起使用"><a href="#与-setup-一起使用" class="header-anchor">#</a> 与 setup() 一起使用</h3> <p>您可以 <strong>直接访问</strong> 任何 getter 作为 store 的属性（与 state 属性完全一样）：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">useStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    store<span class="token punctuation">.</span>counter <span class="token operator">=</span> <span class="token number">3</span>
+    store<span class="token punctuation">.</span>doubleCount <span class="token comment">// 6</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="使用选项-api"><a href="#使用选项-api" class="header-anchor">#</a> 使用选项 API</h3> <p>对于以下示例，您可以假设已创建以下 store：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// Example File Path:</span>
+<span class="token comment">// ./src/stores/counterStore.js</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span><span class="token punctuation">,</span>
+
+<span class="token keyword">const</span> useCounterStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'counterStore'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    counter<span class="token operator">:</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  getters<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">doubleCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>counter <span class="token operator">*</span> <span class="token number">2</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h4 id="使用setup"><a href="#使用setup" class="header-anchor">#</a> 使用setup()</h4> <p>虽然<code>Composition API</code>并不适合所有人，但<code>setup()</code>钩子可以使在 <code>Options API</code>中使用 Pinia 更容易。 不需要额外的 map helpers 功能！</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> useCounterStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../stores/counterStore'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> counterStore <span class="token operator">=</span> <span class="token function">useCounterStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> counterStore <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  computed<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">quadrupleCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> counterStore<span class="token punctuation">.</span>doubleCounter <span class="token operator">*</span> <span class="token number">2</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="没有setup"><a href="#没有setup" class="header-anchor">#</a> 没有setup()</h4> <p>您可以使用 previous section of state 中使用的相同 <code>mapState()</code>函数映射到 getter：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> mapState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useCounterStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../stores/counterStore'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  computed<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 允许访问组件内的 this.doubleCounter</span>
+    <span class="token comment">// 与从 store.doubleCounter 中读取相同</span>
+    <span class="token operator">...</span><span class="token function">mapState</span><span class="token punctuation">(</span>useCounterStore<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'doubleCount'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token comment">// 与上面相同，但将其注册为 this.myOwnName</span>
+    <span class="token operator">...</span><span class="token function">mapState</span><span class="token punctuation">(</span>useCounterStore<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      myOwnName<span class="token operator">:</span> <span class="token string">'doubleCounter'</span><span class="token punctuation">,</span>
+      <span class="token comment">// 您还可以编写一个访问 store 的函数</span>
+      <span class="token function-variable function">double</span><span class="token operator">:</span> store <span class="token operator">=&gt;</span> store<span class="token punctuation">.</span>doubleCount<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="actions"><a href="#actions" class="header-anchor">#</a> actions</h2> <h3 id="添加action"><a href="#添加action" class="header-anchor">#</a> 添加action</h3> <p><code>Actions</code> 相当于组件中的 methods。 它们可以使用 <code>defineStore()</code>中的 actions 属性定义，并且它们非常适合定义业务逻辑：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">export</span> <span class="token keyword">const</span> useStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'main'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    counter<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  actions<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>counter<span class="token operator">++</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">randomizeCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>counter <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token number">100</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>与 getters 一样，操作可以通过 this 访问 整个 store 实例并提供完整类型（和自动完成）支持。 与它们不同，actions 可以是异步的，您可以在其中await 任何 API 调用甚至其他操作！ 这是使用 Mande 的示例。 请注意，只要您获得“Promise”，您使用的库并不重要，您甚至可以使用浏览器的“fetch”函数：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> mande <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'mande'</span>
+
+<span class="token keyword">const</span> api <span class="token operator">=</span> <span class="token function">mande</span><span class="token punctuation">(</span><span class="token string">'/api/users'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> useUsers <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'users'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    userData<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+  actions<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token keyword">async</span> <span class="token function">registerUser</span><span class="token punctuation">(</span>login<span class="token punctuation">,</span> password<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>userData <span class="token operator">=</span> <span class="token keyword">await</span> api<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token punctuation">{</span> login<span class="token punctuation">,</span> password <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token function">showTooltip</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Welcome back </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>userData<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">!</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">showTooltip</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+        <span class="token comment">// 让表单组件显示错误</span>
+        <span class="token keyword">return</span> error
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>你也可以完全自由地设置你想要的任何参数并返回任何东西。 调用 Action 时，一切都会自动推断！</p> <p>Actions 像 methods 一样被调用：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> main <span class="token operator">=</span> <span class="token function">useMainStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment">// Actions 像 methods 一样被调用：</span>
+    main<span class="token punctuation">.</span><span class="token function">randomizeCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="访问其他-store-操作"><a href="#访问其他-store-操作" class="header-anchor">#</a> 访问其他 store 操作</h3> <p>要使用另一个 store ，您可以直接在操作内部使用它：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> useAuthStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./auth-store'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> useSettingsStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'settings'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  actions<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token keyword">async</span> <span class="token function">fetchUserPreferences</span><span class="token punctuation">(</span>preferences<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> auth <span class="token operator">=</span> <span class="token function">useAuthStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>auth<span class="token punctuation">.</span>isAuthenticated<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>preferences <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetchPreferences</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'User must be authenticated'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="与-setup-一起使用-2"><a href="#与-setup-一起使用-2" class="header-anchor">#</a> 与 setup() 一起使用</h3> <p>您可以<code>直接调用</code>任何操作作为 store 的方法：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">useStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    store<span class="token punctuation">.</span><span class="token function">randomizeCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//调用useStore中action的randomizeCounter（）</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>在 Pinia ,调用action不需要和 Vuex 一样执行 commit 或者 dispatch，像普通的函数一样使用即可</p></div> <h3 id="使用选项-api-2"><a href="#使用选项-api-2" class="header-anchor">#</a> 使用选项 API</h3> <p>对于以下示例，您可以假设已创建以下 store：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// Example File Path:</span>
+<span class="token comment">// ./src/stores/counterStore.js</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span><span class="token punctuation">,</span>
+
+<span class="token keyword">const</span> useCounterStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'counterStore'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    counter<span class="token operator">:</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  actions<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>counter<span class="token operator">++</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h4 id="使用setup-2"><a href="#使用setup-2" class="header-anchor">#</a> 使用setup()</h4> <p>虽然 Composition API 并不适合所有人，但 setup() 钩子可以使在 Options API 中使用 Pinia 更容易。 不需要额外的 map helpers 功能！</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> useCounterStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../stores/counterStore'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> counterStore <span class="token operator">=</span> <span class="token function">useCounterStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> counterStore <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">incrementAndPrint</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      counterStore<span class="token punctuation">.</span><span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'New Count:'</span><span class="token punctuation">,</span> counterStore<span class="token punctuation">.</span>count<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="不使用-setup"><a href="#不使用-setup" class="header-anchor">#</a> 不使用 setup()</h4> <p>如果您根本不想使用 Composition API，可以使用 mapActions() 将操作属性映射为组件中的方法：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> mapActions <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useCounterStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../stores/counterStore'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 允许在组件内部访问this.increment()</span>
+    <span class="token comment">// 与从store.increment()调用相同</span>
+    <span class="token operator">...</span><span class="token function">mapActions</span><span class="token punctuation">(</span>useCounterStore<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'increment'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token comment">// 和上面一样，但注册为this.myOwnName()</span>
+    <span class="token operator">...</span><span class="token function">mapActions</span><span class="token punctuation">(</span>useCounterStore<span class="token punctuation">,</span> <span class="token punctuation">{</span> myOwnName<span class="token operator">:</span> <span class="token string">'doubleCounter'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div> <h2 id="添加多个-store"><a href="#添加多个-store" class="header-anchor">#</a> 添加多个 Store</h2> <p>到这里，对单个 Store 的配置和调用相信都已经清楚了，实际项目中会涉及到很多数据操作，还可以用多个 Store 来维护不同需求模块的数据状态。</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><code>多个Store 和 Vuex 的 Module比较相似</code>，目的都是为了避免状态树过于臃肿，但用起来会更为简单。</p></div> <h3 id="目录结构建议"><a href="#目录结构建议" class="header-anchor">#</a> 目录结构建议</h3> <p>建议统一存放在 src/stores 下面管理，根据业务需要进行命名，比如 user 就用来管理登录用户相关的状态数据。</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># Pinia ------------------------------------------------------------------------------------</span>
+src
+└── stores
+    ├── index.js          <span class="token comment"># (Optional) Initializes Pinia, does not import stores</span>
+    ├── module1.js        <span class="token comment"># 'module1' id</span>
+    ├── nested-module2.js <span class="token comment"># 'nested/module2' id</span>
+    ├── nested-module3.js <span class="token comment"># 'nested/module3' id</span>
+    └── nested.js         <span class="token comment"># 'nested' id</span>
+
+
+<span class="token comment"># Vuex -------------------------------------------------------------------------------------</span>
+src
+└── store
+    ├── index.js           <span class="token comment"># Initializes Vuex, imports modules</span>
+    └── modules
+        ├── module1.js     <span class="token comment"># 'module1' namespace</span>
+        └── nested
+            ├── index.js   <span class="token comment"># 'nested' namespace, imports module2 &amp; module3</span>
+            ├── module2.js <span class="token comment"># 'nested/module2' namespace</span>
+            └── module3.js <span class="token comment"># 'nested/module3' namespace</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>Pinia 的目录被建议为<code>stores</code>而不是<code>store</code>。这是为了强调 Pinia 使用多个store，便于理解</p></div> <p>里面暴露的方法就统一以 use 开头加上文件名，并以 Store 结尾，作为小驼峰写法，比如 user 这个 Store 文件里面导出的函数名就是：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// src/stores/user.ts</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> useUserStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>然后以 index.ts 里作为统一的入口文件， index.ts 里的代码写为：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">export</span> <span class="token operator">*</span> <span class="token keyword">from</span> <span class="token string">'./user'</span>
+<span class="token keyword">export</span> <span class="token operator">*</span> <span class="token keyword">from</span> <span class="token string">'./game'</span>
+<span class="token keyword">export</span> <span class="token operator">*</span> <span class="token keyword">from</span> <span class="token string">'./news'</span>
+</code></pre></div><p>这样在使用的时候，只需要从 @/stores 里导入即可，无需写完整的路径，例如，只需要这样：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> useUserStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/stores'</span>
+</code></pre></div><p>而无需这样：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> useUserStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/stores/user'</span>
+</code></pre></div><h3 id="在-vue-组件-ts-文件里使用"><a href="#在-vue-组件-ts-文件里使用" class="header-anchor">#</a> 在 Vue 组件 / TS 文件里使用</h3> <p>这里我以一个比较简单的业务场景举例，希望能够方便的理解如何同时使用多个 Store 。</p> <p>假设目前有一个 userStore 是管理当前登录用户信息， gameStore 是管理游戏的信息，而 “个人中心” 这个页面需要展示 “用户信息” ，以及 “该用户绑定的游戏信息”，那么就可以这样：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> defineComponent<span class="token punctuation">,</span> onMounted<span class="token punctuation">,</span> ref <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> storeToRefs <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span>
+<span class="token comment">// 这里导入你要用到的 Store</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useUserStore<span class="token punctuation">,</span> useGameStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/stores'</span>
+<span class="token keyword">import</span> <span class="token keyword">type</span> <span class="token punctuation">{</span> GameItem <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/types'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 先从 userStore 获取用户信息（已经登录过，所以可以直接拿到）</span>
+    <span class="token keyword">const</span> userStore <span class="token operator">=</span> <span class="token function">useUserStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> userId<span class="token punctuation">,</span> userName <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">storeToRefs</span><span class="token punctuation">(</span>userStore<span class="token punctuation">)</span>
+
+    <span class="token comment">// 使用 gameStore 里的方法，传入用户 ID 去查询用户的游戏列表</span>
+    <span class="token keyword">const</span> gameStore <span class="token operator">=</span> <span class="token function">useGameStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> gameList <span class="token operator">=</span> <span class="token generic-function"><span class="token function">ref</span><span class="token generic class-name"><span class="token operator">&lt;</span>GameItem<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token function">onMounted</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      gameList<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token keyword">await</span> gameStore<span class="token punctuation">.</span><span class="token function">queryGameList</span><span class="token punctuation">(</span>userId<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      userId<span class="token punctuation">,</span>
+      userName<span class="token punctuation">,</span>
+      gameList<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>不能直接通过 ES6 解构的方式（ e.g. const { message } = store ），那样会破坏数据的响应性。需要解构时可引用<code>storeToRefs</code>进行操作，Pinia会将state响应式处理</p></div> <p>再次提醒，<code>切记每个 Store 的 ID 必须不同，如果 ID 重复</code>，在同一个 Vue 组件 / TS 文件里定义 Store 实例变量的时候，会以先定义的为有效值，后续定义的会和前面一样。</p> <p>如果先定义了 userStore :</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// 假设两个 Store 的 ID 一样</span>
+<span class="token keyword">const</span> userStore <span class="token operator">=</span> <span class="token function">useUserStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">// 是想要的 Store</span>
+<span class="token keyword">const</span> gameStore <span class="token operator">=</span> <span class="token function">useGameStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">// 得到的依然是 userStore 的那个 Store</span>
+如果先定义了 gameStore <span class="token operator">:</span>
+
+<span class="token comment">// 假设两个 Store 的 ID 一样</span>
+<span class="token keyword">const</span> gameStore <span class="token operator">=</span> <span class="token function">useGameStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">// 是想要的 Store</span>
+<span class="token keyword">const</span> userStore <span class="token operator">=</span> <span class="token function">useUserStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">// 得到的依然是 gameStore 的那个 Store</span>
+</code></pre></div><h3 id="store-之间互相引用"><a href="#store-之间互相引用" class="header-anchor">#</a> Store 之间互相引用</h3> <p>如果在定义一个 Store 的时候，要引用另外一个 Store 的数据，也是很简单，回到那个 message 的例子，我们添加一个 getter ，它会返回一句问候语 ‘欢迎用户’ ：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// src/stores/message.ts</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span>
+
+<span class="token comment">// 导入用户信息的 Store 并启用它</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useUserStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./user'</span>
+<span class="token keyword">const</span> userStore <span class="token operator">=</span> <span class="token function">useUserStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> useMessageStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'message'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    message<span class="token operator">:</span> <span class="token string">'Hello World'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  getters<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 这里我们就可以直接引用 userStore 上面的数据了</span>
+    <span class="token function-variable function">greeting</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Welcome, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>userStore<span class="token punctuation">.</span>userName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">!</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>假设现在 userName 是 Petter ，那么你会得到一句对 Petter 的问候：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">const</span> messageStore <span class="token operator">=</span> <span class="token function">useMessageStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>messageStore<span class="token punctuation">.</span>greeting<span class="token punctuation">)</span>  <span class="token comment">// Welcome, Petter!</span>
+</code></pre></div><h2 id="专属插件的使用"><a href="#专属插件的使用" class="header-anchor">#</a> 专属插件的使用</h2> <p>Pinia 拥有非常灵活的可扩展性，有专属插件可以开箱即用满足更多的需求场景。</p> <h3 id="数据持久化存储插件"><a href="#数据持久化存储插件" class="header-anchor">#</a> 数据持久化存储插件</h3> <p>这里以<code>pinia-plugin-persistedstate</code>为例，这是一个让数据持久化存储的 Pinia 插件。</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>数据持久化存储，指页面关闭后再打开，浏览器依然可以记录之前保存的本地数据，例如：浏览器原生的 localStorage 和 IndexedDB。</p></div> <h4 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h4> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token comment"># yarn</span>
+yarn add pinia<span class="token punctuation">-</span>plugin<span class="token punctuation">-</span>persistedstate
+<span class="token comment"># npm</span>
+npm install pinia<span class="token punctuation">-</span>plugin<span class="token punctuation">-</span>persistedstate
+</code></pre></div><p>安装成功，激活方法会涉及到 Pinia 的初始化过程调整，这里不局限于某一个插件，通用的插件用法如下（请留意代码注释）：</p> <div class="language-typeScript extra-class"><pre class="language-typescript"><code><span class="token comment">// src/main.ts</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createApp <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App.vue'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>createPinia<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span><span class="token comment">//引入Pinia</span>
+<span class="token keyword">import</span> piniaPluginPersistedstate <span class="token keyword">from</span> <span class="token string">'pinia-plugin-persistedstate'</span> <span class="token comment">// 导入 Pinia 插件</span>
+
+<span class="token keyword">const</span> pinia <span class="token operator">=</span> <span class="token function">createPinia</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">//创建</span>
+pinia<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>piniaPluginPersistedstate<span class="token punctuation">)</span> <span class="token comment">// 激活 Pinia 插件</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">createApp</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span>
+
+<span class="token comment">//挂载</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>pinia<span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token function">mount</span><span class="token punctuation">(</span><span class="token string">'#app'</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="使用前"><a href="#使用前" class="header-anchor">#</a> 使用前</h3> <p>Pinia 默认在页面刷新时会丢失当前变更的数据，没有在本地做持久化记录：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> defineStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> useStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'main'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">// 推荐使用 完整类型推断的箭头函数</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 所有这些属性都将自动推断其类型</span>
+      counter<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+      name<span class="token operator">:</span> <span class="token string">'murray'</span><span class="token punctuation">,</span>
+      isAdmin<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  getters<span class="token operator">:</span><span class="token punctuation">{</span>
+    <span class="token function">getCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token builtin">number</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>counter <span class="token operator">*</span> <span class="token number">2</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  actions<span class="token operator">:</span><span class="token punctuation">{</span>
+      <span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>counter<span class="token operator">++</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="使用后"><a href="#使用后" class="header-anchor">#</a> 使用后</h3> <p>按照 <code>persistedstate</code> 插件的文档说明，我们在其中一个 Store 启用它，只需要添加一个<code>persist: true</code> 的选项即可开启：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> defineStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> useStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'main'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  persist<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span><span class="token comment">// 这是按照插件的文档，在实例上启用了该插件，这个选项是插件特有的</span>
+<span class="token comment">//   persist: {</span>
+<span class="token comment">//     key: &quot;给一个要保存的名称&quot;,</span>
+<span class="token comment">//     //保存的位置</span>
+<span class="token comment">//     storage: window.sessionStorage,//默认localstorage</span>
+<span class="token comment">//   },</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">// 推荐使用 完整类型推断的箭头函数</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 所有这些属性都将自动推断其类型</span>
+      counter<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+      name<span class="token operator">:</span> <span class="token string">'murray'</span><span class="token punctuation">,</span>
+      isAdmin<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  getters<span class="token operator">:</span><span class="token punctuation">{</span>
+    <span class="token function">getCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token builtin">number</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>counter <span class="token operator">*</span> <span class="token number">2</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  actions<span class="token operator">:</span><span class="token punctuation">{</span>
+      <span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>counter<span class="token operator">++</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>在浏览器查看到<code>localStorage</code> 的存储变化，以 Chrome 浏览器为例，按 F12 ，打开 Application 面板，选择 <code>Local Storage</code> ，可以看到以当前<code>Store ID</code> 为 Key 的存储数据。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/document/" class="prev router-link-active">
+        开发手册
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.0ebb6641.js" defer></script><script src="/assets/js/2.56ded47b.js" defer></script><script src="/assets/js/34.d5763b80.js" defer></script>
+  </body>
+</html>
