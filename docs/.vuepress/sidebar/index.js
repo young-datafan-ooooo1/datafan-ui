@@ -9,7 +9,14 @@ module.exports = {
   ],
   // 开发手册
   '/document/': [
-    '/document/'
+    {
+      title: '开发手册',
+      path: '/document/'
+    },
+    {
+        title: 'Pinia 新一代状态管理',
+        path: '/document/pinia'
+    }
   ],
   // 组件中心
   '/components/': [
