@@ -66,11 +66,9 @@
 ## 子平台配置
 平台信息配置，区分子平台资源权限等
 ``` ts
+// .env
 # 平台标识 nodeEnName
 VITE_PLATFORM = escat
-
-# 平台名称 systemName
-VITE_GLOB_APP_TITLE = 数据探索平台
 ```
 
 ## 系统管理模块配置
