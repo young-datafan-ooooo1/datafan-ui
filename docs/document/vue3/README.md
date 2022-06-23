@@ -63,6 +63,16 @@
 ![avatar](./recommended.png)
 
 
+## 子平台配置
+平台信息配置，区分子平台资源权限等
+``` ts
+# 平台标识 nodeEnName
+VITE_PLATFORM = escat
+
+# 平台名称 systemName
+VITE_GLOB_APP_TITLE = 数据探索平台
+```
+
 ## 系统管理模块配置
 ::: tip
 因为Vue3新项目与旧项目代码不兼容，`系统管理`模块为iframe引入展示，`资源管理`中配置菜单时，注意需要将资源中`跳转菜单`指定为`外链地址`模式并设置`路由地址`；如设置系统管理下的用户管理：`/stella/#/common/user`，即可正常使用
