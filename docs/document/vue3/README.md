@@ -69,9 +69,6 @@
 // .env
 # 平台标识 nodeEnName
 VITE_PLATFORM = escat
-
-# 平台名称 systemName
-VITE_GLOB_APP_TITLE = 数据探索平台
 ```
 
 ## 系统管理模块配置
