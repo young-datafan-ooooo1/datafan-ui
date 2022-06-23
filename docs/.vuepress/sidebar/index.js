@@ -14,6 +14,10 @@ module.exports = {
         path: '/document/'
     },
     {
+        title: 'Vue3 新框架&组件',
+        path: '/document/vue3/'
+    },
+    {
         title: 'Pinia 新一代状态管理',
         path: '/document/pinia'
     }
