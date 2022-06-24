@@ -99,23 +99,8 @@ export default {
 import { BasicPageParams } from '/@/api/model/baseModel'
 
 // 分页接口需继承基础分页参数：BasicPageParams
-export interface GetGroupParams {
+export interface GetGroupParams extends BasicPageParams {
   groupName?: string
-}
-
-export interface GroupInstance {
-  groupName: string
-  groupOrder: any
-  describe: string
-  groupType: string
-  enabled: string | boolean
-  createTime?: string
-  createUserId?: string | number
-  createUserName?: string
-  groupId?: string
-  groupTypeName?: string
-  updateTime?: string
-  projectCount?: number
 }
 
 // project/group.ts
@@ -124,13 +109,12 @@ import { GetGroupParams } from './model/group'
 import { BasicResult } from '../model/baseModel'
 
 enum Api {
-  // API命名需明确后缀Api，方便与其他函数区分，如GetListApi、GetDetailByIdApi
   GetGroup = '/escat-common-group-provider/group/selectLikeBy/TSJB',
   // ...
 }
 
 /**
- * @description: 获取分组列表
+ * @description: 获取分组列表（API命名需明确后缀Api，方便与其他函数区分，如GetListApi、GetDetailByIdApi）
  */
 export function getGroupApi(params: GetGroupParams) {
   return defHttp.get<BasicResult>({ url: Api.GetGroup, params: params })
@@ -197,6 +181,13 @@ export function getGroupApi(params: GetGroupParams) {
     <!-- 表格操作功能 -->
     <template #action="{ record }">
       <TableAction :actions="getTableActions(record)" />
+    </template>
+
+    <!-- 表格列自定义 -->
+    <template #bodyCell="{ column, record }">
+      <template v-if="column.dataIndex === 'groupName'">
+        <span>自定义：{{ record.groupName }} </span>
+      </template>
     </template>
   </BasicTable>
 </template>
@@ -410,6 +401,45 @@ export function getGroupApi(params: GetGroupParams) {
 
 ## 表格组件
 参考[vben admin](https://vvbin.cn/next/#/comp/basic)及[ant design](https://www.antdv.com/components/table-cn#API)中的Table使用案例，如[可编辑行](https://vvbin.cn/next/#/comp/table/editRowTable)、[树形表格](https://vvbin.cn/next/#/comp/table/treeTable)、[表格Api](https://www.antdv.com/components/table-cn#API)等
+
+项目内置demo见 `Stella代码样例` ：
+- 普通表格（包含表格常见配置使用例子）
+- 列表模板（列表模板表格使用例子）
+- 弹窗表格（弹窗中表格的使用）
+- 可编辑行表格（可编辑修改的表格）
+
+## 状态颜色
+
+不同状态的颜色区分，比如表格状态列中的颜色使用。
+
+::: demo
+
+```html
+<template>
+  <p>
+    <span class="success-color">成功</span>
+    <span style="font-size: 14px;color: #666;"> -- 表示成功、通过、启用的状态颜色</span>
+  </p>
+  <p>
+    <span class="fail-color">失败</span>
+    <span style="font-size: 14px;color: #666;"> -- 表示失败、拒绝的状态颜色</span>
+  </p>
+  <p>
+    <span class="progress-color">进行中</span>
+    <span style="font-size: 14px;color: #666;"> -- 表示运行中、进行中等状态颜色</span>
+  </p>
+  <p>
+    <span class="disabled-color">失效</span>
+    <span style="font-size: 14px;color: #666;"> -- 表示失效、失败、禁用的状态颜色</span>
+  </p>
+  <p>
+    <span>默认</span>
+    <span style="font-size: 14px;color: #666;"> -- 表示已完成、就绪、异常中止等状态颜色</span>
+  </p>
+</template>
+
+:::
+
 
 
 ## 图标组件
