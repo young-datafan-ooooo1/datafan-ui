@@ -175,7 +175,7 @@ export function getGroupApi(params: GetGroupParams) {
 
     <!-- 页面操作功能 -->
     <template #pageActions>
-      <ActionButton :disabled="selectedRowKeys.length === 0" disabledText="请选择要删除的数据">批量删除</ActionButton>
+      <ActionButton :disabled="selectedRowKeys.length === 0" disabledText="请选择要操作的数据">批量删除</ActionButton>
     </template>
 
     <!-- 表格操作功能 -->
@@ -186,7 +186,7 @@ export function getGroupApi(params: GetGroupParams) {
     <!-- 表格列自定义 -->
     <template #bodyCell="{ column, record }">
       <template v-if="column.dataIndex === 'groupName'">
-        <span>自定义：{{ record.groupName }} </span>
+        <span class="success-color">自定义：{{ record.groupName }} </span>
       </template>
     </template>
   </BasicTable>
@@ -405,6 +405,7 @@ export function getGroupApi(params: GetGroupParams) {
 项目内置demo见 `Stella代码样例` ：
 - 普通表格（包含表格常见配置使用例子）
 - 列表模板（列表模板表格使用例子）
+- 选项卡列表模板（选项卡模板表格使用例子）
 - 弹窗表格（弹窗中表格的使用）
 - 可编辑行表格（可编辑修改的表格）
 
@@ -486,8 +487,21 @@ import Icon from '/@/components/Icon/index'
 </PageHandle>
 ```
 
-## Permission 权限
-根据用户角色中配置的资源，区分权限展示
+## Permission 权限标识
+根据用户角色中配置的资源，区分权限展示资源
+
+### 根据权限标识获取资源名称
+``` ts
+// 引入 & 使用
+import { usePermission } from '/@/hooks/web/usePermission';
+const { p } = usePermission();
+
+// ts中使用，如：
+p('nodeEnName')
+
+// template中使用，如：
+<a-button v-permission="'nodeEnName'">{{p('nodeEnName')}}</a-button>
+```
 
 ### 指令方式验证权限
 ``` ts
