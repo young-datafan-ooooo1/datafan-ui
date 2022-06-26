@@ -92,6 +92,68 @@ export default {
 }
 ```
 
+## vue3 hook等自动引入
+进行vue组件开发时，需要用到vue本身的 `Composition API` 及 `ref`、`reactive` 等hook；`unplugin-auto-import` 插件可以方便的将用到的能力自动引入，省去手动引入的麻烦操作
+
+``` ts
+// 安装依赖
+yarn add unplugin-auto-import -D
+
+// vite.config中使用
+import AutoImport from 'unplugin-auto-import/vite'
+
+// vue hook 自动引入
+AutoImport({
+  imports: ['vue', 'vue-router'],
+  dts: 'auto-import.d.ts',
+})
+
+// tsconfig.json
+"include" 中添加 "./auto-import.d.ts"
+```
+
+可直接使用无需再声明引用：
+``` ts
+// 无需引用 import { ref } from 'vue'
+const count = ref(0)
+```
+
+配置成功后根目录下会生成 `components.d.ts`文件（将用到的组件注册成全局组件）
+![avatar](./autoimport.jpg)
+
+## 组件按需自动引入
+为了方便各组件使用Ant中的组件，我们会全局引入所有的Ant组件，但这种方式不管组件用没用到都会被注册到全局，显然会造成浪费；`vite` 的 `unplugin-vue-components` 插件，可以自动的按需引入所使用的`AntDesignUI` 组件以及 `components` 下的自定义组件
+
+``` ts
+// 安装依赖
+yarn add unplugin-vue-components -D
+
+// vite.config中使用
+import Components from 'unplugin-vue-components/vite'
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
+
+// 组件按需加载配置
+Components({
+  resolvers: [
+    AntDesignVueResolver({
+      importStyle: 'less', // 支持自定义主题色
+    })
+  ]
+})
+```
+
+组件可直接使用无需再声明引用：
+``` ts
+// 无需引用 import Empty from '/@/components/Empty'
+// 无需引用 import Icon from '/@/components/Icon'
+<Empty />
+<Icon icon="delete"/>
+```
+
+配置成功后根目录下会生成 `components.d.ts`文件（将用到的组件注册成全局组件）
+![avatar](./components.jpg)
+
+
 ## Api 创建
 在 `src/api` 中创建模块文件夹如：`project`，添加对应的文件如：`group.ts`；添加数据模型文件夹 `model`，以及对应的模型文件 `group.ts` :
 ``` ts
