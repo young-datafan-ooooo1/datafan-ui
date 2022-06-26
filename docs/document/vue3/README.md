@@ -92,6 +92,68 @@ export default {
 }
 ```
 
+## vue3 hook等自动引入
+进行vue组件开发时，需要用到vue本身的 `Composition API` 及 `ref`、`reactive` 等hook；`unplugin-auto-import` 插件可以方便的将用到的能力自动引入，省去手动引入的麻烦操作
+
+``` ts
+// 安装依赖
+yarn add unplugin-auto-import -D
+
+// vite.config中使用
+import AutoImport from 'unplugin-auto-import/vite'
+
+// vue hook 自动引入
+AutoImport({
+  imports: ['vue', 'vue-router'],
+  dts: 'auto-import.d.ts',
+})
+
+// tsconfig.json
+"include" 中添加 "./auto-import.d.ts"
+```
+
+可直接使用无需再声明引用：
+``` ts
+// 无需引用 import { ref } from 'vue'
+const count = ref(0)
+```
+
+配置成功后根目录下会生成 `components.d.ts`文件（将用到的组件注册成全局组件）
+![avatar](./autoimport.jpg)
+
+## 组件按需自动引入
+为了方便各组件使用Ant中的组件，我们会全局引入所有的Ant组件，但这种方式不管组件用没用到都会被注册到全局，显然会造成浪费；`vite` 的 `unplugin-vue-components` 插件，可以自动的按需引入所使用的`AntDesignUI` 组件以及 `components` 下的自定义组件
+
+``` ts
+// 安装依赖
+yarn add unplugin-vue-components -D
+
+// vite.config中使用
+import Components from 'unplugin-vue-components/vite'
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
+
+// 组件按需加载配置
+Components({
+  resolvers: [
+    AntDesignVueResolver({
+      importStyle: 'less', // 支持自定义主题色
+    })
+  ]
+})
+```
+
+组件可直接使用无需再声明引用：
+``` ts
+// 无需引用 import Empty from '/@/components/Empty'
+// 无需引用 import Icon from '/@/components/Icon'
+<Empty />
+<Icon icon="delete"/>
+```
+
+配置成功后根目录下会生成 `components.d.ts`文件（将用到的组件注册成全局组件）
+![avatar](./components.jpg)
+
+
 ## Api 创建
 在 `src/api` 中创建模块文件夹如：`project`，添加对应的文件如：`group.ts`；添加数据模型文件夹 `model`，以及对应的模型文件 `group.ts` :
 ``` ts
@@ -175,7 +237,7 @@ export function getGroupApi(params: GetGroupParams) {
 
     <!-- 页面操作功能 -->
     <template #pageActions>
-      <ActionButton :disabled="selectedRowKeys.length === 0" disabledText="请选择要删除的数据">批量删除</ActionButton>
+      <ActionButton :disabled="selectedRowKeys.length === 0" disabledText="请选择要操作的数据">批量删除</ActionButton>
     </template>
 
     <!-- 表格操作功能 -->
@@ -186,7 +248,7 @@ export function getGroupApi(params: GetGroupParams) {
     <!-- 表格列自定义 -->
     <template #bodyCell="{ column, record }">
       <template v-if="column.dataIndex === 'groupName'">
-        <span>自定义：{{ record.groupName }} </span>
+        <span class="success-color">自定义：{{ record.groupName }} </span>
       </template>
     </template>
   </BasicTable>
@@ -405,6 +467,7 @@ export function getGroupApi(params: GetGroupParams) {
 项目内置demo见 `Stella代码样例` ：
 - 普通表格（包含表格常见配置使用例子）
 - 列表模板（列表模板表格使用例子）
+- 选项卡列表模板（选项卡模板表格使用例子）
 - 弹窗表格（弹窗中表格的使用）
 - 可编辑行表格（可编辑修改的表格）
 
@@ -486,8 +549,21 @@ import Icon from '/@/components/Icon/index'
 </PageHandle>
 ```
 
-## Permission 权限
-根据用户角色中配置的资源，区分权限展示
+## Permission 权限标识
+根据用户角色中配置的资源，区分权限展示资源
+
+### 根据权限标识获取资源名称
+``` ts
+// 引入 & 使用
+import { usePermission } from '/@/hooks/web/usePermission';
+const { p } = usePermission();
+
+// ts中使用，如：
+p('nodeEnName')
+
+// template中使用，如：
+<a-button v-permission="'nodeEnName'">{{p('nodeEnName')}}</a-button>
+```
 
 ### 指令方式验证权限
 ``` ts
