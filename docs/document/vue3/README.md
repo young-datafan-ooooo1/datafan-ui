@@ -122,7 +122,7 @@ const count = ref(0)
 ![avatar](./autoimport.jpg)
 
 ## 组件按需自动引入
-为了方便各组件使用Ant中的组件，我们会全局引入所有的Ant组件，但这种方式不管组件用没用到都会被注册到全局，显然会造成浪费；`vite` 的 `unplugin-vue-components` 插件，可以自动的按需引入所使用的`AntDesignUI` 组件以及 `components` 下的自定义组件
+为了方便各组件使用`AntDesignUI`组件以及`自定义`组件，我们可能会全局引入所有组件，但这种方式不管组件用没用到都会被注册到全局，显然会造成浪费；`vite` 的 `unplugin-vue-components` 插件，可以自动的按需引入所使用的`AntDesignUI` 组件以及 `components` 下的自定义组件
 
 ``` ts
 // 安装依赖
