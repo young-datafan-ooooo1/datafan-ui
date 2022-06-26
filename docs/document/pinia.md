@@ -54,19 +54,22 @@ Pinia API 与 Vuex ≤4 有很大不同，即：
 | 数据计算 | computed      | getters             | getters |
 | 行为方法 | methods       | mutations / actions | actions |
 
-可以看到 Pinia 的结构和用途都和 Vuex 与 Component 非常相似，并且 Pinia 相对于 Vuex ，在行为方法部分`去掉了 mutations （同步操作）和 actions （异步操作）的区分`，更接近组件的结构，入门成本会更低一些。
+可以看到 Pinia 的结构和用途都和 Vuex 与 Component 非常相似，并且 Pinia 相对于 Vuex ，在行为方法部分`去掉了 mutations （同步操作）和 actions （异步操作）的区分`，更接近组件的结构。
 
 ## 安装和启用
 
 Pinia 目前还没有被广泛的默认集成在各种脚手架里，所以如果你原来创建的项目没有 Pinia ，则需要手动安装它。
 
 ```yaml
+# 使用 yarn
 yarn add pinia
-# 或者使用 npm
+# 使用 pnpm
+pnpm add pinia
+# 使用 npm
 npm install pinia
 ```
 
-查看你的` package.json `，看看里面的 dependencies 是否成功加入了 Pinia 和它的版本号（下方是示例代码，以实际安装的最新版本号为准）：
+查看` package.json `中的 dependencies 是否成功加入了 Pinia 和它的版本号（下方是示例代码，以实际安装的版本号为准）：
 
 ```json
 {
@@ -102,7 +105,7 @@ new Vue({
 
 ## Store
 
-和 Vuex 一样， Pinia 的核心也是称之为 Store 。参照 Pinia 官网推荐的项目管理方案，我们也是先在 src 文件夹下创建一个 stores 文件夹，并在里面添加一个 `index.ts `文件，然后我们就可以来添加一个最基础的 Store 。
+和 Vuex 一样， Pinia 的核心也是称之为 Store 。参照 Pinia 官网推荐的项目管理方案，首先在 src 文件夹下创建一个 stores 文件夹，并在里面添加一个 `index.ts `文件，然后就可以来添加一个最基础的 Store 。
 
 ### 定义Store
 
@@ -182,9 +185,9 @@ export const useStore = defineStore({
 
 ### 添加 state
 
-大多数时候，state 是 store 的核心部分。 我们通常从定义应用程序的状态开始。 在 Pinia 中，状态被定义为返回初始状态的函数。
+大多数时候，state 是 store 的核心部分，通常从定义应用程序的状态开始。 在 Pinia 中，状态被定义为返回初始状态的函数。
 
-```tsx
+```ts
 import { defineStore } from 'pinia'
 
 const useStore = defineStore('storeId', {
@@ -202,20 +205,18 @@ const useStore = defineStore('storeId', {
 
 如果您使用的是 Vue 2，您在 state 中创建的数据遵循与 Vue 实例中的 data 相同的规则，即 state 对象必须是普通的，并且您需要在以下情况下调用 Vue.set() 为其添加新的属性。
 
-### 访问 state✨    
+### 访问 state
 
-用法上和 Vuex 很相似，但有一点区别是，数据直接是挂在 `store` 上的，而不是 `store.state` 上面！
 
 默认情况下，您可以通过 store 实例访问状态来直接读取和写入状态：
 
-```tsx
+```ts
 const store = useStore()
 store.counter++
 ```
 
 ::: tip 
-Vuex 是 `store.state.counter++` ， Pinia 是 `store.counter++`
-
+`Vuex` 访问状态：`store.state.counter++` ， `Pinia`访问状态：`store.counter++`
 :::
 
 
@@ -247,7 +248,7 @@ cartStore.$patch((state) => {
 
 您可以通过调用 store 上的 `$reset()` 方法将状态 重置 到其初始值：
 
-```tsx
+```ts
 const store = useStore()
 store.$reset()
 ```
@@ -296,7 +297,7 @@ export default {
 ## getters
 ### 添加getter
 
-Getter 完全等同于 Store 状态的 计算值。 它们可以用 `defineStore() `中的 `getters` 属性定义。 他们接收`state`作为第一个参数以鼓励箭头函数的使用：
+Getter 完全等同于 Store 状态的*计算值*。 它们可以用 `defineStore() `中的 `getters` 属性定义。 它们接收`state`作为第一个参数以鼓励箭头函数的使用：
 
 
 ```typescript
@@ -396,7 +397,7 @@ export const useStore = defineStore('main', {
 
 ```typescript
 <template>
-  <p>User 2: {{ getUserById(2) }}</p>
+  <p>User 2: {{ getUserById(2) }}</p> //使用getUserById()，并传入参数
 </template>
 <script>
 export default {
@@ -504,7 +505,7 @@ export default {
 
 #### 没有setup()
 
-您可以使用 previous section of state 中使用的相同 `mapState() `函数映射到 getter：
+您可以使用`mapState() `函数映射到 getter：
 
 ```typescript
 import { mapState } from 'pinia'
@@ -529,7 +530,7 @@ export default {
 
 ### 添加action
 
-`Actions` 相当于组件中的 methods。 它们可以使用 `defineStore() `中的 actions 属性定义，并且它们非常适合定义业务逻辑：
+`Actions` 相当于组件中的`methods`。 它们可以使用 `defineStore() `中的 `actions` 属性定义，并且它们非常适合定义业务逻辑：
 
 ```typescript
 export const useStore = defineStore('main', {
@@ -547,7 +548,7 @@ export const useStore = defineStore('main', {
 })
 ```
 
-与 getters 一样，操作可以通过 this 访问 整个 store 实例并提供完整类型（和自动完成）支持。 与它们不同，actions 可以是异步的，您可以在其中await 任何 API 调用甚至其他操作！ 这是使用 Mande 的示例。 请注意，只要您获得“Promise”，您使用的库并不重要，您甚至可以使用浏览器的“fetch”函数：
+与 `getters` 一样，操作可以通过 this 访问整个 store 实例并提供完整类型（和自动完成）支持。 与它们不同，`actions`可以是异步的，您可以在其中**await** 任何 API 调用甚至其他操作！这是使用 Mande 的示例。 请注意，只要您获得**Promise**，您使用的库并不重要，您甚至可以使用浏览器的**fetch**函数：
 
 
 ```typescript
@@ -578,7 +579,7 @@ export const useUsers = defineStore('users', {
 
 你也可以完全自由地设置你想要的任何参数并返回任何东西。 调用 Action 时，一切都会自动推断！
 
-Actions 像 methods 一样被调用：
+`Actions`像`methods`一样被调用：
 
 ```typescript
 export default defineComponent({
@@ -586,7 +587,6 @@ export default defineComponent({
     const main = useMainStore()
     // Actions 像 methods 一样被调用：
     main.randomizeCounter()
-
     return {}
   },
 })
@@ -868,14 +868,16 @@ export default defineComponent({
 :::
 再次提醒，`切记每个 Store 的 ID 必须不同，如果 ID 重复`，在同一个 Vue 组件 / TS 文件里定义 Store 实例变量的时候，会以先定义的为有效值，后续定义的会和前面一样。
 
-如果先定义了 userStore :
+如果先定义了`userStore`:
 
-```typescript
+```js
 // 假设两个 Store 的 ID 一样
 const userStore = useUserStore()  // 是想要的 Store
 const gameStore = useGameStore()  // 得到的依然是 userStore 的那个 Store
-如果先定义了 gameStore :
+```
+如果先定义了`gameStore` :
 
+```js
 // 假设两个 Store 的 ID 一样
 const gameStore = useGameStore()  // 是想要的 Store
 const userStore = useUserStore()  // 得到的依然是 gameStore 的那个 Store
@@ -883,9 +885,9 @@ const userStore = useUserStore()  // 得到的依然是 gameStore 的那个 Stor
 
 ### Store 之间互相引用
 
-如果在定义一个 Store 的时候，要引用另外一个 Store 的数据，也是很简单，回到那个 message 的例子，我们添加一个 getter ，它会返回一句问候语 ‘欢迎用户’ ：
+如果在定义一个 Store 的时候，要引用另外一个 Store 的数据，如下示例：我们添加一个 `getter` ，会返回一句问候语 *'欢迎用户'* 
 
-```typescript
+```js
 // src/stores/message.ts
 import { defineStore } from 'pinia'
 
