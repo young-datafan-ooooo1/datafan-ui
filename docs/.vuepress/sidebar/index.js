@@ -20,6 +20,10 @@ module.exports = {
     {
         title: 'Pinia 新一代状态管理',
         path: '/document/pinia'
+    },
+    {
+        title: 'TypeScript',
+        path: '/document/TypeScript'
     }
   ],
   // 组件中心
