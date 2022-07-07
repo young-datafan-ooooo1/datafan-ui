@@ -23,7 +23,10 @@ module.exports = {
     },
     {
         title: 'TypeScript',
-        path: '/document/TypeScript'
+        path: '/document/TypeScript'},
+    {
+        title: 'Vue3 基础知识',
+        path: '/document/vue3-base'
     }
   ],
   // 组件中心
