@@ -27,6 +27,10 @@ module.exports = {
     {
         title: 'Vue3 基础知识',
         path: '/document/vue3-base'
+    },
+    {
+        title: 'antv-X6',
+        path: '/document/x6/'
     }
   ],
   // 组件中心
