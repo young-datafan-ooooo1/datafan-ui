@@ -31,7 +31,11 @@ module.exports = {
     {
         title: 'antv-X6',
         path: '/document/x6/'
-    }
+    },
+    {
+      title: '闭包和Http缓存机制',
+      path: '/document/Closure/'
+  }
   ],
   // 组件中心
   '/components/': [
