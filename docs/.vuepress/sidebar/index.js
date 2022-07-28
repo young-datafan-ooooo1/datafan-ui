@@ -33,6 +33,10 @@ module.exports = {
         path: '/document/x6/'
     },
     {
+      title: 'Promise对象',
+      path: '/document/Promise/'
+  },
+    {
       title: '闭包和Http缓存机制',
       path: '/document/Closure/'
   }
