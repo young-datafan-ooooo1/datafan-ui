@@ -35,11 +35,15 @@ module.exports = {
     {
       title: 'Promise对象',
       path: '/document/Promise/'
-  },
+    },
     {
       title: '闭包和Http缓存机制',
       path: '/document/Closure/'
-  }
+    },
+    {
+      title: 'Vue3 单元测试',
+      path: '/document/vue3-unti-test'
+    }
   ],
   // 组件中心
   '/components/': [
