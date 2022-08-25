@@ -44,6 +44,11 @@ module.exports = {
       title: 'Vue3 单元测试',
       path: '/document/vue3-unti-test'
     },
+
+    {
+      title: '设计模式',
+      path: '/document/js-design/'
+    },
     { title: 'hook组件封装',
       path: '/document/hooks/'
     }
