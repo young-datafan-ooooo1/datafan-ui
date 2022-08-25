@@ -1,11 +1,11 @@
 <!--
  * @Description: 页面标题组件
  * @Date: 2021-08-12 15:58:57
- * @LastEditTime: 2021-08-13 18:44:20
+ * @LastEditTime: 2022-08-22 11:23:00
 -->
 
 <template>
-  <div class="page-title">
+  <div class="page-title" :style="cssVars">
     <span class="page-title__label">{{ title }}</span>
     <div class="page-title__action">
       <slot />
@@ -21,6 +21,17 @@ export default {
     title: {
       type: String,
       default: ''
+    },
+    size: {
+      type: String,
+      default: '16px'
+    }
+  },
+  computed: {
+    cssVars() {
+      return {
+        "--fontsize": this.size
+      };
     }
   }
 }
@@ -37,12 +48,12 @@ export default {
       align-items: center;
       color: #44454D;
       font-weight: 500;
-      font-size: 16px;
+      font-size: var(--fontsize);
       line-height: 22px;
       &::before {
         margin-right: 15px;
         width: 4px;
-        height: 16px;
+        height: var(--fontsize);
         border-radius: 2px;
         background: #F36F4E;
         content: '';
