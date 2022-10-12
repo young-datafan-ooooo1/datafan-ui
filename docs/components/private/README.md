@@ -4,9 +4,9 @@
 使用 `yarn|pnpm|npm` 来安装，充分利用 Javascript 包和工具的丰富生态系统。
 
 ``` yaml
-yarn add @sense70/common-component-vue
-# 或者 pnpm add @sense70/common-component-vue
-# 或者 npm i @sense70/common-component-vue --save
+yarn add @datamp/common-component
+# 或者 pnpm add @datamp/common-component
+# 或者 npm i @datamp/common-component --save
 ```
 ## 使用
 使用组件库及各模块样式。
@@ -15,12 +15,12 @@ yarn add @sense70/common-component-vue
 
 import Vue from 'vue'
 // 内部组件库
-import SenseComponent from '@sense70/common-component-vue'
+import DatampComponent from '@datamp/common-component'
 // 全局组件注册
-Vue.use(SenseComponent)
+Vue.use(DatampComponent)
 ```
 ## 组件版本
-使用内部组件时，根据当前项目迭代版本下载对应内部组件库；如当前项目迭代为`stella-1.5`，指定组件库版本为`@sense70/common-component-vue: "~1.5.0"` 或者 `@sense70/common-component-vue: "~1.5.x"`
+使用内部组件时，根据当前项目迭代版本下载对应内部组件库；如当前项目迭代为`datamp-1.5`，指定组件库版本为`@datamp/common-component: "~1.5.0"` 或者 `@datamp/common-component: "~1.5.x"`
 
 ## 注意事项
 
