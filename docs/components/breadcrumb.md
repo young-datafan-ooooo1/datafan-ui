@@ -26,7 +26,7 @@
 ::: demo
 
 ```html
-<DBreadcrumb separator-class="senses-icons-actions-send">
+<DBreadcrumb separator-class="datamp-icons-actions-send">
    <!-- 页面标题 --> 
   <template slot="title">
     <DBreadcrumbItem to="/components/empty.html">首页</DBreadcrumbItem>

@@ -5,7 +5,7 @@
 <template>
   <span class="d-breadcrumb-content">
     <span class="d-breadcrumb-item" @click="Jump"><slot /></span>
-    <i v-if="separatorClass" class="d-breadcrumb-separator" :class="'senses-icons '+separatorClass" />
+    <i v-if="separatorClass" class="d-breadcrumb-separator" :class="'datamp-icons '+separatorClass" />
     <span v-else class="d-breadcrumb-separator">{{ separator }}</span>
   </span>
 </template>

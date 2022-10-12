@@ -63,8 +63,8 @@
               <div class="name">
                 <i
                   :class="[
-                    'senses-icons favorite_font  mr-5',
-                    `senses-icons-${
+                    'datamp-icons favorite_font  mr-5',
+                    `datamp-icons-${
                       menu.icon ? menu.icon : 'actions-shape--except'
                     } `
                   ]"
