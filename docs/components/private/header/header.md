@@ -16,7 +16,7 @@
     :menu-data="[]"
     :node-name="'资产管理平台'"
     to-path="/homePage"
-    logo-url="http://192.168.10.241:18180/static/common/img/stella-logo.png"
+    logo-url="http://192.168.10.241:18180/static/common/img/datamp-logo.png"
   />
 </template>
 ```
