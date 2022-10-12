@@ -73,7 +73,7 @@ VITE_PLATFORM = escat
 
 ## 系统管理模块配置
 ::: tip
-因为Vue3新项目与旧项目代码不兼容，`系统管理`模块为iframe引入展示，`资源管理`中配置菜单时，注意需要将资源中`跳转菜单`指定为`外链地址`模式并设置`路由地址`；如设置系统管理下的用户管理：`/stella/#/common/user`，即可正常使用
+因为Vue3新项目与旧项目代码不兼容，`系统管理`模块为iframe引入展示，`资源管理`中配置菜单时，注意需要将资源中`跳转菜单`指定为`外链地址`模式并设置`路由地址`；如设置系统管理下的用户管理：`/datamp/#/common/user`，即可正常使用
 :::
 ![avatar](./system.jpg)
 
@@ -464,7 +464,7 @@ export function getGroupApi(params: GetGroupParams) {
 ## 表格组件
 参考[vben admin](https://vvbin.cn/next/#/comp/basic)及[ant design](https://www.antdv.com/components/table-cn#API)中的Table使用案例，如[可编辑行](https://vvbin.cn/next/#/comp/table/editRowTable)、[树形表格](https://vvbin.cn/next/#/comp/table/treeTable)、[表格Api](https://www.antdv.com/components/table-cn#API)等
 
-项目内置demo见 `Stella代码样例` ：
+项目内置demo见 `代码样例` ：
 - 普通表格（包含表格常见配置使用例子）
 - 列表模板（列表模板表格使用例子）
 - 选项卡列表模板（选项卡模板表格使用例子）
@@ -506,7 +506,7 @@ export function getGroupApi(params: GetGroupParams) {
 
 
 ## 图标组件
-`Iconfont` 图标库，通过 `Font Class` 方式引用，添加新图标登录`Iconfont` 在 `senses-icons` 项目中添加更新
+`Iconfont` 图标库，通过 `Font Class` 方式引用，添加新图标登录`Iconfont` 在 `datamp-icons` 项目中添加更新
 ![avatar](./iconfont.jpg)
 
 ``` ts
@@ -594,7 +594,7 @@ hasPermission(['nodeEnName1', 'nodeEnName2'])
 import { useAssetPath, useOrigin } from '/@/hooks/web/useAsset'
 
 // 使用平台logo
-<img :src="useAssetPath('/common/img/stella-logo.png')"/>
+<img :src="useAssetPath('/common/img/datamp-logo.png')"/>
 
 // 获取当前服务环境（区分开发环境和生成环境）
 useOrigin()

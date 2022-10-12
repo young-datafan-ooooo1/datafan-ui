@@ -1,7 +1,7 @@
 <template>
   <div class="resizable" :class="vertical && 'flex-col'">
     <div id="icon" ref="icon">
-      <i class="senses-icons senses-icons-actions-drag--horizontal" />
+      <i class="datamp-icons datamp-icons-actions-drag--horizontal" />
     </div>
     <!-- start -->
     <div ref="start" class="resize-box-start" :class="vertical && 'flex'">
