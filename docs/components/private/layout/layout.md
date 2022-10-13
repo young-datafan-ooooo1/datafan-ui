@@ -4,7 +4,7 @@
 
  ## 基本用法
  适用于首页排版
- #### 在项目根目录的package.json文件中添加依赖"@sense70/common-component-vue": "~1.5.0",执行 yarn install或者npm install
+ #### 在项目根目录的package.json文件中添加依赖"@datamp/common-component": "~1.5.0",执行 yarn install或者npm install
  ![acatar](./layout.png)
  
  ```html

@@ -5,7 +5,7 @@
 ## 基本用法
 
 ``` js
-import { watermark } from "@sense70/common-component-vue"
+import { watermark } from "@datamp/common-component"
 
 mounted() {
   watermark.set('水印')
