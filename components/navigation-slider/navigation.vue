@@ -1,101 +1,89 @@
 <template>
   <div v-if="showNavigation">
     <!-- 按钮 -->
-    <div
-      :style="{height:`${iconHeight}px`,width:`${iconHeight}px`}"
-      class="admin-header__all-btn"
-      :class="
+    <div :style="{height:`${iconHeight}px`,width:`${iconHeight}px`}"
+         class="admin-header__all-btn"
+         :class="
         headerBtnMenu ? 'header-icon-status-menu' : 'header-icon-status-cross'
       "
-      @click="headerBtnMenu = !headerBtnMenu"
-    >
+         @click="headerBtnMenu = !headerBtnMenu">
       <span />
       <span />
       <span />
     </div>
     <!-- 展开 -->
-    <a-drawer
-      id="__ss-slider-drawer-container"
-      placement="left"
-      :maskClosable="maskClosable"
-      :visible="!headerBtnMenu"
-      :mask-closable="false"
-      :closable="false"
-      width="auto"
-      :header-style="{ height: 0, padding: 0 }"
-      :wrap-style="{
+    <a-drawer id="__ss-slider-drawer-container"
+              placement="left"
+              :maskClosable="maskClosable"
+              :visible="!headerBtnMenu"
+              :mask-closable="false"
+              :closable="false"
+              width="auto"
+              :header-style="{ height: 0, padding: 0 }"
+              :wrap-style="{
         position: 'fixed',
         top: `${iconHeight}px`,
         height: `calc(100vh - ${iconHeight}px)`
       }"
-      :body-style="{
+              :body-style="{
         padding: 0,
         display: 'flex',
         height: '100%',
         overflow: 'hidden'
       }"
-      @close="headerBtnMenu = true"
-      ><div class="flex">
+              @close="headerBtnMenu = true">
+      <div class="flex">
         <!-- 左侧区域 -->
         <div class="navigation_left">
           <!-- 全部导航栏 -->
-          <div
-            class="all_nav_button"
-            @click="clickAllNav"
-          >
+          <div class="all_nav_button"
+               @click="clickAllNav">
             <div class="outer">
-              <img src="./all_nav.svg" class="title" />
+              <img src="./all_nav.svg"
+                   class="title" />
               <span class="title_font">全部导航</span>
               <div class="float-right">
-                <img src="./arrow_white.svg" class="inner" />
+                <img src="./arrow_white.svg"
+                     class="inner" />
               </div>
             </div>
           </div>
 
           <!-- favorite导航栏 -->
           <div class="overflow-auto">
-            <div
-              @click="open_url(menu)"
-              v-for="(menu, index) in favorite"
-              :key="index"
-              class="favorite_nav_button"
-            >
+            <div @click="open_url(menu)"
+                 v-for="(menu, index) in favorite"
+                 :key="index"
+                 class="favorite_nav_button">
               <div class="name">
-                <i
-                  :class="[
-                    'senses-icons favorite_font  mr-5',
-                    `senses-icons-${
+                <i :class="[
+                    'datamp-icons favorite_font  mr-5',
+                    `datamp-icons-${
                       menu.icon ? menu.icon : 'actions-shape--except'
                     } `
-                  ]"
-                />
+                  ]" />
                 <span class="favorite_font truncate">{{ menu.nodeName }}</span>
               </div>
-              <a-icon
-                @click.stop="dispatch_favorite(menu)"
-                type="close"
-                class=" close-label"
-              />
+              <a-icon @click.stop="dispatch_favorite(menu)"
+                      type="close"
+                      class=" close-label" />
             </div>
           </div>
         </div>
         <!-- 右侧区域 -->
-        <div
-          :class="visibleRightPanel ? undefined : 'is_invisible'"
-          class="right_panel"
-        >
-          <NavigationSystem
-            v-for="(menuData, index) in menuCategory"
-            :key="index"
-            :replaceKey="replaceKey"
-            :menuData="menuData"
-            :favorite="favorite"
-            @dispatch_favorite="dispatch_favorite"
-            @open_url="open_url"
-          >
+        <div :class="visibleRightPanel ? undefined : 'is_invisible'"
+             class="right_panel">
+          <NavigationSystem v-for="(menuData, index) in menuCategory"
+                            :key="index"
+                            :replaceKey="replaceKey"
+                            :menuData="menuData"
+                            :favorite="favorite"
+                            @dispatch_favorite="dispatch_favorite"
+                            @open_url="open_url">
             <template #title="{menu}">
-              <slot name="title" :menu="menu"/>
-              </template>
+              <slot name="title"
+                    :menu="menu" />
+            </template>
           </NavigationSystem>
         </div>
       </div>
@@ -109,46 +97,46 @@ export default {
   name: 'Navigation',
   components: { NavigationSystem },
   props: {
-    replaceKey:{
+    replaceKey: {
       // 判断项（用于收藏）的key值
-      type:String,
-      default(){
+      type: String,
+      default () {
         return 'key'
       }
     },
-    iconHeight:{
+    iconHeight: {
       // 按钮高度
-      type:Number,
-      default(){
+      type: Number,
+      default () {
         return 60
       }
     },
-    favorite:{
+    favorite: {
       // 收藏的栏目
-      type:Array,
-      default(){
+      type: Array,
+      default () {
         return []
       }
     },
-    menuCategory:{
+    menuCategory: {
       // 菜单栏目
-      type:Array,
-      default(){
+      type: Array,
+      default () {
         return []
       }
     },
-    visibleRightPanel:{
+    visibleRightPanel: {
       // 右侧导航栏展开状态
-      type:Boolean,
-      default:true
+      type: Boolean,
+      default: true
     },
-    maskClosable:{
+    maskClosable: {
       // 右侧导航栏展开状态
-      type:Boolean,
-      default:true
+      type: Boolean,
+      default: true
     }
   },
-  data() {
+  data () {
     return {
       headerBtnMenu: true, // 控制展开页的展开
       showNavigation: true
@@ -156,19 +144,19 @@ export default {
   },
   methods: {
     // 点击展开右边导航并实时保存
-    clickAllNav() {
+    clickAllNav () {
       this.$emit('expand')
     },
 
     // 打开链接
-    open_url(menu) {
+    open_url (menu) {
       // 为了方便开发环境也能跳转，使用环境变量跳转
-      this.$emit('click',menu)
+      this.$emit('click', menu)
     },
 
     // 更改favorite的状态并实时保存
-    dispatch_favorite(menu) {
-      this.$emit('fav',menu)
+    dispatch_favorite (menu) {
+      this.$emit('fav', menu)
     },
 
   },
@@ -236,26 +224,26 @@ export default {
   }
 }
 
-.flex{
+.flex {
   display: flex;
 }
 
-.float-right{
-  float:right;
+.float-right {
+  float: right;
 }
 
-.overflow-auto{
-  overflow:auto
+.overflow-auto {
+  overflow: auto;
 }
 
-.mr-5{
-  margin-right: 1.25rem; 
+.mr-5 {
+  margin-right: 1.25rem;
 }
 
-.truncate{
+.truncate {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
 // 展开样式
@@ -270,12 +258,12 @@ export default {
 }
 .navigation_left {
   z-index: 1;
+  display: flex;
+  flex-direction: column;
   flex-shrink: 0;
   width: 220px;
+  height: 100%;
   background-color: #2d2e31;
-  display: flex; 
-  flex-direction: column; 
-  height: 100%; 
 }
 .right_panel {
   overflow: auto;
@@ -288,12 +276,13 @@ export default {
 }
 
 .all_nav_button {
+  flex-shrink: 0;
   height: 64px;
   background: #3f393b;
+  cursor: pointer;
   transition-duration: 0.1s;
-  flex-shrink: 0; 
-  cursor: pointer; 
-  user-select: none; 
+
+  user-select: none;
   &:hover {
     background: #4f484a;
   }
@@ -301,38 +290,37 @@ export default {
     background: #292627;
   }
   .outer {
-    margin-top: 1.25rem; 
-    text-align: center; 
+    margin-top: 1.25rem;
+    text-align: center;
   }
-  .title{
-    padding-bottom: 0.25rem; 
-    margin-right: 1.25rem; 
-
+  .title {
+    margin-right: 1.25rem;
+    padding-bottom: 0.25rem;
   }
-  .inner{
-    margin-right: 1rem; 
+  .inner {
+    margin-right: 1rem;
   }
 }
 
 .favorite_nav_button {
-  height: 50px;
-  transition-duration: 0.1s;
-  display: flex; 
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 0.5rem;
-  margin-bottom: 0.5rem; 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  cursor: pointer; 
-  user-select: none; 
-  .name{
-    display: inline-flex; 
-    overflow: hidden; 
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem; 
-    margin-left: 1.5rem; 
-    display: inline-flex; 
+  margin-bottom: 0.5rem;
+  height: 50px;
+  cursor: pointer;
+  transition-duration: 0.1s;
 
+  user-select: none;
+  .name {
+    display: inline-flex;
+    display: inline-flex;
+    overflow: hidden;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 1.5rem;
   }
   &:hover {
     background: #f36f4e7b;
@@ -358,9 +346,9 @@ export default {
   transition-duration: 0.1s;
 }
 .close-label {
+  margin-right: 1rem;
   margin-left: 1rem;
-  margin-right: 1rem; 
-  color: #ffffff; 
+  color: #ffffff;
   opacity: 0;
   transition-duration: 0.1s;
   &:hover {

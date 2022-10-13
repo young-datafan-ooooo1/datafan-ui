@@ -4,7 +4,7 @@
 
  ## 基本用法
 
- #### 在项目根目录的package.json文件中添加依赖"@sense70/common-component-vue": "~1.5.0",执行 yarn install或者npm install
+ #### 在项目根目录的package.json文件中添加依赖"@datamp/common-component": "~1.5.0",执行 yarn install或者npm install
  头部导航条:
  ![acatar](./header.png)
  菜单导航:
@@ -16,7 +16,7 @@
     :menu-data="[]"
     :node-name="'资产管理平台'"
     to-path="/homePage"
-    logo-url="http://192.168.10.241:18180/static/common/img/stella-logo.png"
+    logo-url="http://192.168.10.241:18180/static/common/img/datamp-logo.png"
   />
 </template>
 ```

@@ -36,7 +36,7 @@
 
 ``` js
 // 引用鉴权方法
-import { matchPermission } from '@sense70/common-component-vue'
+import { matchPermission } from '@datamp/common-component'
 
 // 匹配验证单个权限
 matchPermission('Delete')
