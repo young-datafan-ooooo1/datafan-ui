@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hooks（vue3） | DataFan UI</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="所有的伟大，都源于一个勇敢的开始">
+    
+    <link rel="preload" href="/assets/css/0.styles.f997c9a8.css" as="style"><link rel="preload" href="/assets/js/app.762fbe3a.js" as="script"><link rel="preload" href="/assets/js/2.9d5427ba.js" as="script"><link rel="preload" href="/assets/js/38.10c1eda6.js" as="script"><link rel="prefetch" href="/assets/js/10.d176b201.js"><link rel="prefetch" href="/assets/js/11.ab1e99d7.js"><link rel="prefetch" href="/assets/js/12.7c963246.js"><link rel="prefetch" href="/assets/js/13.203d9880.js"><link rel="prefetch" href="/assets/js/14.2b088ad9.js"><link rel="prefetch" href="/assets/js/15.d59429bc.js"><link rel="prefetch" href="/assets/js/16.a909a671.js"><link rel="prefetch" href="/assets/js/17.dee798da.js"><link rel="prefetch" href="/assets/js/18.3791e20b.js"><link rel="prefetch" href="/assets/js/19.81859b50.js"><link rel="prefetch" href="/assets/js/20.9e95e9a8.js"><link rel="prefetch" href="/assets/js/21.e83b9ce5.js"><link rel="prefetch" href="/assets/js/22.1347ddcd.js"><link rel="prefetch" href="/assets/js/23.2315df4d.js"><link rel="prefetch" href="/assets/js/24.b9ddbe72.js"><link rel="prefetch" href="/assets/js/25.2d31c25c.js"><link rel="prefetch" href="/assets/js/26.08cffa85.js"><link rel="prefetch" href="/assets/js/27.7f44fa64.js"><link rel="prefetch" href="/assets/js/28.8f90dcff.js"><link rel="prefetch" href="/assets/js/29.e64ad6c0.js"><link rel="prefetch" href="/assets/js/3.82b433ec.js"><link rel="prefetch" href="/assets/js/30.a52ff9b2.js"><link rel="prefetch" href="/assets/js/31.18ad0a2d.js"><link rel="prefetch" href="/assets/js/32.d7d5428d.js"><link rel="prefetch" href="/assets/js/33.1a2351c0.js"><link rel="prefetch" href="/assets/js/34.3a98dd55.js"><link rel="prefetch" href="/assets/js/35.6a79d14e.js"><link rel="prefetch" href="/assets/js/36.df82d509.js"><link rel="prefetch" href="/assets/js/37.862dc14b.js"><link rel="prefetch" href="/assets/js/39.4ba4e9be.js"><link rel="prefetch" href="/assets/js/4.b6baf5a0.js"><link rel="prefetch" href="/assets/js/40.f141f5b7.js"><link rel="prefetch" href="/assets/js/41.227d6162.js"><link rel="prefetch" href="/assets/js/42.f3819493.js"><link rel="prefetch" href="/assets/js/43.b6aa7346.js"><link rel="prefetch" href="/assets/js/5.a7b25c0b.js"><link rel="prefetch" href="/assets/js/6.a074fa35.js"><link rel="prefetch" href="/assets/js/7.98df8833.js"><link rel="prefetch" href="/assets/js/8.97939b82.js"><link rel="prefetch" href="/assets/js/9.1dc71ea9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f997c9a8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">DataFan UI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/components/" class="nav-link">
+  组件中心
+</a></div><div class="nav-item"><a href="/design/" class="nav-link">
+  规范文档
+</a></div><div class="nav-item"><a href="/document/" class="nav-link router-link-active">
+  开发手册
+</a></div><div class="nav-item"><a href="https://github.com/young-datafan/datafan-ui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/components/" class="nav-link">
+  组件中心
+</a></div><div class="nav-item"><a href="/design/" class="nav-link">
+  规范文档
+</a></div><div class="nav-item"><a href="/document/" class="nav-link router-link-active">
+  开发手册
+</a></div><div class="nav-item"><a href="https://github.com/young-datafan/datafan-ui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/document/" aria-current="page" class="sidebar-link">开发手册</a></li><li><a href="/document/vue3/" class="sidebar-link">Vue3 新框架&amp;组件</a></li><li><a href="/document/pinia.html" class="sidebar-link">Pinia 新一代状态管理</a></li><li><a href="/document/TypeScript.html" class="sidebar-link">TypeScript</a></li><li><a href="/document/vue3-base.html" class="sidebar-link">Vue3 基础知识</a></li><li><a href="/document/x6/" class="sidebar-link">antv-X6</a></li><li><a href="/document/Promise/" class="sidebar-link">Promise对象</a></li><li><a href="/document/Closure/" class="sidebar-link">闭包和Http缓存机制</a></li><li><a href="/document/vue3-unti-test.html" class="sidebar-link">Vue3 单元测试</a></li><li><a href="/document/js-design/" class="sidebar-link">设计模式</a></li><li><a href="/document/hooks/" aria-current="page" class="active sidebar-link">hook组件封装</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/document/hooks/#hook-的概念" class="sidebar-link">Hook 的概念</a></li><li class="sidebar-sub-header"><a href="/document/hooks/#react-hooks由来" class="sidebar-link">React，hooks由来</a></li><li class="sidebar-sub-header"><a href="/document/hooks/#小案例-vue3" class="sidebar-link">小案例（Vue3）</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/document/hooks/#_1-计数" class="sidebar-link">1. 计数</a></li><li class="sidebar-sub-header"><a href="/document/hooks/#_2-鼠标位置" class="sidebar-link">2. 鼠标位置</a></li></ul></li><li class="sidebar-sub-header"><a href="/document/hooks/#为何使用hook" class="sidebar-link">为何使用hook</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/document/hooks/#更灵活的代码组织" class="sidebar-link">更灵活的代码组织</a></li></ul></li><li class="sidebar-sub-header"><a href="/document/hooks/#结语" class="sidebar-link">结语</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="hooks-vue3"><a href="#hooks-vue3" class="header-anchor">#</a> Hooks（vue3）</h1> <h2 id="hook-的概念"><a href="#hook-的概念" class="header-anchor">#</a> Hook 的概念</h2> <p>Hook 这个概念是在 React 中被提出的，vue3借鉴React中hook概念做实现</p> <p>钩子编程（hooking），也称作“挂钩”，<strong>是计算机程序设计术语，指通过拦截软件模块间的函数调用、消息传递、事件传递来修改或扩展操作系统、应用程序或其他软件组件的行为的各种技术</strong>。<strong>处理被拦截的函数调用、事件、消息的代码，被称为钩子</strong>（hook）</p> <p><code>Hook</code>原意是指<code>钩子</code>，它表示的就是在某个函数的上下文做自定义的处理来实现我们想要的<code>黑科技</code></p> <p>在<code>vue3</code>中的hooks其实是函数的写法，就是将文件的一些单独功能的js代码进行抽离出来，放到单独的js文件中，把一些复杂的逻辑或一些常用的逻辑封装成一个个hook来进行调用。这样其实和我们在<code>vue2</code>中学的<code>mixin</code>比较像</p> <h2 id="react-hooks由来"><a href="#react-hooks由来" class="header-anchor">#</a> React，hooks由来</h2> <p>vue3组件使用</p> <p>vben-admin案例</p> <div class="language-vue2 extra-class"><pre class="language-text"><code>&lt;template&gt;
+    &lt;!-- html tags --&gt;
+&lt;/template&gt;
+
+
+&lt;script&gt;
+export default {
+    name: 'textCompontent',
+    props: {
+        // ...
+    },
+    data() {
+        return { 
+            // ...
+        }
+    },
+    methods: {
+        // ...
+    },
+    computed: {
+        // ...
+    }
+}
+&lt;/script&gt;
+</code></pre></div><div class="language-React extra-class"><pre class="language-text"><code>class Clock extends React.Component {
+    construtor(props) {
+        super(props);   
+        this.state = {
+            count: 1
+            // ...
+        };
+    }
+
+    componentDidMount() {
+        // ...
+    }
+
+    setCount = () =&gt; {
+        const { count } = this.state
+        this.setState({ count: count++ })
+        // React通过管理状态实现对组件的管理，当this.setState()被调用的时候
+        // React会重新调用render方法来重新渲染UI。
+    }
+
+    render() {
+        return {
+            &lt;div&gt;
+                &lt;p onClick={this.setCount}&gt;hello world&lt;/p&gt;
+            &lt;/div&gt;
+        }
+    }
+}
+</code></pre></div><p>参考大家熟知的 Vue 2 代码结构，我们看到：React 整体使用 <code>Class</code> 来封装一个组件；设计了一个 <code>state</code> 来管理变量，相当于 Vue 2 中的 <code>data</code>；同样拥有生命周期和自定义方法；模板部分借助 <code>JSX</code> 写进一个渲染函数。如果需要更新视图，必须通过 <code>setState</code> 方法更新 <code>state</code> 中的变量，然后视图上的数据才随之更新，不能直接通过更新视图来更新数据。</p> <p>可以看出，和 Vue 不同，它是一个单向的数据流。Vue 的读音是视图的 &quot;view&quot;，而 &quot;state&quot;，就是状态的意思。如果说 Vue 是视图导向，React 就是状态导向。</p> <p>既然 React 是用 Class 实现组件，那么问题就随之而来：在 Class 内必须注意 <code>this</code> 的指向问题；而且在组件发生复用和嵌套时，对每一层组件的 <code>props</code> 都要进行操作，逻辑复杂。</p> <p>于是函数组件诞生，为 React 实现了状态（state）分离</p> <h2 id="小案例-vue3"><a href="#小案例-vue3" class="header-anchor">#</a> 小案例（Vue3）</h2> <h3 id="_1-计数"><a href="#_1-计数" class="header-anchor">#</a> 1. 计数</h3> <div class="language-目录结构 extra-class"><pre class="language-text"><code>目录结构
+demo_01
+   hooks                      // 各式各样的hook
+      useCount.ts
+      ...
+   types                      // 类型
+      countTyping.ts
+      ...
+   index.vue                  // 目标页面
+</code></pre></div><div class="language-ts extra-class"><pre class="language-ts"><code><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>
+ <span class="token operator">*</span> <span class="token decorator"><span class="token at operator">@</span><span class="token function">Description</span></span><span class="token operator">:</span> 测试案例_demo_01
+ <span class="token operator">*</span> <span class="token decorator"><span class="token at operator">@</span><span class="token function">Date</span></span><span class="token operator">:</span> <span class="token number">2022</span><span class="token operator">-</span><span class="token number">08</span><span class="token operator">-</span><span class="token number">07</span> <span class="token number">13</span><span class="token operator">:</span><span class="token number">14</span><span class="token operator">:</span><span class="token number">54</span>
+<span class="token operator">--</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;demo_01&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>当前计数为：<span class="token punctuation">{</span><span class="token punctuation">{</span> count <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>a<span class="token operator">-</span>button <span class="token decorator"><span class="token at operator">@</span><span class="token function">click</span></span><span class="token operator">=</span><span class="token string">&quot;increment&quot;</span><span class="token operator">&gt;</span>点击自增<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">-</span>button<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>a<span class="token operator">-</span>button <span class="token decorator"><span class="token at operator">@</span><span class="token function">click</span></span><span class="token operator">=</span><span class="token string">&quot;decrement&quot;</span><span class="token operator">&gt;</span>点击自减<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">-</span>button<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script lang<span class="token operator">=</span><span class="token string">&quot;ts&quot;</span> setup<span class="token operator">&gt;</span>
+  <span class="token keyword">import</span> <span class="token punctuation">{</span> useCount <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./hooks/useCount'</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> <span class="token punctuation">{</span> increment<span class="token punctuation">,</span> decrement <span class="token punctuation">}</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token keyword">const</span> count <span class="token operator">=</span> <span class="token generic-function"><span class="token function">ref</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token builtin">number</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">increment</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        count<span class="token punctuation">.</span>value<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">decrement</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        count<span class="token punctuation">.</span>value<span class="token operator">--</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>style lang<span class="token operator">=</span><span class="token string">&quot;less&quot;</span> scoped<span class="token operator">&gt;</span>
+  <span class="token punctuation">.</span>demo_01 <span class="token punctuation">{</span>
+    padding<span class="token operator">:</span> 10px 20px 20px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span>
+</code></pre></div><div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">/*
+ * @Description: 计数hook（可进行加减操作）
+ * @Date: 2022-08-07 13:38:27
+ */</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ref <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token keyword">type</span> <span class="token punctuation">{</span> CountInstance<span class="token punctuation">,</span> UseCountReturnType <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../types/countTyping'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">useCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> UseCountReturnType <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> count <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> methods<span class="token operator">:</span> CountInstance <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 自增</span>
+    <span class="token function-variable function">increment</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      count<span class="token punctuation">.</span>value<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// 自减</span>
+    <span class="token function-variable function">decrement</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      count<span class="token punctuation">.</span>value<span class="token operator">--</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> methods<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">/*
+ * @Description: 计数类型
+ * @Date: 2022-08-07 13:47:51
+ */</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Ref <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">CountInstance</span> <span class="token punctuation">{</span>
+  <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span> <span class="token comment">// 自增</span>
+  <span class="token function">decrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span> <span class="token comment">// 自减</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 定义返回时的类型</span>
+<span class="token keyword">export</span> <span class="token keyword">type</span> <span class="token class-name">Register</span> <span class="token operator">=</span> Ref<span class="token operator">&lt;</span><span class="token builtin">number</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">type</span> <span class="token class-name">UseCountReturnType</span> <span class="token operator">=</span> <span class="token punctuation">[</span>Register<span class="token punctuation">,</span> CountInstance<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_2-鼠标位置"><a href="#_2-鼠标位置" class="header-anchor">#</a> 2. 鼠标位置</h3> <div class="language-html index.vue extra-class"><pre class="language-html"><code><span class="token comment">&lt;!--
+ * @Description: 
+ * @Date: 2022-08-10 20:56:34
+--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>demo_02<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span> {{ x }} {{ y }} <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ts<span class="token punctuation">&quot;</span></span> <span class="token attr-name">setup</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> <span class="token punctuation">{</span> useMouse <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./hooks/useMouse'</span>
+
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> x<span class="token punctuation">,</span> y <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useMouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>less<span class="token punctuation">&quot;</span></span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.demo_02</span> <span class="token punctuation">{</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 10px 20px 20px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre></div><div class="language-typescript useMouse.ts extra-class"><pre class="language-typescript"><code><span class="token comment">/*
+ * @Description: 监听鼠标移动
+ * @Date: 2022-08-10 20:45:26
+ */</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> reactive<span class="token punctuation">,</span> toRefs<span class="token punctuation">,</span> onMounted<span class="token punctuation">,</span> onUnmounted <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token comment">// 鼠标位置侦听</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">useMouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 数据响应</span>
+  <span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token function">reactive</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    x<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    y<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token comment">//  事件更新</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">update</span> <span class="token operator">=</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    state<span class="token punctuation">.</span>x <span class="token operator">=</span> e<span class="token punctuation">.</span>pageX
+    state<span class="token punctuation">.</span>y <span class="token operator">=</span> e<span class="token punctuation">.</span>pageY
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 已经加载</span>
+  <span class="token function">onMounted</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'mousemove'</span><span class="token punctuation">,</span> update<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token comment">//卸载</span>
+  <span class="token function">onUnmounted</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    window<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">'mousemove'</span><span class="token punctuation">,</span> update<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token comment">//转换所有key为响应式数据</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span><span class="token function">toRefs</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    update<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h2 id="为何使用hook"><a href="#为何使用hook" class="header-anchor">#</a> 为何使用hook</h2> <p>vue官方解释：<a href="https://staging-cn.vuejs.org/guide/extras/composition-api-faq.html#more-flexible-code-organization" target="_blank" rel="noopener noreferrer">组合式 API 常见问答 | Vue.js<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="更灵活的代码组织"><a href="#更灵活的代码组织" class="header-anchor">#</a> 更灵活的代码组织</h3> <p>许多用户都喜欢选项式 API，因为在默认情况下就能够写出有组织的代码：任何东西都有其对应的选项来管理。然而，选项式 API 在单个组件的逻辑复杂到一定程度时，也面临了一些无法忽视的限制。这些限制主要体现在需要处理多个<strong>逻辑关注点</strong>的组件中，在许多 Vue 2 已经上线的生产应用中可以看到这一点。</p> <p>我们以 Vue CLI GUI 中的文件浏览器组件为例：这个组件承担了以下几个逻辑关注点：</p> <ul><li>追踪当前文件夹的状态，展示其内容</li> <li>处理文件夹的相关操作 (打开、关闭和刷新)</li> <li>支持创建新文件夹</li> <li>可以切换到只展示收藏的文件夹</li> <li>可以开启对隐藏文件夹的展示</li> <li>处理当前工作目录中的变更</li></ul> <p>这个组件<a href="https://github.com/vuejs/vue-cli/blob/a09407dd5b9f18ace7501ddb603b95e31d6d93c0/packages/@vue/cli-ui/src/components/folder/FolderExplorer.vue#L198-L404" target="_blank" rel="noopener noreferrer">最原始的版本<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>是由选项式 API 写成的。如果我们为相同的逻辑关注点标上一种颜色，那将会是这样：（<a href="https://user-images.githubusercontent.com/499550/62783021-7ce24400-ba89-11e9-9dd3-36f4f6b1fae2.png" target="_blank" rel="noopener noreferrer">图片选自vue官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>）</p> <img title="" src="https://user-images.githubusercontent.com/499550/62783021-7ce24400-ba89-11e9-9dd3-36f4f6b1fae2.png" alt="folder component before" data-align="inline"> <p>你可以看到，处理相同逻辑关注点的代码被强制拆分在了不同的选项中，位于文件的不同部分。在一个几百行的大组件中，要读懂代码中的一个逻辑关注点，只能在文件中反复上下滚动，可这件事不应该这么困难。另外，如果我们还想要将一个逻辑关注点抽离到一个可重用的工具函数中，需要从文件的不同部分中寻找到所需的正确片段。</p> <p>而如果<a href="https://gist.github.com/yyx990803/8854f8f6a97631576c14b63c8acd8f2e" target="_blank" rel="noopener noreferrer">用组合式 API 重构<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>这个组件，将会变成：(<a href="https://user-images.githubusercontent.com/499550/62783026-810e6180-ba89-11e9-8774-e7771c8095d6.png" target="_blank" rel="noopener noreferrer">图片选自vue官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>）</p> <p><img src="https://user-images.githubusercontent.com/499550/62783026-810e6180-ba89-11e9-8774-e7771c8095d6.png" alt=""></p> <p>现在与同一个逻辑关注点相关的代码被归为了一组：我们无需再为了一个逻辑关注点在不同的选项块间来回滚动切换。此外，我们现在可以不费吹灰之力地将这一组代码移动到一个外部文件中，不再需要为了抽象而重新组织代码，大大降低了重构成本，这在长期维护的大型项目中非常关键。</p> <h2 id="结语"><a href="#结语" class="header-anchor">#</a> 结语</h2> <p>vben-admin代码中组件其实运用了hooks思想，如有需要可根据vben-admin中component源码阅读其设计理念</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/document/js-design/" class="prev">
+        设计模式
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.762fbe3a.js" defer></script><script src="/assets/js/2.9d5427ba.js" defer></script><script src="/assets/js/38.10c1eda6.js" defer></script>
+  </body>
+</html>
