@@ -14,12 +14,43 @@ module.exports = {
         path: '/document/'
     },
     {
+        title: 'Vue3 新框架&组件',
+        path: '/document/vue3/'
+    },
+    {
         title: 'Pinia 新一代状态管理',
         path: '/document/pinia'
     },
     {
         title: 'TypeScript',
-        path: '/document/TypeScript'
+        path: '/document/TypeScript'},
+    {
+        title: 'Vue3 基础知识',
+        path: '/document/vue3-base'
+    },
+    {
+        title: 'antv-X6',
+        path: '/document/x6/'
+    },
+    {
+      title: 'Promise对象',
+      path: '/document/Promise/'
+    },
+    {
+      title: '闭包和Http缓存机制',
+      path: '/document/Closure/'
+    },
+    {
+      title: 'Vue3 单元测试',
+      path: '/document/vue3-unti-test'
+    },
+
+    {
+      title: '设计模式',
+      path: '/document/js-design/'
+    },
+    { title: 'hook组件封装',
+      path: '/document/hooks/'
     }
   ],
   // 组件中心
