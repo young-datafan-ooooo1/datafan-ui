@@ -20,7 +20,7 @@
 import 'xe-utils'
 import VXETable from 'vxe-table'
 // vxe-grid表格样式覆盖
-import '@sense70/common-component-vue/assets/page-table.scss'
+import '@datamp/common-component/assets/page-table.scss'
 Vue.use(VXETable)
 ```
 
@@ -226,7 +226,7 @@ Vue.use(VXETable)
 </template>
 <script>
   // 引用鉴权方法
-  import { matchPermission } from '@sense70/common-component-vue'
+  import { matchPermission } from '@datamp/common-component'
 
   export default {
     data() {
