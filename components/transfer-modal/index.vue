@@ -1,7 +1,7 @@
 <!--
  * @Description: 穿梭弹窗组件（共享用户、授权用户等，需要在多个可选项中进行多选时的场景）
  * @Date: 2021-03-01 10:05:26
- * @LastEditTime: 2022-03-28 22:42:10
+ * @LastEditTime: 2022-08-15 10:53:21
 -->
 <template>
   <a-modal 
@@ -11,6 +11,7 @@
     :mask-closable="maskClosable"
     :destroyOnClose="destroyOnClose"
     :confirm-loading="isConfirmLoading"
+    :lazy="isLazy"
     @ok="onConfirm"
     @cancel="onCancel"
   >
@@ -111,6 +112,11 @@ export default {
     destroyOnClose: {
       type: Boolean,
       default: true
+    },
+    // 是否开启懒加载
+    isLazy: {
+      type: Boolean,
+      default: false
     },
   },
   data () {
