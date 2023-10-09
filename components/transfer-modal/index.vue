@@ -1,7 +1,7 @@
 <!--
  * @Description: 穿梭弹窗组件（共享用户、授权用户等，需要在多个可选项中进行多选时的场景）
  * @Date: 2021-03-01 10:05:26
- * @LastEditTime: 2022-03-28 22:42:10
+ * @LastEditTime: 2023-10-09 15:14:17
 -->
 <template>
   <a-modal 
@@ -27,7 +27,16 @@
         @change="onTransferChange"
         v-bind="$attrs"
         v-on="$listeners"
-      ></a-transfer>
+      >
+        <!-- 插槽 -->
+        <template
+          v-for="slot in Object.keys($scopedSlots)"
+          :slot="slot"
+          slot-scope="scope"
+        >
+          <slot :name="slot" v-bind="scope" />
+        </template>
+      </a-transfer>
     </a-spin>
   </a-modal>
 </template>
